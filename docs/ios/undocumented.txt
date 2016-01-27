@@ -1,0 +1,149 @@
+ImageDataLoader.swift
+	func imageDataTaskWithRequest(request: ImageRequest, progressHandler: ImageDataLoadingProgressHandler, completionHandler: ImageDataLoadingCompletionHandler) -> NSURLSessionTask
+	func invalidate()
+	func removeAllCachedImages()
+	public private(set) var session: NSURLSession!
+	public init(sessionConfiguration: NSURLSessionConfiguration)
+	public func imageDataTaskWithRequest(request: ImageRequest, progressHandler: ImageDataLoadingProgressHandler, completionHandler: ImageDataLoadingCompletionHandler) -> NSURLSessionTask
+	public func URLSession(session: NSURLSession, dataTask: NSURLSessionDataTask, didReceiveData data: NSData)
+	public func URLSession(session: NSURLSession, task: NSURLSessionTask, didCompleteWithError error: NSError?)
+ImageTask.swift
+	public enum ImageTaskState
+	case Suspended, Running, Cancelled, Completed
+	case Suspended, Running, Cancelled, Completed
+	case Suspended, Running, Cancelled, Completed
+	case Suspended, Running, Cancelled, Completed
+	public internal(set) var response: ImageResponse?
+	public internal(set) var completedUnitCount: Int64 = 0
+	public internal(set) var totalUnitCount: Int64 = 0
+	public var hashValue: Int { return self.identifier }
+	public init(request: ImageRequest, identifier: Int)
+	public var fractionCompleted: Double
+	public func ==(lhs: ImageTask, rhs: ImageTask) -> Bool
+ImageResponse.swift
+	case Success(Image, ImageResponseInfo)
+	case Failure(ErrorType)
+	public var image: Image?
+	public var info: ImageResponseInfo?
+	public var error: ErrorType?
+	public var success: Bool
+	public init(fastResponse: Bool, userInfo: Any? = nil)
+ImagePreheatingControllerForCollectionView.swift
+	public class ImagePreheatingControllerForCollectionView: ImagePreheatingController
+	public var collectionView: UICollectionView
+	public var collectionViewLayout: UICollectionViewFlowLayout
+	public init(collectionView: UICollectionView)
+	public override var enabled: Bool
+	public override func scrollViewDidScroll()
+ImageViewLoadingController.swift
+	public var manager: ImageManager = ImageManager.shared
+	public init(handler: (ImageTask, ImageResponse, ImageViewLoadingOptions?) -> Void)
+	public func cancelLoading()
+	public func setImageWithRequest(request: ImageRequest, options: ImageViewLoadingOptions?)  -> ImageTask
+ImagePreheatingControllerForTableView.swift
+	public class ImagePreheatingControllerForTableView: ImagePreheatingController
+	public var tableView: UITableView
+	public init(tableView: UITableView)
+	public override var enabled: Bool
+	public override func scrollViewDidScroll()
+ImageLoadingViewExtensions.swift
+	public var nk_image: UIImage?
+ImageManagerExtensions.swift
+	func taskWithURL(URL: NSURL, completion: ImageTaskCompletion? = nil) -> ImageTask
+	func taskWithRequest(request: ImageRequest, completion: ImageTaskCompletion?) -> ImageTask
+ImageProcessor.swift
+	public let processors: [ImageProcessing]
+	public func processImage(input: Image) -> Image?
+	public func ==(lhs: ImageProcessorComposition, rhs: ImageProcessorComposition) -> Bool
+	public func processImage(image: Image) -> Image?
+	public func ==(lhs: ImageDecompressor, rhs: ImageDecompressor) -> Bool
+ImageLoader.swift
+	weak var manager: ImageLoadingManager? { get set }
+	func resumeLoadingForTask(task: ImageTask)
+	func suspendLoadingForTask(task: ImageTask)
+	func cancelLoadingForTask(task: ImageTask)
+	func isRequestCacheEquivalent(lhs: ImageRequest, toRequest rhs: ImageRequest) -> Bool
+	func invalidate()
+	func removeAllCachedImages()
+	func imageLoader(imageLoader: ImageLoading, task: ImageTask, didUpdateProgressWithCompletedUnitCount completedUnitCount: Int64, totalUnitCount: Int64)
+	func imageLoader(imageLoader: ImageLoading, task: ImageTask, didCompleteWithImage image: Image?, error: ErrorType?, userInfo: Any?)
+	public struct ImageLoaderConfiguration
+	public var dataLoader: ImageDataLoading
+	public var decoder: ImageDecoding
+	public class ImageLoaderDefaultDelegate: ImageLoaderDelegate
+	public init() {}
+	public weak var manager: ImageLoadingManager?
+	public let configuration: ImageLoaderConfiguration
+	public let delegate: ImageLoaderDelegate
+	public func resumeLoadingForTask(task: ImageTask)
+	public func suspendLoadingForTask(task: ImageTask)
+	public func cancelLoadingForTask(task: ImageTask)
+	public func isRequestCacheEquivalent(lhs: ImageRequest, toRequest rhs: ImageRequest) -> Bool
+	public func invalidate()
+	public func removeAllCachedImages()
+	public func isImageRequestKey(lhs: ImageRequestKey, equalToKey rhs: ImageRequestKey) -> Bool
+ImageRequestKey.swift
+	public protocol ImageRequestKeyOwner: class
+	func isImageRequestKey(key: ImageRequestKey, equalToKey: ImageRequestKey) -> Bool
+	public let request: ImageRequest
+	public weak private(set) var owner: ImageRequestKeyOwner?
+	public init(_ request: ImageRequest, owner: ImageRequestKeyOwner)
+	public override var hash: Int
+	public override func isEqual(other: AnyObject?) -> Bool
+ImageMemoryCache.swift
+	public protocol ImageMemoryCaching
+	func cachedResponseForKey(key: ImageRequestKey) -> ImageCachedResponse?
+	func storeResponse(response: ImageCachedResponse, forKey key: ImageRequestKey)
+	func removeAllCachedImages()
+	public class ImageCachedResponse
+	public let image: Image
+	public init(image: Image, userInfo: Any?)
+	public let cache: NSCache
+	public init(cache: NSCache)
+	public func cachedResponseForKey(key: ImageRequestKey) -> ImageCachedResponse?
+	public func storeResponse(response: ImageCachedResponse, forKey key: ImageRequestKey)
+	public func costForImage(image: Image) -> Int
+	public class func recommendedCacheTotalLimit() -> Int
+	public func removeAllCachedImages()
+ImagePreheatingController.swift
+	func preheatingController(controller: ImagePreheatingController, didUpdateWithAddedIndexPaths addedIndexPaths: [NSIndexPath], removedIndexPaths: [NSIndexPath])
+	public weak var delegate: ImagePreheatingControllerDelegate?
+	public let scrollView: UIScrollView
+	public init(scrollView: UIScrollView)
+	public override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>)
+ImageDecoder.swift
+	func imageWithData(data: NSData) -> Image?
+	public init() {}
+	public func imageWithData(data: NSData) -> Image?
+	public var imageScale: CGFloat
+	public let decoders: [ImageDecoding]
+	public init(decoders: [ImageDecoding])
+	public func imageWithData(data: NSData) -> Image?
+ImageLoadingView.swift
+	public struct ImageViewLoadingOptions
+	public var placeholder: Image?
+	public var animations: ((ImageDisplayingView) -> Void)?
+	public init(placeholder: Image? = nil, animations: ((ImageDisplayingView) -> Void)? = nil)
+	func nk_cancelLoading()
+	public func nk_setImageWithURL(URL: NSURL) -> ImageTask
+	func nk_setImageWithRequest(request: ImageRequest) -> ImageTask
+	public typealias View = UIView
+	var nk_image: Image? { get set }
+	func nk_imageTask(task: ImageTask, didFinishWithResponse response: ImageResponse, options: ImageViewLoadingOptions?)
+	public var ImageViewDefaultAnimationDuration = 0.25
+	public func nk_imageTask(task: ImageTask, didFinishWithResponse response: ImageResponse, options: ImageViewLoadingOptions?)
+	public func nk_cancelLoading()
+	public func nk_setImageWithRequest(request: ImageRequest, options: ImageViewLoadingOptions?) -> ImageTask
+	public var nk_imageLoadingController: ImageViewLoadingController
+ImageManager.swift
+	public let ImageManagerErrorDomain = "Nuke.ImageManagerErrorDomain"
+	public let ImageManagerErrorCancelled = -1
+	public let ImageManagerErrorUnknown = -2
+	public struct ImageManagerConfiguration
+	public var loader: ImageLoading
+	public var cache: ImageMemoryCaching?
+	public let configuration: ImageManagerConfiguration
+	public init(configuration: ImageManagerConfiguration)
+	public func imageLoader(imageLoader: ImageLoading, task: ImageTask, didUpdateProgressWithCompletedUnitCount completedUnitCount: Int64, totalUnitCount: Int64)
+	public func imageLoader(imageLoader: ImageLoading, task: ImageTask, didCompleteWithImage image: Image?, error: ErrorType?, userInfo: Any?)
+	public func isImageRequestKey(lhs: ImageRequestKey, equalToKey rhs: ImageRequestKey) -> Bool

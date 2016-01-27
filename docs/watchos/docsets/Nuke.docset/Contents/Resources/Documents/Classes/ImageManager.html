@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ImageManager Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/ImageManager" class="dashAnchor"></a>
+    <a title="ImageManager Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Nuke Docs</a> (51% documented)</p>
+        <p class="header-right"><a href="https://github.com/kean/Nuke"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Nuke Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        ImageManager Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/ImageCachedResponse.html">ImageCachedResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageDataLoader.html">ImageDataLoader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageDecoder.html">ImageDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageDecoderComposition.html">ImageDecoderComposition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageDecompressor.html">ImageDecompressor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageLoader.html">ImageLoader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageLoaderDefaultDelegate.html">ImageLoaderDefaultDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageManager.html">ImageManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageMemoryCache.html">ImageMemoryCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageProcessorComposition.html">ImageProcessorComposition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageRequestKey.html">ImageRequestKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageResponseInfo.html">ImageResponseInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageTask.html">ImageTask</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v4Nuke26ImageManagerErrorCancelledSi">ImageManagerErrorCancelled</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v4Nuke23ImageManagerErrorDomainSS">ImageManagerErrorDomain</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v4Nuke24ImageManagerErrorUnknownSi">ImageManagerErrorUnknown</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v4Nuke16ImageMaximumSizeVSC6CGSize">ImageMaximumSize</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/ImageContentMode.html">ImageContentMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ImageResponse.html">ImageResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ImageTaskState.html">ImageTaskState</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:ZF4Nukeoi2eeFTCS_17ImageDecompressorS0__Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:ZF4Nukeoi2eeFTCS_25ImageProcessorCompositionS0__Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:ZF4Nukeoi2eeFTCS_9ImageTaskS0__Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4Nuke20equivalentProcessorsFTGSqPS_15ImageProcessing__3rhsGSqPS0____Sb">equivalentProcessors(_:rhs:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4Nuke21startPreheatingImagesFGSaVS_12ImageRequest_T_">startPreheatingImages(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4Nuke20stopPreheatingImagesFT_T_">stopPreheatingImages()</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4Nuke20stopPreheatingImagesFGSaVS_12ImageRequest_T_">stopPreheatingImages(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4Nuke15taskWithRequestFTVS_12ImageRequest10completionGSqFOS_13ImageResponseT___CS_9ImageTask">taskWithRequest(_:completion:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4Nuke11taskWithURLFTCSo5NSURL10completionGSqFOS_13ImageResponseT___CS_9ImageTask">taskWithURL(_:completion:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/ImageDataLoading.html">ImageDataLoading</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ImageDecoding.html">ImageDecoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ImageLoaderDelegate.html">ImageLoaderDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ImageLoading.html">ImageLoading</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ImageLoadingManager.html">ImageLoadingManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ImageMemoryCaching.html">ImageMemoryCaching</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ImageProcessing.html">ImageProcessing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ImageRequestKeyOwner.html">ImageRequestKeyOwner</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/ImageLoaderConfiguration.html">ImageLoaderConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageManagerConfiguration.html">ImageManagerConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageRequest.html">ImageRequest</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>ImageManager</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ImageManager</span></code></pre>
+
+                </div>
+              </div>
+            <p>The <code>ImageManager</code> class and related classes provide methods for loading, processing, caching and preheating images.</p>
+
+<p><code>ImageManager</code> is also a pipeline that loads images using injectable dependencies, which makes it highly customizable. See <a href="https://github.com/kean/Nuke#design">https://github.com/kean/Nuke#design</a> for more info.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC4Nuke12ImageManager13configurationVS_25ImageManagerConfiguration"></a>
+                    <a name="//apple_ref/swift/Property/configuration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC4Nuke12ImageManager13configurationVS_25ImageManagerConfiguration">configuration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ImageManager</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/1.4.0/Nuke/Source/Core/ImageManager.swift#L0">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC4Nuke12ImageManagercFMS0_FT13configurationVS_25ImageManagerConfiguration_S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(configuration:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC4Nuke12ImageManagercFMS0_FT13configurationVS_25ImageManagerConfiguration_S0_">init(configuration:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ImageManager</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/1.4.0/Nuke/Source/Core/ImageManager.swift#L71-L74">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC4Nuke12ImageManager15taskWithRequestFS0_FVS_12ImageRequestCS_9ImageTask"></a>
+                    <a name="//apple_ref/swift/Method/taskWithRequest(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC4Nuke12ImageManager15taskWithRequestFS0_FVS_12ImageRequestCS_9ImageTask">taskWithRequest(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a task with a given request. After you create a task, you start it by calling its resume method.</p>
+
+<p>The manager holds a strong reference to the task until it is either completes or get cancelled.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">taskWithRequest</span><span class="p">(</span><span class="nv">request</span><span class="p">:</span> <span class="kt">ImageRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ImageTask</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/1.4.0/Nuke/Source/Core/ImageManager.swift#L81-L83">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC4Nuke12ImageManager19invalidateAndCancelFS0_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/invalidateAndCancel()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC4Nuke12ImageManager19invalidateAndCancelFS0_FT_T_">invalidateAndCancel()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Cancels all outstanding tasks and then invalidates the manager. New image tasks may not be resumed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">invalidateAndCancel</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/1.4.0/Nuke/Source/Core/ImageManager.swift#L87-L95">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC4Nuke12ImageManager21removeAllCachedImagesFS0_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/removeAllCachedImages()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC4Nuke12ImageManager21removeAllCachedImagesFS0_FT_T_">removeAllCachedImages()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Removes all cached images by calling corresponding methods on memory cache and image loader.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">removeAllCachedImages</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/1.4.0/Nuke/Source/Core/ImageManager.swift#L99-L102">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC4Nuke12ImageManager22getTasksWithCompletionFS0_FFT14executingTasksGVSs3SetCS_9ImageTask_15preheatingTasksGS1_S2___T_T_"></a>
+                    <a name="//apple_ref/swift/Method/getTasksWithCompletion(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC4Nuke12ImageManager22getTasksWithCompletionFS0_FFT14executingTasksGVSs3SetCS_9ImageTask_15preheatingTasksGS1_S2___T_T_">getTasksWithCompletion(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Asynchronously calls a completion closure on the main thread with all executing tasks and all preheating tasks. Set with executing tasks might contain currently executing preheating tasks.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getTasksWithCompletion</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="p">(</span><span class="nv">executingTasks</span><span class="p">:</span> <span class="kt">Set</span><span class="o">&lt;</span><span class="kt">ImageTask</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">preheatingTasks</span><span class="p">:</span> <span class="kt">Set</span><span class="o">&lt;</span><span class="kt">ImageTask</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/1.4.0/Nuke/Source/Core/ImageManager.swift#L106-L114">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Preheating"></a>
+                <a name="//apple_ref/swift/Section/Preheating" class="dashAnchor"></a>
+                <a href="#/Preheating">
+                  <h3 class="section-name">Preheating</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC4Nuke12ImageManager21startPreheatingImagesFS0_FGSaVS_12ImageRequest_T_"></a>
+                    <a name="//apple_ref/swift/Method/startPreheatingImages(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC4Nuke12ImageManager21startPreheatingImagesFS0_FGSaVS_12ImageRequest_T_">startPreheatingImages(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Prepares images for the given requests for later use.</p>
+
+<p>When you call this method, ImageManager starts to load and cache images for the given requests. ImageManager caches images with the exact target size, content mode, and filters. At any time afterward, you can create tasks with equivalent requests.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">startPreheatingImages</span><span class="p">(</span><span class="nv">requests</span><span class="p">:</span> <span class="p">[</span><span class="kt">ImageRequest</span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/1.4.0/Nuke/Source/Core/ImageManager.swift#L168-L180">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC4Nuke12ImageManager20stopPreheatingImagesFS0_FGSaVS_12ImageRequest_T_"></a>
+                    <a name="//apple_ref/swift/Method/stopPreheatingImages(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC4Nuke12ImageManager20stopPreheatingImagesFS0_FGSaVS_12ImageRequest_T_">stopPreheatingImages(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Stop preheating for the given requests. The request parameters should match the parameters used in startPreheatingImages method.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">stopPreheatingImages</span><span class="p">(</span><span class="nv">requests</span><span class="p">:</span> <span class="p">[</span><span class="kt">ImageRequest</span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/1.4.0/Nuke/Source/Core/ImageManager.swift#L184-L190">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC4Nuke12ImageManager20stopPreheatingImagesFS0_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/stopPreheatingImages()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC4Nuke12ImageManager20stopPreheatingImagesFS0_FT_T_">stopPreheatingImages()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Stops all preheating tasks.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">stopPreheatingImages</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/1.4.0/Nuke/Source/Core/ImageManager.swift#L194-L196">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Memory%20Caching"></a>
+                <a name="//apple_ref/swift/Section/Memory Caching" class="dashAnchor"></a>
+                <a href="#/Memory%20Caching">
+                  <h3 class="section-name">Memory Caching</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC4Nuke12ImageManager24cachedResponseForRequestFS0_FVS_12ImageRequestGSqCS_19ImageCachedResponse_"></a>
+                    <a name="//apple_ref/swift/Method/cachedResponseForRequest(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC4Nuke12ImageManager24cachedResponseForRequestFS0_FVS_12ImageRequestGSqCS_19ImageCachedResponse_">cachedResponseForRequest(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns image response from the memory cache. Ignores NSURLRequestCachePolicy.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">cachedResponseForRequest</span><span class="p">(</span><span class="nv">request</span><span class="p">:</span> <span class="kt">ImageRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ImageCachedResponse</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/1.4.0/Nuke/Source/Core/ImageManager.swift#L227-L229">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC4Nuke12ImageManager13storeResponseFS0_FTCS_19ImageCachedResponse10forRequestVS_12ImageRequest_T_"></a>
+                    <a name="//apple_ref/swift/Method/storeResponse(_:forRequest:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC4Nuke12ImageManager13storeResponseFS0_FTCS_19ImageCachedResponse10forRequestVS_12ImageRequest_T_">storeResponse(_:forRequest:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Stores image response into the memory cache.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">storeResponse</span><span class="p">(</span><span class="nv">response</span><span class="p">:</span> <span class="kt">ImageCachedResponse</span><span class="p">,</span> <span class="n">forRequest</span> <span class="nv">request</span><span class="p">:</span> <span class="kt">ImageRequest</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/1.4.0/Nuke/Source/Core/ImageManager.swift#L233-L235">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC4Nuke12ImageManager11imageLoaderFS0_FTPS_12ImageLoading_4taskCS_9ImageTask39didUpdateProgressWithCompletedUnitCountVSs5Int6414totalUnitCountS3__T_"></a>
+                    <a name="//apple_ref/swift/Method/imageLoader(_:task:didUpdateProgressWithCompletedUnitCount:totalUnitCount:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC4Nuke12ImageManager11imageLoaderFS0_FTPS_12ImageLoading_4taskCS_9ImageTask39didUpdateProgressWithCompletedUnitCountVSs5Int6414totalUnitCountS3__T_">imageLoader(_:task:didUpdateProgressWithCompletedUnitCount:totalUnitCount:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ImageManager</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/1.4.0/Nuke/Source/Core/ImageManager.swift#L253-L259">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC4Nuke12ImageManager11imageLoaderFS0_FTPS_12ImageLoading_4taskCS_9ImageTask20didCompleteWithImageGSqCSo7UIImage_5errorGSqPSs9ErrorType__8userInfoGSqP___T_"></a>
+                    <a name="//apple_ref/swift/Method/imageLoader(_:task:didCompleteWithImage:error:userInfo:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC4Nuke12ImageManager11imageLoaderFS0_FTPS_12ImageLoading_4taskCS_9ImageTask20didCompleteWithImageGSqCSo7UIImage_5errorGSqPSs9ErrorType__8userInfoGSqP___T_">imageLoader(_:task:didCompleteWithImage:error:userInfo:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ImageManager</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/1.4.0/Nuke/Source/Core/ImageManager.swift#L261-L272">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC4Nuke12ImageManager17isImageRequestKeyFS0_FTCS_15ImageRequestKey10equalToKeyS1__Sb"></a>
+                    <a name="//apple_ref/swift/Method/isImageRequestKey(_:equalToKey:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC4Nuke12ImageManager17isImageRequestKeyFS0_FTCS_15ImageRequestKey10equalToKeyS1__Sb">isImageRequestKey(_:equalToKey:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ImageManager</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/1.4.0/Nuke/Source/Core/ImageManager.swift#L308-L310">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC4Nuke12ImageManager11taskWithURLFS0_FTCSo5NSURL10completionGSqFOS_13ImageResponseT___CS_9ImageTask"></a>
+                    <a name="//apple_ref/swift/Method/taskWithURL(_:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC4Nuke12ImageManager11taskWithURLFS0_FTCSo5NSURL10completionGSqFOS_13ImageResponseT___CS_9ImageTask">taskWithURL(_:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ImageManager</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/1.4.0/Nuke/Source/Core/ImageManagerExtensions.swift#L10-L12">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC4Nuke12ImageManager15taskWithRequestFS0_FTVS_12ImageRequest10completionGSqFOS_13ImageResponseT___CS_9ImageTask"></a>
+                    <a name="//apple_ref/swift/Method/taskWithRequest(_:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC4Nuke12ImageManager15taskWithRequestFS0_FTVS_12ImageRequest10completionGSqFOS_13ImageResponseT___CS_9ImageTask">taskWithRequest(_:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ImageManager</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/1.4.0/Nuke/Source/Core/ImageManagerExtensions.swift#L14-L18">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvC4Nuke12ImageManager6sharedS0_"></a>
+                    <a name="//apple_ref/swift/Variable/shared" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvC4Nuke12ImageManager6sharedS0_">shared</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The shared image manager. This property as well as all <code><a href="../Classes/ImageManager.html">ImageManager</a></code> methods are thread safe.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="k">var</span> <span class="nv">shared</span><span class="p">:</span> <span class="kt">ImageManager</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/1.4.0/Nuke/Source/Core/ImageManagerExtensions.swift#L30-L43">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="https://github.com/kean" target="_blank" rel="external">kean</a>. All rights reserved. (Last updated: 2016-01-27)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

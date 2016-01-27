@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ImageDataLoading Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/ImageDataLoading" class="dashAnchor"></a>
+    <a title="ImageDataLoading Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Nuke Docs</a> (48% documented)</p>
+        <p class="header-right"><a href="https://github.com/kean/Nuke"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Nuke Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        ImageDataLoading Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/ImageCachedResponse.html">ImageCachedResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageDataLoader.html">ImageDataLoader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageDecoder.html">ImageDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageDecoderComposition.html">ImageDecoderComposition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageDecompressor.html">ImageDecompressor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageLoader.html">ImageLoader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageLoaderDefaultDelegate.html">ImageLoaderDefaultDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageManager.html">ImageManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageMemoryCache.html">ImageMemoryCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImagePreheatingController.html">ImagePreheatingController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImagePreheatingControllerForCollectionView.html">ImagePreheatingControllerForCollectionView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImagePreheatingControllerForTableView.html">ImagePreheatingControllerForTableView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageProcessorComposition.html">ImageProcessorComposition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageRequestKey.html">ImageRequestKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageResponseInfo.html">ImageResponseInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageTask.html">ImageTask</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageViewLoadingController.html">ImageViewLoadingController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v4Nuke26ImageManagerErrorCancelledSi">ImageManagerErrorCancelled</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v4Nuke23ImageManagerErrorDomainSS">ImageManagerErrorDomain</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v4Nuke24ImageManagerErrorUnknownSi">ImageManagerErrorUnknown</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v4Nuke16ImageMaximumSizeVSC6CGSize">ImageMaximumSize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v4Nuke33ImageViewDefaultAnimationDurationSd">ImageViewDefaultAnimationDuration</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/ImageContentMode.html">ImageContentMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ImageResponse.html">ImageResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ImageTaskState.html">ImageTaskState</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/NSImageView.html">NSImageView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIImageView.html">UIImageView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/View.html">View</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:ZF4Nukeoi2eeFTCS_17ImageDecompressorS0__Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:ZF4Nukeoi2eeFTCS_25ImageProcessorCompositionS0__Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:ZF4Nukeoi2eeFTCS_9ImageTaskS0__Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4Nuke20equivalentProcessorsFTGSqPS_15ImageProcessing__3rhsGSqPS0____Sb">equivalentProcessors(_:rhs:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4Nuke21startPreheatingImagesFGSaVS_12ImageRequest_T_">startPreheatingImages(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4Nuke20stopPreheatingImagesFT_T_">stopPreheatingImages()</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4Nuke20stopPreheatingImagesFGSaVS_12ImageRequest_T_">stopPreheatingImages(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4Nuke15taskWithRequestFTVS_12ImageRequest10completionGSqFOS_13ImageResponseT___CS_9ImageTask">taskWithRequest(_:completion:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4Nuke11taskWithURLFTCSo5NSURL10completionGSqFOS_13ImageResponseT___CS_9ImageTask">taskWithURL(_:completion:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/ImageDataLoading.html">ImageDataLoading</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ImageDecoding.html">ImageDecoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ImageDisplayingView.html">ImageDisplayingView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ImageLoaderDelegate.html">ImageLoaderDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ImageLoading.html">ImageLoading</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ImageLoadingManager.html">ImageLoadingManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ImageLoadingView.html">ImageLoadingView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ImageMemoryCaching.html">ImageMemoryCaching</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ImagePreheatingControllerDelegate.html">ImagePreheatingControllerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ImageProcessing.html">ImageProcessing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ImageRequestKeyOwner.html">ImageRequestKeyOwner</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/ImageLoaderConfiguration.html">ImageLoaderConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageManagerConfiguration.html">ImageManagerConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageRequest.html">ImageRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageViewLoadingOptions.html">ImageViewLoadingOptions</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>ImageDataLoading</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ImageDataLoading</span></code></pre>
+
+                </div>
+              </div>
+            <p>Performs loading of image data.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP4Nuke16ImageDataLoading23isRequestLoadEquivalentuRq_S0__Fq_FTVS_12ImageRequest9toRequestS1__Sb"></a>
+                    <a name="//apple_ref/swift/Method/isRequestLoadEquivalent(_:toRequest:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP4Nuke16ImageDataLoading23isRequestLoadEquivalentuRq_S0__Fq_FTVS_12ImageRequest9toRequestS1__Sb">isRequestLoadEquivalent(_:toRequest:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Compares two requests for equivalence with regard to loading image data. Requests should be considered equivalent if data loader can handle both requests with a single session task.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">isRequestLoadEquivalent</span><span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">ImageRequest</span><span class="p">,</span> <span class="n">toRequest</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">ImageRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/1.4.0/Nuke/Source/Core/ImageDataLoader.swift#L17">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP4Nuke16ImageDataLoading24isRequestCacheEquivalentuRq_S0__Fq_FTVS_12ImageRequest9toRequestS1__Sb"></a>
+                    <a name="//apple_ref/swift/Method/isRequestCacheEquivalent(_:toRequest:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP4Nuke16ImageDataLoading24isRequestCacheEquivalentuRq_S0__Fq_FTVS_12ImageRequest9toRequestS1__Sb">isRequestCacheEquivalent(_:toRequest:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Compares two requests for equivalence with regard to caching image data. ImageManager uses this method for memory caching only, which means that there is no need for filtering out the dynamic part of the request (is there is any).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">isRequestCacheEquivalent</span><span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">ImageRequest</span><span class="p">,</span> <span class="n">toRequest</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">ImageRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/1.4.0/Nuke/Source/Core/ImageDataLoader.swift#L21">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP4Nuke16ImageDataLoading24imageDataTaskWithRequestuRq_S0__Fq_FTVS_12ImageRequest15progressHandlerFT18completedUnitCountVSs5Int6414totalUnitCountS2__T_17completionHandlerFT4dataGSqCSo6NSData_8responseGSqCSo13NSURLResponse_5errorGSqPSs9ErrorType___T__CSo16NSURLSessionTask"></a>
+                    <a name="//apple_ref/swift/Method/imageDataTaskWithRequest(_:progressHandler:completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP4Nuke16ImageDataLoading24imageDataTaskWithRequestuRq_S0__Fq_FTVS_12ImageRequest15progressHandlerFT18completedUnitCountVSs5Int6414totalUnitCountS2__T_17completionHandlerFT4dataGSqCSo6NSData_8responseGSqCSo13NSURLResponse_5errorGSqPSs9ErrorType___T__CSo16NSURLSessionTask">imageDataTaskWithRequest(_:progressHandler:completionHandler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ImageDataLoading</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/1.4.0/Nuke/Source/Core/ImageDataLoader.swift#L0">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP4Nuke16ImageDataLoading10invalidateuRq_S0__Fq_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/invalidate()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP4Nuke16ImageDataLoading10invalidateuRq_S0__Fq_FT_T_">invalidate()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ImageDataLoading</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/1.4.0/Nuke/Source/Core/ImageDataLoader.swift#L0">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP4Nuke16ImageDataLoading21removeAllCachedImagesuRq_S0__Fq_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/removeAllCachedImages()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP4Nuke16ImageDataLoading21removeAllCachedImagesuRq_S0__Fq_FT_T_">removeAllCachedImages()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ImageDataLoading</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/1.4.0/Nuke/Source/Core/ImageDataLoader.swift#L0">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="https://github.com/kean" target="_blank" rel="external">kean</a>. All rights reserved. (Last updated: 2016-01-27)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
