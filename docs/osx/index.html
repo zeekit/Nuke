@@ -225,13 +225,14 @@ Advanced Swift framework for loading, processing, caching, displaying and prehea
 <span class="n">request</span><span class="o">.</span><span class="n">processor</span> <span class="o">=</span> <span class="o">&lt;</span><span class="err">#</span><span class="kt">ImageProcessing</span><span class="err">#</span><span class="o">&gt;</span> <span class="c1">// Apply image filters</span>
 
 <span class="kt">Nuke</span><span class="o">.</span><span class="nf">taskWithRequest</span><span class="p">(</span><span class="n">request</span><span class="p">)</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
-    <span class="k">let</span> <span class="nv">image</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">image</span> 
+    <span class="k">let</span> <span class="nv">image</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">image</span>
 <span class="p">}</span><span class="o">.</span><span class="nf">resume</span><span class="p">()</span>
 </code></pre>
 
 <ol>
 <li><a href="#h_requirements">Requirements</a></li>
 <li><a href="#h_getting_started">Getting Started</a></li>
+<li><a href="#h_documentation">Documentation</a></li>
 <li><a href="#h_usage">Usage</a></li>
 <li><a href="#h_design">Design</a></li>
 <li><a href="#installation">Installation</a></li>
@@ -245,7 +246,7 @@ Advanced Swift framework for loading, processing, caching, displaying and prehea
 <li>Performant, asynchronous, thread safe</li>
 <li>Optional <a href="https://github.com/kean/Nuke-Alamofire-Plugin">Alamofire</a> and <a href="https://github.com/kean/Nuke-AnimatedImage-Plugin">AnimatedImage</a> plugins</li>
 <li>Nuke is a <a href="#h_design">pipeline</a> that loads images using injectable dependencies</li>
-<li>Beautiful <a href="https://cloud.githubusercontent.com/assets/1567433/10491357/057ac246-72af-11e5-9c60-6f30e0ea9d52.png">playground</a>,  <a href="http://cocoadocs.org/docsets/Nuke">complete documentation</a> and <a href="https://github.com/kean/Nuke/wiki">wiki</a> included</li>
+<li>Beautiful <a href="https://cloud.githubusercontent.com/assets/1567433/10491357/057ac246-72af-11e5-9c60-6f30e0ea9d52.png">playground</a>, and <a href="#h_documentation">complete documentation</a> included</li>
 </ul>
 <a href='#loading' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h5 id='loading'>Loading</h5>
 
@@ -258,9 +259,8 @@ Advanced Swift framework for loading, processing, caching, displaying and prehea
 <a href='#caching' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h5 id='caching'>Caching</h5>
 
 <ul>
-<li>Doesn&rsquo;t reinvent caching, relies on <a href="https://tools.ietf.org/html/rfc7234">HTTP cache</a> and its implementation in <a href="https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/URLLoadingSystem/URLLoadingSystem.html">Foundation</a></li>
-<li>Caching is transparent to the client</li>
-<li>Two cache layers including <a href="https://github.com/kean/Nuke/wiki/Image-Caching-Guide">auto purging memory cache</a></li>
+<li><a href="http://kean.github.io/blog/programming/2016/01/26/image-caching.html">Doesn&rsquo;t reinvent caching</a>, relies on HTTP cache in URL Loading System</li>
+<li>Two cache layers including auto purging memory cache</li>
 </ul>
 <a href='#processing' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h5 id='processing'>Processing</h5>
 
@@ -283,6 +283,12 @@ Advanced Swift framework for loading, processing, caching, displaying and prehea
 
 </div>
 <li><a href="#installation">Install</a>, <code>import Nuke</code> and enjoy!</li>
+<a href='#a_name_h_documentation_a_documentation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='a_name_h_documentation_a_documentation'><a name="h_documentation"></a>Documentation</h2>
+
+<ul>
+<li><a href="http://kean.github.io/Nuke/docs/ios/">API reference</a></li>
+<li><a href="https://github.com/kean/Nuke/wiki">Guides</a></li>
+</ul>
 <a href='#a_name_h_usage_a_usage' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='a_name_h_usage_a_usage'><a name="h_usage"></a>Usage</h2>
 <a href='#zero_config' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='zero_config'>Zero Config</h4>
 <pre class="highlight swift"><code><span class="kt">Nuke</span><span class="o">.</span><span class="nf">taskWithURL</span><span class="p">(</span><span class="n">imageURL</span><span class="p">)</span> <span class="p">{</span>
@@ -301,9 +307,9 @@ Advanced Swift framework for loading, processing, caching, displaying and prehea
 <a href='#using_image_response' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='using_image_response'>Using Image Response</h4>
 <pre class="highlight swift"><code><span class="kt">Nuke</span><span class="o">.</span><span class="nf">taskWithRequest</span><span class="p">(</span><span class="n">request</span><span class="p">)</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
     <span class="k">switch</span> <span class="n">response</span> <span class="p">{</span>
-    <span class="k">case</span> <span class="kd">let</span> <span class="o">.</span><span class="kt">Success</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">info</span><span class="p">):</span> 
+    <span class="k">case</span> <span class="kd">let</span> <span class="o">.</span><span class="kt">Success</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">info</span><span class="p">):</span>
         <span class="c1">// Use image and inspect info</span>
-    <span class="k">case</span> <span class="kd">let</span> <span class="o">.</span><span class="kt">Failure</span><span class="p">(</span><span class="n">error</span><span class="p">):</span> 
+    <span class="k">case</span> <span class="kd">let</span> <span class="o">.</span><span class="kt">Failure</span><span class="p">(</span><span class="n">error</span><span class="p">):</span>
         <span class="c1">// Handle error</span>
     <span class="p">}</span>
 <span class="p">}</span><span class="o">.</span><span class="nf">resume</span><span class="p">()</span>
@@ -326,16 +332,15 @@ Advanced Swift framework for loading, processing, caching, displaying and prehea
 </code></pre>
 <a href='#adding_ui_extensions' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='adding_ui_extensions'>Adding UI Extensions</h4>
 
-<p>Nuke makes it extremely easy to add full-featured image loading extensions to UI components
-<code>swift
-extension MKAnnotationView: ImageDisplayingView, ImageLoadingView {
-    // That&#39;s it, you get default implementation of all methods in ImageLoadingView protocol
-    public var nk_image: UIImage? {
-        get { return self.image }
-        set { self.image = newValue }
-    }
-}
-</code></p>
+<p>Nuke makes it extremely easy to add full-featured image loading extensions to UI components</p>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">MKAnnotationView</span><span class="p">:</span> <span class="kt">ImageDisplayingView</span><span class="p">,</span> <span class="kt">ImageLoadingView</span> <span class="p">{</span>
+    <span class="c1">// That's it, you get default implementation of all methods in ImageLoadingView protocol</span>
+    <span class="kd">public</span> <span class="k">var</span> <span class="nv">nk_image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?</span> <span class="p">{</span>
+        <span class="k">get</span> <span class="p">{</span> <span class="k">return</span> <span class="k">self</span><span class="o">.</span><span class="n">image</span> <span class="p">}</span>
+        <span class="k">set</span> <span class="p">{</span> <span class="k">self</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="n">newValue</span> <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
 <a href='#uicollectionview' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='uicollectionview'>UICollectionView</h4>
 <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">collectionView</span><span class="p">(</span><span class="nv">collectionView</span><span class="p">:</span> <span class="kt">UICollectionView</span><span class="p">,</span> <span class="n">cellForItemAtIndexPath</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">NSIndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UICollectionViewCell</span> <span class="p">{</span>
     <span class="k">let</span> <span class="nv">cell</span> <span class="o">=</span> <span class="n">collectionView</span><span class="o">.</span><span class="nf">dequeueReusableCellWithReuseIdentifier</span><span class="p">(</span><span class="n">cellReuseID</span><span class="p">,</span> <span class="nv">forIndexPath</span><span class="p">:</span> <span class="n">indexPath</span><span class="p">)</span>
@@ -421,32 +426,29 @@ extension MKAnnotationView: ImageDisplayingView, ImageLoadingView {
 <a href='#installation_a_name_installation_a' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='installation_a_name_installation_a'>Installation<a name="installation"></a></h2>
 <a href='#a_href_http_cocoapods_org_cocoapods_a' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='a_href_http_cocoapods_org_cocoapods_a'><a href="http://cocoapods.org">CocoaPods</a></h3>
 
-<p>To install Nuke add a dependency to your Podfile:
-&ldquo;`ruby</p>
-<a href='#source_39_a_href_https_github_com_cocoapods_specs_git_https_github_com_cocoapods_specs_git_a_39' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='source_39_a_href_https_github_com_cocoapods_specs_git_https_github_com_cocoapods_specs_git_a_39'>source &rsquo;<a href="https://github.com/CocoaPods/Specs.git">https://github.com/CocoaPods/Specs.git</a>&rsquo;</h1>
-<a href='#use_frameworks' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='use_frameworks'>use_frameworks!</h1>
-<a href='#platform_ios_q_8_0_q_watchos_q_2_0_q_osx_q_10_9_q_tvos_q_9_0_q' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='platform_ios_q_8_0_q_watchos_q_2_0_q_osx_q_10_9_q_tvos_q_9_0_q'>platform :ios, <q>8.0</q> / :watchos, <q>2.0</q> / :osx, <q>10.9</q> / :tvos, <q>9.0</q></h1>
+<p>To install Nuke add a dependency to your Podfile:</p>
+<pre class="highlight ruby"><code><span class="c1"># source 'https://github.com/CocoaPods/Specs.git'</span>
+<span class="c1"># use_frameworks!</span>
+<span class="c1"># platform :ios, "8.0" / :watchos, "2.0" / :osx, "10.9" / :tvos, "9.0"</span>
 
-<p>pod <q>Nuke</q>
-pod <q>Nuke-Alamofire-Plugin</q> # optional
-pod <q>Nuke-AnimatedImage-Plugin</q> # optional
-&rdquo;`</p>
+<span class="n">pod</span> <span class="s2">"Nuke"</span>
+<span class="n">pod</span> <span class="s2">"Nuke-Alamofire-Plugin"</span> <span class="c1"># optional</span>
+<span class="n">pod</span> <span class="s2">"Nuke-AnimatedImage-Plugin"</span> <span class="c1"># optional</span>
+</code></pre>
 <a href='#a_href_https_github_com_carthage_carthage_carthage_a' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='a_href_https_github_com_carthage_carthage_carthage_a'><a href="https://github.com/Carthage/Carthage">Carthage</a></h3>
 
-<p>To install Nuke add a dependency to your Cartfile:
-<code>
-github &quot;kean/Nuke&quot;
-github &quot;kean/Nuke-Alamofire-Plugin&quot; # optional
-github &quot;kean/Nuke-AnimatedImage-Plugin&quot; # optional
-</code></p>
+<p>To install Nuke add a dependency to your Cartfile:</p>
+<pre class="highlight plaintext"><code>github "kean/Nuke"
+github "kean/Nuke-Alamofire-Plugin" # optional
+github "kean/Nuke-AnimatedImage-Plugin" # optional
+</code></pre>
 <a href='#import' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='import'>Import</h3>
 
-<p>Import installed modules in your source files
-<code>swift
-import Nuke
-import NukeAlamofirePlugin
-import NukeAnimatedImagePlugin
-</code></p>
+<p>Import installed modules in your source files</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">Nuke</span>
+<span class="kd">import</span> <span class="kt">NukeAlamofirePlugin</span>
+<span class="kd">import</span> <span class="kt">NukeAnimatedImagePlugin</span>
+</code></pre>
 <a href='#a_name_h_satellite_projects_a_satellite_projects' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='a_name_h_satellite_projects_a_satellite_projects'><a name="h_satellite_projects"></a>Satellite Projects</h2>
 
 <ul>
