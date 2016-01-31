@@ -27,3 +27,9 @@ DerivedData
 
 Pods/
 Podfile.lock
+
+
+.DS_Store
+_site
+.sass-cache
+.jekyll-metadata
