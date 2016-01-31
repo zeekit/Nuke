@@ -306,9 +306,48 @@
      }
  }
 
+// Custom:
+
+.nuke-title {
+    font-size: 100px;
+    font-weight: 200;
+    color: white;
+    padding: 0px 40px 0px 40px;
+    background: linear-gradient(rgb(256, 43, 104), rgb(254, 153, 71));
+    border-radius: 30px;
+    display: inline-block;
+}
 
  p.mini-text {
-     font-size: 18px;
+     font-size: 42px;
+     line-height: 46px;
+     font-weight: 200;
+     color: $grey-color-dark;
      text-align: center;
-     text-transform: uppercase
+     //text-transform: uppercase;
+     margin-bottom: 40px;
  }
+
+.feature-header {
+    text-align: center;
+    font-size: 48px;
+    margin-top: 30px;
+}
+
+.feature-block {
+    align: center;
+    text-align: center;
+    width: 30%;
+    //border: 1px solid red;
+    float: left;
+    margin:10px 0px 10px 0px;
+    font-size: 16px;
+
+    // Gaps between nav items, but not on the last one
+    &:not(:first-child) {
+        margin-left: 10px;
+    }
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
+}

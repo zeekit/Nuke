@@ -3,8 +3,8 @@ layout: default
 ---
 
 <div>
-    <p align="center"><img src="https://cloud.githubusercontent.com/assets/1567433/10440878/a7c6e468-714b-11e5-9b12-baef482c37c1.png" height="100"/>
-    <p class="mini-text">Advanced framework for loading, processing and caching images</p>
+    <div align="center"><p class="nuke-title">Nuke<p></div>
+    <p class="mini-text">Advanced framework for loading, processing, caching and preheating images</p>
 </div>
 
 <div>
@@ -20,4 +20,44 @@ Nuke.taskWithRequest(request) { response in
 }.resume()
 {% endhighlight %}
 
+</div>
+
+<div>
+    <div class="feature-block">
+        <strong>Easy to Use</strong>
+        <p>Zero config and user-friendly. The goal is simplicity. Without compromising on extensibility.</p>
+    </div>
+    <div class="feature-block">
+        <strong>Fast</strong>
+        <p>Performant, asynchronous, and thread-safe.</p>
+    </div>
+    <div class="feature-block">
+        <strong>Extensible</strong>
+        <p> Nuke is a <a href="https://github.com/kean/Nuke#h_design">pipeline</a> that loads images using injectable dependencies. Features optional <a href="https://github.com/kean/Nuke-Alamofire-Plugin">Alamofire</a> and <a href="https://github.com/kean/Nuke-AnimatedImage-Plugin">FLAnimatedImage</a> integrations.</p>
+    </div>
+</div>
+
+<div>
+<h1 class="feature-header">Features</h1>
+
+<h2>Loading</h2>
+<ul>
+    <li>Uses <a href="https://developer.apple.com/library/ios/documentation/Foundation/Reference/NSURLSession_class/">NSURLSession</a> with <a href="https://en.wikipedia.org/wiki/HTTP/2">HTTP/2</a> support</li>
+    <li>A single data task used for multiple equivalent requests</li>
+    <li>Automated <a href="http://kean.github.io/blog/programming/2015/12/12/image-preheating.html">preheating</a> of images close to the viewport</li>
+    <li>Full featured extensions for UI components</li>
+</ul>
+
+<h2>Caching</h2>
+<ul>
+    <li><a href="https://kean.github.io/blog/programming/2016/01/26/image-caching.html">Doesn't reinvent caching</a>, relies on HTTP cache in URL Loading System</li>
+    <li>Two cache layers including auto purging memory cache for decompressed images</li>
+</ul>
+
+<h2>Processing</h2>
+<ul>
+    <li>Create, compose and apply image filters</li>
+    <li>Background image decompression and scaling in a single step</li>
+    <li>Resize loaded images to <a href="https://developer.apple.com/library/ios/qa/qa1708/_index.html">fit displayed size</a></li>
+</ul>
 </div>
