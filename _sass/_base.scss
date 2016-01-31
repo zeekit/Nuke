@@ -37,8 +37,6 @@ ul, ol, dl, figure,
     margin-bottom: $spacing-unit / 2;
 }
 
-
-
 /**
  * Images
  */
@@ -127,11 +125,11 @@ blockquote {
 pre,
 code {
     font-family: Menlo, Courier, Consolas, "Liberation Mono", monospace;
-    font-size: 13px;
-    line-height: 17px;
+    font-size: 14px;
+    line-height: 18px;
     border: 1px solid $grey-color-light;
     border-radius: 3px;
-    background-color: #F4F5F6;
+    background-color: #F9F9F9;
 }
 
 code {
@@ -204,7 +202,7 @@ pre {
     }
 }
 
-/** 
+/**
  *Share page
  */
 .share-page {

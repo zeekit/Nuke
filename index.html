@@ -2,22 +2,22 @@
 layout: default
 ---
 
-<div class="home">
+<div>
+    <p align="center"><img src="https://cloud.githubusercontent.com/assets/1567433/10440878/a7c6e468-714b-11e5-9b12-baef482c37c1.png" height="100"/>
+    <p class="mini-text">Advanced framework for loading, processing, caching and preheating images</p>
+</div>
 
-  <h1 class="page-heading">Posts</h1>
+<div>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+{% highlight swift %}
+let imageURL = NSURL(string: "http://...")
+var request = ImageRequest(URLRequest: NSURLRequest(URL: imageURL))
+request.targetSize = CGSize(width: 200, height: 200) // Resize image
+request.processor = <#ImageProcessing#> // Apply image filters
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+Nuke.taskWithRequest(request) { response in
+    let image = response.image
+}.resume()
+{% endhighlight %}
 
 </div>

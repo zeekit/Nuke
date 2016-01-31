@@ -3,7 +3,7 @@
  */
 .site-header {
     min-height: 56px;
-    background-color: rgba(241, 241, 241, 0.6);
+    background-color: rgba(241, 241, 241, 1);
 
     // Positioning context for the mobile navigation icon
     position: relative;
@@ -304,4 +304,11 @@
      > li:first-child {
          border-top: none;
      }
+ }
+
+
+ p.mini-text {
+     font-size: 14px;
+     text-align: center;
+     text-transform: uppercase
  }
