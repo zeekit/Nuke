@@ -170,6 +170,8 @@ func collectionView(collectionView: UICollectionView, didEndDisplayingCell cell:
 
 ## Applying Filters
 
+Nuke defines a simple `ImageProcessing` protocol that allows you to create custom image filters. It requires just a couple line of code to create [filters on top of Core Image](https://github.com/kean/Nuke/wiki/Core-Image-Integration-Guide). You can also easily compose multiple filters together using `ImageProcessorComposition` class.
+
 {% highlight swift %}
 let filter1: ImageProcessing = <#filter#>
 let filter2: ImageProcessing = <#filter#>
@@ -184,15 +186,32 @@ Nuke.taskWith(request) {
 }.resume()
 {% endhighlight %}
 
-## Composing Filters
+## Creating Filters
+
+Here's an example of custom image filter implemented on top of [Core Image](https://github.com/kean/Nuke/wiki/Core-Image-Integration-Guide):
 
 {% highlight swift %}
-let processor1: ImageProcessing = <#processor#>
-let processor2: ImageProcessing = <#processor#>
-let composition = ImageProcessorComposition(processors: [processor1, processor2])
+public class ImageFilterGaussianBlur: ImageProcessing {
+    public let radius: Int
+    public init(radius: Int = 8) {
+        self.radius = radius
+    }
+
+    public func process(image: UIImage) -> UIImage? {
+        return image.applyFilter(CIFilter(name: "CIGaussianBlur", withInputParameters: ["inputRadius" : self.radius]))
+    }
+}
+
+// We need to be able to compare filters for equivalence to cache processed images
+// Default implementation returns `true` if both filters are of the same class
+public func ==(lhs: ImageFilterGaussianBlur, rhs: ImageFilterGaussianBlur) -> Bool {
+    return lhs.radius == rhs.radius
+}
 {% endhighlight %}
 
 ## Preheating Images
+
+[Preheating](http://kean.github.io/blog/programming/2015/12/12/image-preheating.html) is an effective way to improve user experience in applications that display collections of images. Preheating means loading and caching images that might soon appear on the display. Nuke provides a set of self-explanatory methods for image preheating which are inspired by [PHImageManager](https://developer.apple.com/library/prerelease/ios/documentation/Photos/Reference/PHImageManager_Class/index.html):
 
 {% highlight swift %}
 let requests = [ImageRequest(URL: imageURL1), ImageRequest(URL: imageURL2)]
@@ -202,12 +221,16 @@ Nuke.stopPreheatingImages(requests: requests)
 
 ## Automate Preheating
 
+Nuke also automates a process of determining which images in collection to preheat and when. There are two corresponding classes (one for `UICollectionView`, one for `UITableView`). For more info about them see [Image Preheating Guide](http://kean.github.io/blog/programming/2015/12/12/image-preheating.html).
+
 {% highlight swift %}
 let preheater = ImagePreheatingControllerForCollectionView(collectionView: <#collectionView#>)
-preheater.delegate = self // Signals when preheat window changes
+preheater.delegate = self // Signals when preheat index paths change
 {% endhighlight %}
 
 ## Customizing Image Manager
+
+`Nuke.taskWith(_:)` family of functions are just shortcuts for methods on `ImageManager` class. One of the greatest things about Nuke is that it is [a pipeline](https://github.com/kean/Nuke#h_design) that loads images using injectable dependencies. There are multiple protocols and implementations that you can use to customize that pipeline:
 
 {% highlight swift %}
 let dataLoader: ImageDataLoading = <#dataLoader#>

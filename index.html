@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-
 <div>
     <div align="center"><p class="nuke-title">Nuke<p></div>
     <p class="mini-text">Advanced framework for loading, processing, caching and <a href="http://kean.github.io/blog/programming/2015/12/12/image-preheating.html">preheating</a> images</p>
@@ -10,8 +9,7 @@ layout: default
 <div>
 
 {% highlight swift %}
-let imageURL = NSURL(string: "http://...")
-var request = ImageRequest(URLRequest: NSURLRequest(URL: imageURL))
+var request = ImageRequest(URL: NSURL(string: "http://..."))
 request.targetSize = CGSize(width: 200, height: 200) // Resize image
 request.processor = <#ImageProcessing#> // Apply image filters
 
@@ -20,6 +18,11 @@ Nuke.taskWith(request) { response in
 }.resume()
 {% endhighlight %}
 
+</div>
+
+<div style="margin-bottom:30px" align="center">
+        <iframe src="https://ghbtns.com/github-btn.html?user=kean&repo=Nuke&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+        <iframe src="https://ghbtns.com/github-btn.html?user=kean&type=follow&count=false&size=large" frameborder="0" scrolling="0" width="150px" height="30px"></iframe>
 </div>
 
 <div>
