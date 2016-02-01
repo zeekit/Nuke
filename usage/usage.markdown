@@ -2,7 +2,7 @@
 layout: page
 title: Usage
 permalink: /usage/
-weight: 2
+weight: 1
 ---
 
 * Table of Contents
