@@ -5,6 +5,9 @@ permalink: /usage/
 weight: 2
 ---
 
+* Table of Contents
+{:toc}
+
 ## Zero Config
 
 Loading an image is as simple as creating and resuming an `ImageTask`. Nuke is thread safe, you can freely create and resume tasks in any thread.

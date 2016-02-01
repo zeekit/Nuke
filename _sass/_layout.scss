@@ -251,6 +251,7 @@
 
     h2 {
         font-size: 32px;
+        border-bottom: 1px solid #eee;
 
         @include media-query($on-laptop) {
             font-size: 28px;
@@ -343,6 +344,13 @@
     margin-top: 30px;
 }
 
+.feature-divider {
+    margin: 30px 0;
+    border-top: 1px solid #eeeeee;
+    transform: scaleY(0.5);
+    width: 100%;
+}
+
 .feature-block {
     align: center;
     text-align: center;
@@ -368,5 +376,17 @@
     }
     &:not(:last-child) {
         margin-right: 10px;
+    }
+}
+
+
+#markdown-toc {
+    column-count: 3;
+    column-gap: 2.5em;
+    list-style: square;
+    color: #bbb;
+
+    @include media-query($on-palm) {
+        column-count: 1;
     }
 }
