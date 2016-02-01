@@ -4,7 +4,7 @@ layout: default
 
 <div>
     <div align="center"><p class="nuke-title">Nuke<p></div>
-    <p class="mini-text">Advanced framework for loading, processing, caching and preheating images</p>
+    <p class="mini-text">Advanced framework for loading, processing, caching and <a href="http://kean.github.io/blog/programming/2015/12/12/image-preheating.html">preheating</a> images</p>
 </div>
 
 <div>
@@ -15,7 +15,7 @@ var request = ImageRequest(URLRequest: NSURLRequest(URL: imageURL))
 request.targetSize = CGSize(width: 200, height: 200) // Resize image
 request.processor = <#ImageProcessing#> // Apply image filters
 
-Nuke.taskWithRequest(request) { response in
+Nuke.taskWith(request) { response in
     let image = response.image
 }.resume()
 {% endhighlight %}
@@ -33,7 +33,7 @@ Nuke.taskWithRequest(request) { response in
     </div>
     <div class="feature-block">
         <strong>Extensible</strong>
-        <p> Nuke is a <a href="https://github.com/kean/Nuke#h_design">pipeline</a> that loads images using injectable dependencies. Features optional <a href="https://github.com/kean/Nuke-Alamofire-Plugin">Alamofire</a> and <a href="https://github.com/kean/Nuke-AnimatedImage-Plugin">FLAnimatedImage</a> integrations.</p>
+        <p> Nuke is a <a href="https://github.com/kean/Nuke#h_design">pipeline</a> with injectable dependencies. Optional <a href="https://github.com/kean/Nuke-Alamofire-Plugin">Alamofire</a> and <a href="https://github.com/kean/Nuke-AnimatedImage-Plugin">FLAnimatedImage</a> integrations.</p>
     </div>
 </div>
 
@@ -43,7 +43,9 @@ Nuke.taskWithRequest(request) { response in
 <h2>Loading</h2>
 <ul>
     <li>Uses <a href="https://developer.apple.com/library/ios/documentation/Foundation/Reference/NSURLSession_class/">NSURLSession</a> with <a href="https://en.wikipedia.org/wiki/HTTP/2">HTTP/2</a> support</li>
-    <li>A single data task used for multiple equivalent requests</li>
+    <li>Install <a href="https://github.com/kean/Nuke-Alamofire-Plugin">Alamofire plugin</a> or integrate your own networking with a couple lines of code</li>
+    <li>A single data task is used for multiple equivalent requests</li>
+    <li>Congestion control that prevents trashing the system with requests during fast scrolling</li>
     <li>Automated <a href="http://kean.github.io/blog/programming/2015/12/12/image-preheating.html">preheating</a> of images close to the viewport</li>
     <li>Full featured extensions for UI components</li>
 </ul>
@@ -51,7 +53,8 @@ Nuke.taskWithRequest(request) { response in
 <h2>Caching</h2>
 <ul>
     <li><a href="https://kean.github.io/blog/programming/2016/01/26/image-caching.html">Doesn't reinvent caching</a>, relies on HTTP cache in URL Loading System</li>
-    <li>Two cache layers including auto purging memory cache for decompressed images</li>
+    <li>Two cache layers including auto-purging memory cache for processed images</li>
+    <li>Intellegent control over memory cache</li>
 </ul>
 
 <h2>Processing</h2>
@@ -60,4 +63,35 @@ Nuke.taskWithRequest(request) { response in
     <li>Background image decompression and scaling in a single step</li>
     <li>Resize loaded images to <a href="https://developer.apple.com/library/ios/qa/qa1708/_index.html">fit displayed size</a></li>
 </ul>
+</div>
+
+<div>
+<h1 class="feature-header">Installation</h1>
+
+<p><strong style="font-weight: 400;">Supported platforms</strong>: iOS 8.0+ <span class="nuke-span">/</span> watchOS 2.0+ <span class="nuke-span">/</span> OS X 10.9+ <span class="nuke-span">/</span> tvOS 9.0+</p>
+
+<h2><a href="http://cocoapods.org">CocoaPods</a></h2>
+
+<p>To install Nuke add a dependency to your Podfile:</p>
+
+{% highlight ruby %}
+# source 'https://github.com/CocoaPods/Specs.git'
+# use_frameworks!
+# platform :ios, "8.0" / :watchos, "2.0" / :osx, "10.9" / :tvos, "9.0"
+
+pod "Nuke"
+pod "Nuke-Alamofire-Plugin" # optional
+pod "Nuke-AnimatedImage-Plugin" # optional
+{% endhighlight %}
+
+<h2><a href="https://github.com/Carthage/Carthage)">Carthage</a></h2>
+
+<p>To install Nuke add a dependency to your Cartfile:</p>
+
+{% highlight ruby %}
+github "kean/Nuke"
+github "kean/Nuke-Alamofire-Plugin" # optional
+github "kean/Nuke-AnimatedImage-Plugin" # optional
+{% endhighlight %}
+
 </div>
