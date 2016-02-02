@@ -31,7 +31,7 @@ request.targetSize = CGSize(width: 300.0, height: 400.0) // Set target size in p
 request.contentMode = .AspectFill
 
 // Set filters (more on filters later)
-request.processor = YourBlurImageFilter()
+request.processor = ImageFilterGaussianBlur()
 
 // Control memory caching
 request.memoryCacheStorageAllowed = true // true is default
