@@ -2,11 +2,18 @@
     font-size: 100px;
     font-weight: 200;
     color: white;
-    margin-top: 15px;
+    margin: 15px 0 15px 0;
     padding: 0px 40px 0px 40px;
     background: linear-gradient(rgb(256, 43, 104), rgb(254, 153, 71));
     border-radius: 30px;
     display: inline-block;
+
+    @include media-query($on-palm) {
+        font-size: 80px;
+        line-height: 1.4;
+        padding: 0px 40px 0px 40px;
+        margin: 0px 0 5px 0;
+    }
 }
 
 .home-description {
@@ -15,8 +22,13 @@
     font-weight: 200;
     color: $grey-color-dark;
     text-align: center;
-    //text-transform: uppercase;
     margin-bottom: 40px;
+
+    @include media-query($on-palm) {
+        font-size: 32px;
+        line-height: 34px;
+        margin-bottom: 20px;
+    }
 }
 
 .featurette-header {

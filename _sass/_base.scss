@@ -123,6 +123,12 @@ code {
     border: 0.5px solid $grey-color-light;
     border-radius: 4px;
     background-color: #F9F9F9;
+
+    @include media-query($on-palm) {
+        font-size: 12px;
+        line-height: 17px;
+        overflow: auto;
+    }
 }
 
 code {
@@ -193,6 +199,18 @@ pre {
 }
 
 
-span {
+.branded-span {
     color: $brand-color;
+}
+
+
+#markdown-toc {
+    column-count: 3;
+    column-gap: 2.5em;
+    list-style: square;
+    color: #bbb;
+
+    @include media-query($on-palm) {
+        column-count: 1;
+    }
 }
