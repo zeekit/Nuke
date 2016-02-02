@@ -2,8 +2,8 @@
 layout: default
 ---
 <div>
-    <div align="center"><p class="nuke-title">Nuke<p></div>
-    <p class="mini-text">Advanced framework for loading, processing, caching and <a href="http://kean.github.io/blog/programming/2015/12/12/image-preheating.html">preheating</a> images</p>
+    <div align="center"><p class="home-title">Nuke<p></div>
+    <p class="home-description">Advanced framework for loading, processing, caching and <a href="http://kean.github.io/blog/programming/2015/12/12/image-preheating.html">preheating</a> images</p>
 </div>
 
 <div>
@@ -11,7 +11,7 @@ layout: default
 {% highlight swift %}
 var request = ImageRequest(URL: NSURL(string: "http://..."))
 request.targetSize = CGSize(width: 200, height: 200) // Resize image
-request.processor = <#ImageProcessing#> // Apply image filters
+request.processor = ImageFilterGaussianBlur() // Apply image filters
 
 Nuke.taskWith(request) { response in
     let image = response.image
@@ -30,24 +30,24 @@ Nuke.taskWith(request) { response in
 </div>
 
 <div>
-    <div class="feature-block">
+    <div class="featurette-block">
         <strong>Easy to Use</strong>
         <p>Zero config and user-friendly. The goal is simplicity. Without compromising on extensibility.</p>
     </div>
-    <div class="feature-block">
+    <div class="featurette-block">
         <strong>Fast</strong>
         <p>Performant, asynchronous, and fully thread-safe.</p>
     </div>
-    <div class="feature-block">
+    <div class="featurette-block">
         <strong>Extensible</strong>
         <p> Nuke is a <a href="https://github.com/kean/Nuke#h_design">pipeline</a> with injectable dependencies. Has <a href="https://github.com/kean/Nuke-Alamofire-Plugin">Alamofire</a> and <a href="https://github.com/kean/Nuke-AnimatedImage-Plugin">FLAnimatedImage</a> plugins.</p>
     </div>
 </div>
 
-<hr class="feature-divider">
+<hr class="featurette-divider">
 
 <div>
-<h1 class="feature-header">Features</h1>
+<h1 class="featurette-header">Features</h1>
 
 <h2 style="margin-top: 0px;">Loading</h2>
 <ul>
@@ -75,12 +75,12 @@ Nuke.taskWith(request) { response in
 </ul>
 </div>
 
-<hr class="feature-divider"/>
+<hr class="featurette-divider"/>
 
 <div>
-<h1 class="feature-header">Installation</h1>
+<h1 class="featurette-header">Installation</h1>
 
-<p><strong style="font-weight: 400;">Supported platforms</strong>: iOS 8.0+ <span class="nuke-span">/</span> watchOS 2.0+ <span class="nuke-span">/</span> OS X 10.9+ <span class="nuke-span">/</span> tvOS 9.0+</p>
+<p><strong style="font-weight: 400;">Supported platforms</strong>: iOS 8.0+ <span class="branded-span">/</span> watchOS 2.0+ <span class="branded-span">/</span> OS X 10.9+ <span class="branded-span">/</span> tvOS 9.0+</p>
 
 <h2><a href="http://cocoapods.org">CocoaPods</a></h2>
 

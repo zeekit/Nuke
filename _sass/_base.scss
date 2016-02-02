@@ -9,7 +9,6 @@ dl, dd, ol, ul, figure {
 }
 
 
-
 /**
  * Basic styling
  */
@@ -25,6 +24,7 @@ body {
     font-kerning: normal;
 }
 
+
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
@@ -35,6 +35,7 @@ ul, ol, dl, figure,
     margin-bottom: $spacing-unit / 2;
 }
 
+
 /**
  * Images
  */
@@ -42,7 +43,6 @@ img {
     max-width: 100%;
     vertical-align: middle;
 }
-
 
 
 /**
@@ -55,7 +55,6 @@ figure > img {
 figcaption {
     font-size: $small-font-size;
 }
-
 
 
 /**
@@ -73,14 +72,12 @@ li {
 }
 
 
-
 /**
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
     font-weight: $base-font-weight;
 }
-
 
 
 /**
@@ -100,7 +97,6 @@ a {
 }
 
 
-
 /**
  * Blockquotes
  */
@@ -114,7 +110,6 @@ blockquote {
         margin-bottom: 0;
     }
 }
-
 
 
 /**
@@ -146,7 +141,6 @@ pre {
 }
 
 
-
 /**
  * Wrapper
  */
@@ -168,7 +162,6 @@ pre {
 }
 
 
-
 /**
  * Clearfix
  */
@@ -180,7 +173,6 @@ pre {
         clear: both;
     }
 }
-
 
 
 /**
@@ -200,22 +192,7 @@ pre {
     }
 }
 
-/**
- *Share page
- */
-.share-page {
-    text-align: center;
-    padding: 8px 12px;
-    border-radius: 5px;
-    background-color: lighten($grey-color, 45%);
-    margin: 1 * $spacing-unit 0;
 
-    a {
-        font-weight: 400;
-        margin-left: 10px;
-
-        &:hover {
-            border-bottom: 1px dashed #fff;
-        }
-    }
+span {
+    color: $brand-color;
 }
