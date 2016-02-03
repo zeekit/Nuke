@@ -74,8 +74,8 @@
 
 .featurette-block {
     text-align: center;
-    width: 240px;
-    margin: 0px 8px 0px 8px;
+    width: 250px;
+    margin: 0 4px;
 
     strong {
         font-weight: 400;
@@ -84,6 +84,11 @@
 
     p {
         margin-top: 10px;
+    }
+
+    @include media-query($on-palm) {
+        width: 100%;
+        margin: 0;
     }
 }
 
