@@ -1,0 +1,17 @@
+---
+layout: page
+title: Docs
+permalink: /docs/
+weight: 3
+---
+
+- API reference: [iOS](http://kean.github.io/Nuke/docs/ios/) / [OSX](http://kean.github.io/Nuke/docs/osx/) / [tvOS](http://kean.github.io/Nuke/docs/tvos/) / [watchOS](http://kean.github.io/Nuke/docs/watchos/)
+- [FAQ](https://github.com/kean/Nuke/wiki/FAQ)
+
+
+
+### Articles
+
+- [Image Caching Guide](http://outscope.net/blog/image-caching)
+- [Image Preheating Guide](http://outscope.net/blog/image-preheating)
+- [Core Image Integration Guide](https://github.com/kean/Nuke/wiki/Core-Image-Integration-Guide)
