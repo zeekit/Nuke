@@ -6,9 +6,9 @@ weight: 3
 ---
 
 - API reference: [iOS](http://kean.github.io/Nuke/docs/ios/) / [OSX](http://kean.github.io/Nuke/docs/osx/) / [tvOS](http://kean.github.io/Nuke/docs/tvos/) / [watchOS](http://kean.github.io/Nuke/docs/watchos/)
+- [Usage](http://kean.github.io/Nuke/usage/)
+- [Plugins](http://kean.github.io/Nuke/plugins/)
 - [FAQ](https://github.com/kean/Nuke/wiki/FAQ)
-
-
 
 ### Articles
 
