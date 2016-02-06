@@ -14,7 +14,7 @@
     <a title="ImageLoadingManager Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Nuke Docs</a> (49% documented)</p>
+        <p><a href="../index.html">Nuke Docs</a> (71% documented)</p>
         <p class="header-right"><a href="https://github.com/kean/Nuke"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -65,9 +65,6 @@
                 <a href="../Classes/ImageRequestKey.html">ImageRequestKey</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/ImageResponseInfo.html">ImageResponseInfo</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Classes/ImageTask.html">ImageTask</a>
               </li>
               <li class="nav-group-task">
@@ -79,13 +76,7 @@
             <a href="../Global Variables.html">Global Variables</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Global Variables.html#/s:v4Nuke26ImageManagerErrorCancelledSi">ImageManagerErrorCancelled</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Global Variables.html#/s:v4Nuke23ImageManagerErrorDomainSS">ImageManagerErrorDomain</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Global Variables.html#/s:v4Nuke24ImageManagerErrorUnknownSi">ImageManagerErrorUnknown</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Global Variables.html#/s:v4Nuke16ImageMaximumSizeVSC6CGSize">ImageMaximumSize</a>
@@ -100,6 +91,12 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Enums/ImageContentMode.html">ImageContentMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ImageManagerErrorCode.html">ImageManagerErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ImageRequestMemoryCachePolicy.html">ImageRequestMemoryCachePolicy</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/ImageResponse.html">ImageResponse</a>
@@ -133,9 +130,6 @@
                 <a href="../Functions.html#/s:ZF4Nukeoi2eeFTCS_9ImageTaskS0__Sb">==(_:_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:F4Nuke20equivalentProcessorsFTGSqPS_15ImageProcessing__3rhsGSqPS0____Sb">equivalentProcessors(_:rhs:)</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Functions.html#/s:F4Nuke21startPreheatingImagesFGSaVS_12ImageRequest_T_">startPreheatingImages(_:)</a>
               </li>
               <li class="nav-group-task">
@@ -145,10 +139,10 @@
                 <a href="../Functions.html#/s:F4Nuke20stopPreheatingImagesFGSaVS_12ImageRequest_T_">stopPreheatingImages(_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:F4Nuke15taskWithRequestFTVS_12ImageRequest10completionGSqFOS_13ImageResponseT___CS_9ImageTask">taskWithRequest(_:completion:)</a>
+                <a href="../Functions.html#/s:F4Nuke8taskWithFTVS_12ImageRequest10completionGSqFOS_13ImageResponseT___CS_9ImageTask">taskWith(_:completion:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:F4Nuke11taskWithURLFTCSo5NSURL10completionGSqFOS_13ImageResponseT___CS_9ImageTask">taskWithURL(_:completion:)</a>
+                <a href="../Functions.html#/s:F4Nuke8taskWithFTCSo5NSURL10completionGSqFOS_13ImageResponseT___CS_9ImageTask">taskWith(_:completion:)</a>
               </li>
             </ul>
           </li>
@@ -200,6 +194,12 @@
                 <a href="../Structs/ImageRequest.html">ImageRequest</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Structs/ImageResponseInfo.html">ImageResponseInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageTaskProgress.html">ImageTaskProgress</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Structs/ImageViewLoadingOptions.html">ImageViewLoadingOptions</a>
               </li>
             </ul>
@@ -225,9 +225,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FP4Nuke19ImageLoadingManager11imageLoaderuRq_S0__Fq_FTPS_12ImageLoading_4taskCS_9ImageTask39didUpdateProgressWithCompletedUnitCountVSs5Int6414totalUnitCountS3__T_"></a>
-                    <a name="//apple_ref/swift/Method/imageLoader(_:task:didUpdateProgressWithCompletedUnitCount:totalUnitCount:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FP4Nuke19ImageLoadingManager11imageLoaderuRq_S0__Fq_FTPS_12ImageLoading_4taskCS_9ImageTask39didUpdateProgressWithCompletedUnitCountVSs5Int6414totalUnitCountS3__T_">imageLoader(_:task:didUpdateProgressWithCompletedUnitCount:totalUnitCount:)</a>
+                    <a name="/s:FP4Nuke19ImageLoadingManager6loaderuRq_S0__Fq_FTPS_12ImageLoading_4taskCS_9ImageTask17didUpdateProgressVS_17ImageTaskProgress_T_"></a>
+                    <a name="//apple_ref/swift/Method/loader(_:task:didUpdateProgress:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP4Nuke19ImageLoadingManager6loaderuRq_S0__Fq_FTPS_12ImageLoading_4taskCS_9ImageTask17didUpdateProgressVS_17ImageTaskProgress_T_">loader(_:task:didUpdateProgress:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -235,19 +235,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Sent periodically to notify delegate of task progress.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ImageLoadingManager</span><span class="p">:</span> <span class="kd">class</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">loader</span><span class="p">(</span><span class="nv">loader</span><span class="p">:</span> <span class="kt">ImageLoading</span><span class="p">,</span> <span class="nv">task</span><span class="p">:</span> <span class="kt">ImageTask</span><span class="p">,</span> <span class="n">didUpdateProgress</span> <span class="nv">progress</span><span class="p">:</span> <span class="kt">ImageTaskProgress</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/1.4.0/Nuke/Source/Core/ImageLoader.swift#L0">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/2.0.0/Nuke/Source/Core/ImageLoader.swift#L48">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -255,9 +255,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FP4Nuke19ImageLoadingManager11imageLoaderuRq_S0__Fq_FTPS_12ImageLoading_4taskCS_9ImageTask20didCompleteWithImageGSqCSo7NSImage_5errorGSqPSs9ErrorType__8userInfoGSqP___T_"></a>
-                    <a name="//apple_ref/swift/Method/imageLoader(_:task:didCompleteWithImage:error:userInfo:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FP4Nuke19ImageLoadingManager11imageLoaderuRq_S0__Fq_FTPS_12ImageLoading_4taskCS_9ImageTask20didCompleteWithImageGSqCSo7NSImage_5errorGSqPSs9ErrorType__8userInfoGSqP___T_">imageLoader(_:task:didCompleteWithImage:error:userInfo:)</a>
+                    <a name="/s:FP4Nuke19ImageLoadingManager6loaderuRq_S0__Fq_FTPS_12ImageLoading_4taskCS_9ImageTask20didCompleteWithImageGSqCSo7NSImage_5errorGSqPSs9ErrorType__8userInfoGSqP___T_"></a>
+                    <a name="//apple_ref/swift/Method/loader(_:task:didCompleteWithImage:error:userInfo:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP4Nuke19ImageLoadingManager6loaderuRq_S0__Fq_FTPS_12ImageLoading_4taskCS_9ImageTask20didCompleteWithImageGSqCSo7NSImage_5errorGSqPSs9ErrorType__8userInfoGSqP___T_">loader(_:task:didCompleteWithImage:error:userInfo:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -265,19 +265,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Send when loading for task is completed.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ImageLoadingManager</span><span class="p">:</span> <span class="kd">class</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">loader</span><span class="p">(</span><span class="nv">loader</span><span class="p">:</span> <span class="kt">ImageLoading</span><span class="p">,</span> <span class="nv">task</span><span class="p">:</span> <span class="kt">ImageTask</span><span class="p">,</span> <span class="n">didCompleteWithImage</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">Image</span><span class="p">?,</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">ErrorType</span><span class="p">?,</span> <span class="nv">userInfo</span><span class="p">:</span> <span class="kt">Any</span><span class="p">?)</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/1.4.0/Nuke/Source/Core/ImageLoader.swift#L0">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/2.0.0/Nuke/Source/Core/ImageLoader.swift#L52">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -287,7 +287,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://github.com/kean" target="_blank" rel="external">kean</a>. All rights reserved. (Last updated: 2016-01-27)</p>
+          <p>&copy; 2016 <a class="link" href="https://github.com/kean" target="_blank" rel="external">kean</a>. All rights reserved. (Last updated: 2016-02-06)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

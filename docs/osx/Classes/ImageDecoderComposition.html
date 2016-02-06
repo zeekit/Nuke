@@ -14,7 +14,7 @@
     <a title="ImageDecoderComposition Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Nuke Docs</a> (49% documented)</p>
+        <p><a href="../index.html">Nuke Docs</a> (71% documented)</p>
         <p class="header-right"><a href="https://github.com/kean/Nuke"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -65,9 +65,6 @@
                 <a href="../Classes/ImageRequestKey.html">ImageRequestKey</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/ImageResponseInfo.html">ImageResponseInfo</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Classes/ImageTask.html">ImageTask</a>
               </li>
               <li class="nav-group-task">
@@ -79,13 +76,7 @@
             <a href="../Global Variables.html">Global Variables</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Global Variables.html#/s:v4Nuke26ImageManagerErrorCancelledSi">ImageManagerErrorCancelled</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Global Variables.html#/s:v4Nuke23ImageManagerErrorDomainSS">ImageManagerErrorDomain</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Global Variables.html#/s:v4Nuke24ImageManagerErrorUnknownSi">ImageManagerErrorUnknown</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Global Variables.html#/s:v4Nuke16ImageMaximumSizeVSC6CGSize">ImageMaximumSize</a>
@@ -100,6 +91,12 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Enums/ImageContentMode.html">ImageContentMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ImageManagerErrorCode.html">ImageManagerErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ImageRequestMemoryCachePolicy.html">ImageRequestMemoryCachePolicy</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/ImageResponse.html">ImageResponse</a>
@@ -133,9 +130,6 @@
                 <a href="../Functions.html#/s:ZF4Nukeoi2eeFTCS_9ImageTaskS0__Sb">==(_:_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:F4Nuke20equivalentProcessorsFTGSqPS_15ImageProcessing__3rhsGSqPS0____Sb">equivalentProcessors(_:rhs:)</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Functions.html#/s:F4Nuke21startPreheatingImagesFGSaVS_12ImageRequest_T_">startPreheatingImages(_:)</a>
               </li>
               <li class="nav-group-task">
@@ -145,10 +139,10 @@
                 <a href="../Functions.html#/s:F4Nuke20stopPreheatingImagesFGSaVS_12ImageRequest_T_">stopPreheatingImages(_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:F4Nuke15taskWithRequestFTVS_12ImageRequest10completionGSqFOS_13ImageResponseT___CS_9ImageTask">taskWithRequest(_:completion:)</a>
+                <a href="../Functions.html#/s:F4Nuke8taskWithFTVS_12ImageRequest10completionGSqFOS_13ImageResponseT___CS_9ImageTask">taskWith(_:completion:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:F4Nuke11taskWithURLFTCSo5NSURL10completionGSqFOS_13ImageResponseT___CS_9ImageTask">taskWithURL(_:completion:)</a>
+                <a href="../Functions.html#/s:F4Nuke8taskWithFTCSo5NSURL10completionGSqFOS_13ImageResponseT___CS_9ImageTask">taskWith(_:completion:)</a>
               </li>
             </ul>
           </li>
@@ -200,6 +194,12 @@
                 <a href="../Structs/ImageRequest.html">ImageRequest</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Structs/ImageResponseInfo.html">ImageResponseInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageTaskProgress.html">ImageTaskProgress</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Structs/ImageViewLoadingOptions.html">ImageViewLoadingOptions</a>
               </li>
             </ul>
@@ -218,8 +218,6 @@
               </div>
             <p>Composes multiple image decoders.</p>
 
-<p>Decoders are applied in an order in which they are present in the decoders array. The decoding stops when one of the decoders produces an image.</p>
-
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -237,19 +235,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Image decoders that the receiver was initialized with.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ImageDecoderComposition</span><span class="p">:</span> <span class="kt">ImageDecoding</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">decoders</span><span class="p">:</span> <span class="p">[</span><span class="kt">ImageDecoding</span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/1.4.0/Nuke/Source/Core/ImageDecoder.swift#L0">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/2.0.0/Nuke/Source/Core/ImageDecoder.swift#L58">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -267,19 +265,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Composes multiple image decoders.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ImageDecoderComposition</span><span class="p">:</span> <span class="kt">ImageDecoding</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">decoders</span><span class="p">:</span> <span class="p">[</span><span class="kt">ImageDecoding</span><span class="p">])</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/1.4.0/Nuke/Source/Core/ImageDecoder.swift#L51-L53">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/2.0.0/Nuke/Source/Core/ImageDecoder.swift#L62-L64">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -287,9 +285,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC4Nuke23ImageDecoderComposition13imageWithDataFS0_FCSo6NSDataGSqCSo7NSImage_"></a>
-                    <a name="//apple_ref/swift/Method/imageWithData(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC4Nuke23ImageDecoderComposition13imageWithDataFS0_FCSo6NSDataGSqCSo7NSImage_">imageWithData(_:)</a>
+                    <a name="/s:FC4Nuke23ImageDecoderComposition6decodeFS0_FTCSo6NSData8responseGSqCSo13NSURLResponse__GSqCSo7NSImage_"></a>
+                    <a name="//apple_ref/swift/Method/decode(_:response:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC4Nuke23ImageDecoderComposition6decodeFS0_FTCSo6NSData8responseGSqCSo13NSURLResponse__GSqCSo7NSImage_">decode(_:response:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -297,19 +295,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Decoders are applied in an order in which they are present in the decoders array. The decoding stops when one of the decoders produces an image.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ImageDecoderComposition</span><span class="p">:</span> <span class="kt">ImageDecoding</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">decode</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="kt">NSData</span><span class="p">,</span> <span class="nv">response</span><span class="p">:</span> <span class="kt">NSURLResponse</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Image</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/1.4.0/Nuke/Source/Core/ImageDecoder.swift#L55-L62">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/2.0.0/Nuke/Source/Core/ImageDecoder.swift#L68-L75">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -319,7 +317,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://github.com/kean" target="_blank" rel="external">kean</a>. All rights reserved. (Last updated: 2016-01-27)</p>
+          <p>&copy; 2016 <a class="link" href="https://github.com/kean" target="_blank" rel="external">kean</a>. All rights reserved. (Last updated: 2016-02-06)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

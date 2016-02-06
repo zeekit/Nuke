@@ -13,7 +13,7 @@
     <a title="Nuke  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">Nuke Docs</a> (51% documented)</p>
+        <p><a href="index.html">Nuke Docs</a> (75% documented)</p>
         <p class="header-right"><a href="https://github.com/kean/Nuke"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -64,9 +64,6 @@
                 <a href="Classes/ImageRequestKey.html">ImageRequestKey</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/ImageResponseInfo.html">ImageResponseInfo</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Classes/ImageTask.html">ImageTask</a>
               </li>
             </ul>
@@ -75,13 +72,7 @@
             <a href="Global Variables.html">Global Variables</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Global Variables.html#/s:v4Nuke26ImageManagerErrorCancelledSi">ImageManagerErrorCancelled</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Global Variables.html#/s:v4Nuke23ImageManagerErrorDomainSS">ImageManagerErrorDomain</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Global Variables.html#/s:v4Nuke24ImageManagerErrorUnknownSi">ImageManagerErrorUnknown</a>
               </li>
               <li class="nav-group-task">
                 <a href="Global Variables.html#/s:v4Nuke16ImageMaximumSizeVSC6CGSize">ImageMaximumSize</a>
@@ -95,6 +86,12 @@
                 <a href="Enums/ImageContentMode.html">ImageContentMode</a>
               </li>
               <li class="nav-group-task">
+                <a href="Enums/ImageManagerErrorCode.html">ImageManagerErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/ImageRequestMemoryCachePolicy.html">ImageRequestMemoryCachePolicy</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Enums/ImageResponse.html">ImageResponse</a>
               </li>
               <li class="nav-group-task">
@@ -106,6 +103,9 @@
             <a href="Functions.html">Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="Functions.html#/==(_:_:)">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Functions.html#/s:ZF4Nukeoi2eeFTCS_17ImageDecompressorS0__Sb">==(_:_:)</a>
               </li>
               <li class="nav-group-task">
@@ -113,9 +113,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="Functions.html#/s:ZF4Nukeoi2eeFTCS_9ImageTaskS0__Sb">==(_:_:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Functions.html#/s:F4Nuke20equivalentProcessorsFTGSqPS_15ImageProcessing__3rhsGSqPS0____Sb">equivalentProcessors(_:rhs:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="Functions.html#/s:F4Nuke21startPreheatingImagesFGSaVS_12ImageRequest_T_">startPreheatingImages(_:)</a>
@@ -127,10 +124,10 @@
                 <a href="Functions.html#/s:F4Nuke20stopPreheatingImagesFGSaVS_12ImageRequest_T_">stopPreheatingImages(_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:F4Nuke15taskWithRequestFTVS_12ImageRequest10completionGSqFOS_13ImageResponseT___CS_9ImageTask">taskWithRequest(_:completion:)</a>
+                <a href="Functions.html#/s:F4Nuke8taskWithFTVS_12ImageRequest10completionGSqFOS_13ImageResponseT___CS_9ImageTask">taskWith(_:completion:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:F4Nuke11taskWithURLFTCSo5NSURL10completionGSqFOS_13ImageResponseT___CS_9ImageTask">taskWithURL(_:completion:)</a>
+                <a href="Functions.html#/s:F4Nuke8taskWithFTCSo5NSURL10completionGSqFOS_13ImageResponseT___CS_9ImageTask">taskWith(_:completion:)</a>
               </li>
             </ul>
           </li>
@@ -167,6 +164,9 @@
             <a href="Structs.html">Structs</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="Structs/ImageFilterGaussianBlur.html">ImageFilterGaussianBlur</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Structs/ImageLoaderConfiguration.html">ImageLoaderConfiguration</a>
               </li>
               <li class="nav-group-task">
@@ -174,6 +174,12 @@
               </li>
               <li class="nav-group-task">
                 <a href="Structs/ImageRequest.html">ImageRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ImageResponseInfo.html">ImageResponseInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ImageTaskProgress.html">ImageTaskProgress</a>
               </li>
             </ul>
           </li>
@@ -183,63 +189,55 @@
         <section>
           <section class="section">
             
-            <p align="center"><img src="https://cloud.githubusercontent.com/assets/1567433/10440878/a7c6e468-714b-11e5-9b12-baef482c37c1.png" height="100"/>
+            <p align="left"><img src="https://cloud.githubusercontent.com/assets/1567433/10440878/a7c6e468-714b-11e5-9b12-baef482c37c1.png" height="100"/>
 
-<p align="center">
+<p align="left">
 <a href="https://cocoapods.org"><img src="https://img.shields.io/cocoapods/v/Nuke.svg"></a>
 <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat"></a>
 <a href="http://cocoadocs.org/docsets/Nuke"><img src="https://img.shields.io/cocoapods/p/Nuke.svg?style=flat)"></a>
 </p>
 
-<p align="center">
-Advanced Swift framework for loading, processing, caching, displaying and preheating images.
-</p>
-<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">request</span> <span class="o">=</span> <span class="kt">ImageRequest</span><span class="p">(</span><span class="kt">URLRequest</span><span class="p">:</span> <span class="o">&lt;</span><span class="err">#</span><span class="kt">NSURLRequest</span><span class="err">#</span><span class="o">&gt;</span><span class="p">)</span>
-<span class="n">request</span><span class="o">.</span><span class="n">targetSize</span> <span class="o">=</span> <span class="kt">CGSize</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">200</span><span class="p">)</span> <span class="c1">// Resize image</span>
-<span class="n">request</span><span class="o">.</span><span class="n">processor</span> <span class="o">=</span> <span class="o">&lt;</span><span class="err">#</span><span class="kt">ImageProcessing</span><span class="err">#</span><span class="o">&gt;</span> <span class="c1">// Apply image filters</span>
+<p>Advanced Swift framework for loading, processing, caching and <a href="http://outscope.net/blog/image-preheating">preheating</a> images.</p>
 
-<span class="kt">Nuke</span><span class="o">.</span><span class="nf">taskWithRequest</span><span class="p">(</span><span class="n">request</span><span class="p">)</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+<p>To get started check out <a href="http://kean.github.io/Nuke/">http://kean.github.io/Nuke/</a> !</p>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">request</span> <span class="o">=</span> <span class="kt">ImageRequest</span><span class="p">(</span><span class="kt">URL</span><span class="p">:</span> <span class="kt">NSURL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"http://..."</span><span class="p">))</span>
+<span class="n">request</span><span class="o">.</span><span class="n">targetSize</span> <span class="o">=</span> <span class="kt">CGSize</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">200</span><span class="p">)</span> <span class="c1">// Resize image</span>
+<span class="n">request</span><span class="o">.</span><span class="n">processor</span> <span class="o">=</span> <span class="kt">ImageFilterGaussianBlur</span><span class="p">()</span> <span class="c1">// Apply image filter</span>
+
+<span class="kt">Nuke</span><span class="o">.</span><span class="nf">taskWith</span><span class="p">(</span><span class="n">request</span><span class="p">)</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
     <span class="k">let</span> <span class="nv">image</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">image</span>
 <span class="p">}</span><span class="o">.</span><span class="nf">resume</span><span class="p">()</span>
 </code></pre>
-
-<ol>
-<li><a href="#h_requirements">Requirements</a></li>
-<li><a href="#h_getting_started">Getting Started</a></li>
-<li><a href="#h_documentation">Documentation</a></li>
-<li><a href="#h_usage">Usage</a></li>
-<li><a href="#h_design">Design</a></li>
-<li><a href="#installation">Installation</a></li>
-<li><a href="#h_satellite_projects">Satellite Projects</a></li>
-<li><a href="#h_donations">Donations</a></li>
-</ol>
 <a href='#a_name_h_features_a_features' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='a_name_h_features_a_features'><a name="h_features"></a>Features</h2>
 
 <ul>
-<li>Zero config &amp; user-friendly</li>
-<li>Performant, asynchronous, thread safe</li>
+<li>User-friendly API, zero configuration required</li>
+<li>Performant, asynchronous and thread safe</li>
+<li>Nuke is a <a href="#h_design">pipeline</a> with injectable dependencies</li>
 <li>Optional <a href="https://github.com/kean/Nuke-Alamofire-Plugin">Alamofire</a> and <a href="https://github.com/kean/Nuke-AnimatedImage-Plugin">AnimatedImage</a> plugins</li>
-<li>Nuke is a <a href="#h_design">pipeline</a> that loads images using injectable dependencies</li>
 <li>Beautiful <a href="https://cloud.githubusercontent.com/assets/1567433/10491357/057ac246-72af-11e5-9c60-6f30e0ea9d52.png">playground</a>, and <a href="#h_documentation">complete documentation</a> included</li>
 </ul>
 <a href='#loading' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h5 id='loading'>Loading</h5>
 
 <ul>
 <li>Uses <a href="https://developer.apple.com/library/ios/documentation/Foundation/Reference/NSURLSession_class/">NSURLSession</a> with <a href="https://en.wikipedia.org/wiki/HTTP/2">HTTP/2</a> support</li>
-<li>Uses a single data task for multiple equivalent requests</li>
-<li><a href="https://github.com/kean/Nuke/wiki/Image-Preheating-Guide">Automated preheating</a> of images close to the viewport</li>
+<li>A single data task is used for multiple equivalent requests</li>
+<li><a href="http://outscope.net/blog/image-preheating">Automated preheating</a> of images close to the viewport</li>
+<li>Congestion control that prevents trashing the system with requests during fast scrolling</li>
 <li>Full featured extensions for UI components</li>
 </ul>
 <a href='#caching' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h5 id='caching'>Caching</h5>
 
 <ul>
-<li><a href="http://kean.github.io/blog/programming/2016/01/26/image-caching.html">Doesn&rsquo;t reinvent caching</a>, relies on HTTP cache in URL Loading System</li>
+<li><a href="http://outscope.net/blog/image-caching">Doesn&rsquo;t reinvent caching</a>, relies on HTTP cache in URL Loading System</li>
 <li>Two cache layers including auto purging memory cache</li>
+<li>Intellegent control over memory cache</li>
 </ul>
 <a href='#processing' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h5 id='processing'>Processing</h5>
 
 <ul>
 <li>Create, compose and apply image filters</li>
+<li><a href="https://developer.apple.com/library/mac/documentation/GraphicsImaging/Conceptual/CoreImaging/ci_intro/ci_intro.html">Core Image</a> integration</li>
 <li>Background image decompression and scaling in a single step</li>
 <li>Resize loaded images to <a href="https://developer.apple.com/library/ios/qa/qa1708/_index.html">fit displayed size</a></li>
 </ul>
@@ -250,6 +248,7 @@ Advanced Swift framework for loading, processing, caching, displaying and prehea
 <li>Xcode 7.1+, Swift 2.0+</li>
 </ul>
 <a href='#a_name_h_getting_started_a_getting_started' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='a_name_h_getting_started_a_getting_started'><a name="h_getting_started"></a>Getting Started</h2>
+<li>Best place to get started is <a href="http://kean.github.io/Nuke/">http://kean.github.io/Nuke/</a></li>
 <li>Get a demo project using <code>pod try Nuke</code> command</li>
 <div class="aside aside-experiment">
     <p class="aside-title">Experiment</p>
@@ -260,53 +259,113 @@ Advanced Swift framework for loading, processing, caching, displaying and prehea
 <a href='#a_name_h_documentation_a_documentation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='a_name_h_documentation_a_documentation'><a name="h_documentation"></a>Documentation</h2>
 
 <ul>
-<li><a href="http://kean.github.io/Nuke/docs/ios/">API reference</a></li>
-<li><a href="https://github.com/kean/Nuke/wiki">Guides</a></li>
+<li>API reference: <a href="http://kean.github.io/Nuke/docs/ios/">iOS</a> / <a href="http://kean.github.io/Nuke/docs/osx/">OSX</a> / <a href="http://kean.github.io/Nuke/docs/tvos/">tvOS</a> / <a href="http://kean.github.io/Nuke/docs/watchos/">watchOS</a></li>
+<li><a href="http://kean.github.io/Nuke/usage/">Usage</a></li>
+<li><a href="http://kean.github.io/Nuke/plugins/">Plugins</a></li>
 </ul>
 <a href='#a_name_h_usage_a_usage' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='a_name_h_usage_a_usage'><a name="h_usage"></a>Usage</h2>
-<a href='#zero_config' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='zero_config'>Zero Config</h4>
-<pre class="highlight swift"><code><span class="kt">Nuke</span><span class="o">.</span><span class="nf">taskWithURL</span><span class="p">(</span><span class="n">imageURL</span><span class="p">)</span> <span class="p">{</span>
+<a href='#creating_image_task' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='creating_image_task'>Creating Image Task</h4>
+
+<p>Loading an image is as simple as creating and resuming an <code>ImageTask</code>. Nuke is thread safe, you can freely create and resume tasks from any thread. The completion closure is called on the main thread.</p>
+<pre class="highlight swift"><code><span class="kt">Nuke</span><span class="o">.</span><span class="nf">taskWith</span><span class="p">(</span><span class="kt">NSURL</span><span class="p">(</span><span class="kt">URL</span><span class="p">:</span> <span class="s">"http://..."</span><span class="p">)</span><span class="o">!</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">let</span> <span class="nv">image</span> <span class="o">=</span> <span class="nv">$0</span><span class="o">.</span><span class="n">image</span>
 <span class="p">}</span><span class="o">.</span><span class="nf">resume</span><span class="p">()</span>
 </code></pre>
 <a href='#adding_request_options' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='adding_request_options'>Adding Request Options</h4>
-<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">request</span> <span class="o">=</span> <span class="kt">ImageRequest</span><span class="p">(</span><span class="kt">URLRequest</span><span class="p">:</span> <span class="o">&lt;</span><span class="err">#</span><span class="kt">NSURLRequest</span><span class="err">#</span><span class="o">&gt;</span><span class="p">)</span>
-<span class="n">request</span><span class="o">.</span><span class="n">targetSize</span> <span class="o">=</span> <span class="kt">CGSize</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mf">300.0</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mf">400.0</span><span class="p">)</span> <span class="c1">// Set target size in pixels</span>
+
+<p>Each <code>ImageTask</code> object is created with an <code>ImageRequest</code> struct which contains request parameters. An <code>ImageRequest</code> itself can be initialized either with <code>NSURL</code> or <code>NSURLRequest</code>.</p>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">request</span> <span class="o">=</span> <span class="kt">ImageRequest</span><span class="p">(</span><span class="kt">URLRequest</span><span class="p">:</span> <span class="kt">NSURLRequest</span><span class="p">(</span><span class="kt">NSURL</span><span class="p">(</span><span class="kt">URL</span><span class="p">:</span> <span class="s">"http://..."</span><span class="p">)</span><span class="o">!</span><span class="p">))</span>
+
+<span class="c1">// Set target size (in pixels) and content mode that describe how to resize loaded image</span>
+<span class="n">request</span><span class="o">.</span><span class="n">targetSize</span> <span class="o">=</span> <span class="kt">CGSize</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mf">300.0</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mf">400.0</span><span class="p">)</span>
 <span class="n">request</span><span class="o">.</span><span class="n">contentMode</span> <span class="o">=</span> <span class="o">.</span><span class="kt">AspectFill</span>
 
-<span class="kt">Nuke</span><span class="o">.</span><span class="nf">taskWithRequest</span><span class="p">(</span><span class="n">request</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">let</span> <span class="nv">image</span> <span class="o">=</span> <span class="nv">$0</span><span class="o">.</span><span class="n">image</span> <span class="c1">// Image is resized</span>
+<span class="c1">// Set filter (more on filters later)</span>
+<span class="n">request</span><span class="o">.</span><span class="n">processor</span> <span class="o">=</span> <span class="kt">ImageFilterGaussianBlur</span><span class="p">()</span>
+
+<span class="c1">// Control memory caching</span>
+<span class="n">request</span><span class="o">.</span><span class="n">memoryCacheStorageAllowed</span> <span class="o">=</span> <span class="kc">true</span> <span class="c1">// true is default</span>
+<span class="n">request</span><span class="o">.</span><span class="n">memoryCachePolicy</span> <span class="o">=</span> <span class="o">.</span><span class="kt">ReloadIgnoringCachedImage</span> <span class="c1">// Force reload</span>
+
+<span class="c1">// Change the priority of the underlying NSURLSessionTask</span>
+<span class="n">request</span><span class="o">.</span><span class="n">priority</span> <span class="o">=</span> <span class="kt">NSURLSessionTaskPriorityHigh</span>
+
+<span class="kt">Nuke</span><span class="o">.</span><span class="nf">taskWith</span><span class="p">(</span><span class="n">request</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// - Image is resized to fill target size</span>
+    <span class="c1">// - Blur filter is applied</span>
+    <span class="k">let</span> <span class="nv">image</span> <span class="o">=</span> <span class="nv">$0</span><span class="o">.</span><span class="n">image</span>
 <span class="p">}</span><span class="o">.</span><span class="nf">resume</span><span class="p">()</span>
 </code></pre>
+
+<p>Processed images are stored into memory cache for fast access. Next time you start the equivalent request the completion closure will be called synchronously.</p>
 <a href='#using_image_response' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='using_image_response'>Using Image Response</h4>
-<pre class="highlight swift"><code><span class="kt">Nuke</span><span class="o">.</span><span class="nf">taskWithRequest</span><span class="p">(</span><span class="n">request</span><span class="p">)</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+
+<p>The response passed into the completion closure is represented by an <code>ImageResponse</code> enum. It has two states: <code>Success</code> and <code>Failure</code>. Each state has some values associated with it.</p>
+<pre class="highlight swift"><code><span class="kt">Nuke</span><span class="o">.</span><span class="nf">taskWith</span><span class="p">(</span><span class="n">request</span><span class="p">)</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
     <span class="k">switch</span> <span class="n">response</span> <span class="p">{</span>
     <span class="k">case</span> <span class="kd">let</span> <span class="o">.</span><span class="kt">Success</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">info</span><span class="p">):</span>
         <span class="c1">// Use image and inspect info</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">info</span><span class="o">.</span><span class="n">isFastResponse</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">// Image was returned from the memory cache</span>
+        <span class="p">}</span>
     <span class="k">case</span> <span class="kd">let</span> <span class="o">.</span><span class="kt">Failure</span><span class="p">(</span><span class="n">error</span><span class="p">):</span>
         <span class="c1">// Handle error</span>
     <span class="p">}</span>
 <span class="p">}</span><span class="o">.</span><span class="nf">resume</span><span class="p">()</span>
 </code></pre>
 <a href='#using_image_task' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='using_image_task'>Using Image Task</h4>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">task</span> <span class="o">=</span> <span class="kt">Nuke</span><span class="o">.</span><span class="nf">taskWithURL</span><span class="p">(</span><span class="n">imageURL</span><span class="p">)</span><span class="o">.</span><span class="nf">resume</span><span class="p">()</span>
-<span class="n">task</span><span class="o">.</span><span class="n">progress</span> <span class="o">=</span> <span class="p">{</span> <span class="n">completed</span><span class="p">,</span> <span class="n">total</span> <span class="k">in</span>
-   <span class="c1">// Update progress</span>
-<span class="p">}</span>
-<span class="k">let</span> <span class="nv">state</span> <span class="o">=</span> <span class="n">task</span><span class="o">.</span><span class="n">state</span> <span class="c1">// Track task state</span>
-<span class="n">task</span><span class="o">.</span><span class="n">completion</span> <span class="p">{</span> <span class="c1">// Add multiple completions, even for completed task</span>
-    <span class="k">let</span> <span class="nv">image</span> <span class="o">=</span> <span class="nv">$0</span><span class="o">.</span><span class="n">image</span>
-<span class="p">}</span>
+
+<p><code>ImageTask</code> is your primary interface for controlling the image load. Task is always in one of four states: <code>Suspended</code>, <code>Running</code>, <code>Cancelled</code> or <code>Completed</code>. The task is always created in a <code>Suspended</code> state. You can use the corresponding <code>resume()</code>, <code>suspend()</code> and <code>cancel()</code> methods to control the task&rsquo;s state. It&rsquo;s always safe to call these methods, no matter in which state the task is currently in.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">task</span> <span class="o">=</span> <span class="kt">Nuke</span><span class="o">.</span><span class="nf">taskWith</span><span class="p">(</span><span class="n">imageURL</span><span class="p">)</span><span class="o">.</span><span class="nf">resume</span><span class="p">()</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">task</span><span class="o">.</span><span class="n">state</span><span class="p">)</span> <span class="c1">// Prints "Running"</span>
+
+<span class="c1">// Cancels the image load, task completes with an error ImageManagerErrorCode.Cancelled</span>
 <span class="n">task</span><span class="o">.</span><span class="nf">cancel</span><span class="p">()</span>
 </code></pre>
+
+<p>You can also use <code>ImageTask</code> to monitor load progress.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">task</span> <span class="o">=</span> <span class="kt">Nuke</span><span class="o">.</span><span class="nf">taskWith</span><span class="p">(</span><span class="n">imageURL</span><span class="p">)</span><span class="o">.</span><span class="nf">resume</span><span class="p">()</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">task</span><span class="o">.</span><span class="n">progress</span><span class="p">)</span> <span class="c1">// The initial progress is (completed: 0, total: 0)</span>
+
+<span class="c1">// Add progress handler which gets called periodically on the main thread</span>
+<span class="n">task</span><span class="o">.</span><span class="n">progressHandler</span> <span class="o">=</span> <span class="p">{</span> <span class="n">progress</span> <span class="k">in</span>
+   <span class="c1">// Update progress</span>
+<span class="p">}</span>
+
+<span class="c1">// Task represents an image promise</span>
+<span class="c1">// It allows you to add multiple completion handlers, even when the task is completed</span>
+<span class="n">task</span><span class="o">.</span><span class="n">completion</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">image</span> <span class="o">=</span> <span class="nv">$0</span><span class="o">.</span><span class="n">image</span>
+<span class="p">}</span>
+</code></pre>
 <a href='#using_ui_extensions' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='using_ui_extensions'>Using UI Extensions</h4>
+
+<p>Nuke provides full-featured UI extensions to make image loading as simple as possible.</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">imageView</span> <span class="o">=</span> <span class="kt">UIImageView</span><span class="p">()</span>
-<span class="c1">// let task = imageView.nk_setImageWithURL(&lt;#NSURL#&gt;)</span>
-<span class="k">let</span> <span class="nv">task</span> <span class="o">=</span> <span class="n">imageView</span><span class="o">.</span><span class="nf">nk_setImageWithRequest</span><span class="p">(</span><span class="o">&lt;</span><span class="err">#</span><span class="kt">ImageRequest</span><span class="err">#</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="o">&lt;</span><span class="err">#</span><span class="kt">ImageViewLoadingOptions</span><span class="p">?</span><span class="err">#</span><span class="o">&gt;</span><span class="p">)</span>
+
+<span class="c1">// Loads and displays an image for the given URL</span>
+<span class="c1">// Previously started requests are cancelled</span>
+<span class="c1">// Uses ImageContentMode.AspectFill and current view size as a target size</span>
+<span class="k">let</span> <span class="nv">task</span> <span class="o">=</span> <span class="n">imageView</span><span class="o">.</span><span class="nf">nk_setImageWith</span><span class="p">(</span><span class="kt">NSURL</span><span class="p">(</span><span class="kt">URL</span><span class="p">:</span> <span class="s">"http://..."</span><span class="p">)</span><span class="o">!</span><span class="p">)</span>
+<span class="c1">// let task = imageView.nk_setImageWith(ImageRequest(...))</span>
+</code></pre>
+
+<p>You have some extra control over loading via <code>ImageViewLoadingOptions</code>. If allows you to provide custom <code>animations</code>, or completely override the completion <code>handler</code>.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">imageView</span> <span class="o">=</span> <span class="kt">UIImageView</span><span class="p">()</span>
+<span class="k">let</span> <span class="nv">request</span> <span class="o">=</span> <span class="kt">ImageRequest</span><span class="p">(</span><span class="kt">URLRequest</span><span class="p">:</span> <span class="kt">NSURLRequest</span><span class="p">(</span><span class="kt">NSURL</span><span class="p">(</span><span class="kt">URL</span><span class="p">:</span> <span class="s">"http://..."</span><span class="p">)</span><span class="o">!</span><span class="p">))</span>
+
+<span class="k">var</span> <span class="nv">options</span> <span class="o">=</span> <span class="kt">ImageViewLoadingOptions</span><span class="p">()</span>
+<span class="n">options</span><span class="o">.</span><span class="n">handler</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="c1">// The `ImageViewLoading` protocol controls the task</span>
+    <span class="c1">// You handle its completion</span>
+<span class="p">}</span>
+<span class="k">let</span> <span class="nv">task</span> <span class="o">=</span> <span class="n">imageView</span><span class="o">.</span><span class="nf">nk_setImageWith</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="p">)</span>
 </code></pre>
 <a href='#adding_ui_extensions' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='adding_ui_extensions'>Adding UI Extensions</h4>
 
-<p>Nuke makes it extremely easy to add full-featured image loading extensions to UI components</p>
+<p>Nuke makes it extremely easy to add image loading extensions to custom UI components. Those methods are provided by <code>ImageLoadingView</code> protocol. This protocol is actually a trait - most of its methods are already implemented. All you need to do is to implement one required method to make your custom views conform to <code>ImageLoadingView</code> protocol.</p>
+
+<p>You can do so by either implementing <code>ImageDisplayingView</code> protocol:</p>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">MKAnnotationView</span><span class="p">:</span> <span class="kt">ImageDisplayingView</span><span class="p">,</span> <span class="kt">ImageLoadingView</span> <span class="p">{</span>
     <span class="c1">// That's it, you get default implementation of all methods in ImageLoadingView protocol</span>
     <span class="kd">public</span> <span class="k">var</span> <span class="nv">nk_image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?</span> <span class="p">{</span>
@@ -315,55 +374,142 @@ Advanced Swift framework for loading, processing, caching, displaying and prehea
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
-<a href='#uicollectionview' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='uicollectionview'>UICollectionView</h4>
+
+<p>Or providing an implementation for remaining <code>ImageLoadingView</code> methods:</p>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">MKAnnotationView</span><span class="p">:</span> <span class="kt">ImageLoadingView</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">func</span> <span class="nf">nk_imageTask</span><span class="p">(</span><span class="nv">task</span><span class="p">:</span> <span class="kt">ImageTask</span><span class="p">,</span> <span class="n">didFinishWithResponse</span> <span class="nv">response</span><span class="p">:</span> <span class="kt">ImageResponse</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt">ImageViewLoadingOptions</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Handle task completion</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<a href='#uicollection_table_view' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='uicollection_table_view'>UICollection(Table)View</h4>
+
+<p>Sometimes you need to display a collection of images, which is a quite complex task when it comes to managing which tasks are associated with which cells, cancelling and handling those tasks, etc. Nuke takes care of all the complexity for you:</p>
 <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">collectionView</span><span class="p">(</span><span class="nv">collectionView</span><span class="p">:</span> <span class="kt">UICollectionView</span><span class="p">,</span> <span class="n">cellForItemAtIndexPath</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">NSIndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UICollectionViewCell</span> <span class="p">{</span>
     <span class="k">let</span> <span class="nv">cell</span> <span class="o">=</span> <span class="n">collectionView</span><span class="o">.</span><span class="nf">dequeueReusableCellWithReuseIdentifier</span><span class="p">(</span><span class="n">cellReuseID</span><span class="p">,</span> <span class="nv">forIndexPath</span><span class="p">:</span> <span class="n">indexPath</span><span class="p">)</span>
     <span class="k">let</span> <span class="nv">imageView</span><span class="p">:</span> <span class="kt">ImageView</span> <span class="o">=</span> <span class="o">&lt;</span><span class="err">#</span><span class="n">view</span><span class="err">#</span><span class="o">&gt;</span>
-    <span class="n">imageView</span><span class="o">.</span><span class="nf">nk_prepareForReuse</span><span class="p">()</span>
-    <span class="n">imageView</span><span class="o">.</span><span class="nf">nk_setImageWithURL</span><span class="p">(</span><span class="n">imageURL</span><span class="p">)</span>
+    <span class="n">imageView</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="kc">nil</span>
+    <span class="n">imageView</span><span class="o">.</span><span class="nf">nk_setImageWith</span><span class="p">(</span><span class="n">imageURL</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">cell</span>
 <span class="p">}</span>
 </code></pre>
 
-<p>Cancel image task as soon as the cell goes offscreen (optional):</p>
+<p>Optional: you can also cancel image tasks as soon as the cells go offscreen:</p>
 <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">collectionView</span><span class="p">(</span><span class="nv">collectionView</span><span class="p">:</span> <span class="kt">UICollectionView</span><span class="p">,</span> <span class="n">didEndDisplayingCell</span> <span class="nv">cell</span><span class="p">:</span> <span class="kt">UICollectionViewCell</span><span class="p">,</span> <span class="n">forItemAtIndexPath</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">NSIndexPath</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">let</span> <span class="nv">imageView</span><span class="p">:</span> <span class="kt">ImageView</span> <span class="o">=</span> <span class="o">&lt;</span><span class="err">#</span><span class="n">view</span><span class="err">#</span><span class="o">&gt;</span>
-    <span class="n">imageView</span><span class="o">.</span><span class="nf">nk_prepareForReuse</span><span class="p">()</span>
+    <span class="n">imageView</span><span class="o">.</span><span class="nf">nk_cancelLoading</span><span class="p">()</span>
 <span class="p">}</span>
 </code></pre>
 <a href='#applying_filters' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='applying_filters'>Applying Filters</h4>
+
+<p>Nuke defines a simple <code>ImageProcessing</code> protocol that represents image filters. Some filters are already built into the framework. And it task just a couple line of code to create your own filters. You can also compose multiple filters together using <code>ImageProcessorComposition</code> class.</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">filter1</span><span class="p">:</span> <span class="kt">ImageProcessing</span> <span class="o">=</span> <span class="o">&lt;</span><span class="err">#</span><span class="n">filter</span><span class="err">#</span><span class="o">&gt;</span>
 <span class="k">let</span> <span class="nv">filter2</span><span class="p">:</span> <span class="kt">ImageProcessing</span> <span class="o">=</span> <span class="o">&lt;</span><span class="err">#</span><span class="n">filter</span><span class="err">#</span><span class="o">&gt;</span>
-<span class="k">let</span> <span class="nv">filterComposition</span> <span class="o">=</span> <span class="kt">ImageProcessorComposition</span><span class="p">(</span><span class="nv">processors</span><span class="p">:</span> <span class="p">[</span><span class="n">filter1</span><span class="p">,</span> <span class="n">filter2</span><span class="p">])</span>
 
 <span class="k">var</span> <span class="nv">request</span> <span class="o">=</span> <span class="kt">ImageRequest</span><span class="p">(</span><span class="kt">URL</span><span class="p">:</span> <span class="o">&lt;</span><span class="err">#</span><span class="n">image_url</span><span class="err">#</span><span class="o">&gt;</span><span class="p">)</span>
-<span class="n">request</span><span class="o">.</span><span class="n">processor</span> <span class="o">=</span> <span class="n">filterComposition</span>
+<span class="n">request</span><span class="o">.</span><span class="n">processor</span> <span class="o">=</span> <span class="kt">ImageProcessorComposition</span><span class="p">(</span><span class="nv">processors</span><span class="p">:</span> <span class="p">[</span><span class="n">filter1</span><span class="p">,</span> <span class="n">filter2</span><span class="p">])</span>
 
-<span class="kt">Nuke</span><span class="o">.</span><span class="nf">taskWithRequest</span><span class="p">(</span><span class="n">request</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// Filters are applied, filtered image is stored in memory cache</span>
+<span class="kt">Nuke</span><span class="o">.</span><span class="nf">taskWith</span><span class="p">(</span><span class="n">request</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Filters are applied, processed image is stored into memory cache</span>
     <span class="k">let</span> <span class="nv">image</span> <span class="o">=</span> <span class="nv">$0</span><span class="o">.</span><span class="n">image</span>
 <span class="p">}</span><span class="o">.</span><span class="nf">resume</span><span class="p">()</span>
 </code></pre>
-<a href='#composing_filters' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='composing_filters'>Composing Filters</h4>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">processor1</span><span class="p">:</span> <span class="kt">ImageProcessing</span> <span class="o">=</span> <span class="o">&lt;</span><span class="err">#</span><span class="n">processor</span><span class="err">#</span><span class="o">&gt;</span>
-<span class="k">let</span> <span class="nv">processor2</span><span class="p">:</span> <span class="kt">ImageProcessing</span> <span class="o">=</span> <span class="o">&lt;</span><span class="err">#</span><span class="n">processor</span><span class="err">#</span><span class="o">&gt;</span>
-<span class="k">let</span> <span class="nv">composition</span> <span class="o">=</span> <span class="kt">ImageProcessorComposition</span><span class="p">(</span><span class="nv">processors</span><span class="p">:</span> <span class="p">[</span><span class="n">processor1</span><span class="p">,</span> <span class="n">processor2</span><span class="p">])</span>
+<a href='#creating_filters' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='creating_filters'>Creating Filters</h4>
+
+<p><code>ImageProcessing</code> protocol consists of two methods: one to process the image and one to compare two (heterogeneous) filters. Here&rsquo;s an example of custom image filter implemented on top of <a href="https://github.com/kean/Nuke/wiki/Core-Image-Integration-Guide">Core Image</a>. It uses some of the helper functions provided by Nuke that simplify work with <code>Core Image</code>.</p>
+<pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ImageFilterGaussianBlur</span><span class="p">:</span> <span class="kt">ImageProcessing</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="k">let</span> <span class="nv">radius</span><span class="p">:</span> <span class="kt">Int</span>
+    <span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">radius</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">8</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">radius</span> <span class="o">=</span> <span class="n">radius</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">func</span> <span class="nf">process</span><span class="p">(</span><span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIImage</span><span class="p">?</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">image</span><span class="o">.</span><span class="nf">nk_filter</span><span class="p">(</span><span class="kt">CIFilter</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"CIGaussianBlur"</span><span class="p">,</span> <span class="nv">withInputParameters</span><span class="p">:</span> <span class="p">[</span><span class="s">"inputRadius"</span> <span class="p">:</span> <span class="k">self</span><span class="o">.</span><span class="n">radius</span><span class="p">]))</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// We need to be able to compare filters for equivalence to cache processed images</span>
+<span class="c1">// Default implementation returns `true` if both filters are of the same class</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="o">==</span><span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">ImageFilterGaussianBlur</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">ImageFilterGaussianBlur</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">lhs</span><span class="o">.</span><span class="n">radius</span> <span class="o">==</span> <span class="n">rhs</span><span class="o">.</span><span class="n">radius</span>
+<span class="p">}</span>
 </code></pre>
 <a href='#preheating_images' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='preheating_images'>Preheating Images</h4>
+
+<p><a href="http://kean.github.io/blog/programming/2015/12/12/image-preheating.html">Preheating</a> is an effective way to improve user experience in applications that display collections of images. Preheating means loading and caching images that might soon appear on the display. Nuke provides a set of self-explanatory methods for image preheating which are inspired by <a href="https://developer.apple.com/library/prerelease/ios/documentation/Photos/Reference/PHImageManager_Class/index.html">PHImageManager</a>:</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">requests</span> <span class="o">=</span> <span class="p">[</span><span class="kt">ImageRequest</span><span class="p">(</span><span class="kt">URL</span><span class="p">:</span> <span class="n">imageURL1</span><span class="p">),</span> <span class="kt">ImageRequest</span><span class="p">(</span><span class="kt">URL</span><span class="p">:</span> <span class="n">imageURL2</span><span class="p">)]</span>
 <span class="kt">Nuke</span><span class="o">.</span><span class="nf">startPreheatingImages</span><span class="p">(</span><span class="nv">requests</span><span class="p">:</span> <span class="n">requests</span><span class="p">)</span>
 <span class="kt">Nuke</span><span class="o">.</span><span class="nf">stopPreheatingImages</span><span class="p">(</span><span class="nv">requests</span><span class="p">:</span> <span class="n">requests</span><span class="p">)</span>
 </code></pre>
-<a href='#automate_preheating' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='automate_preheating'>Automate Preheating</h4>
+<a href='#automating_preheating' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='automating_preheating'>Automating Preheating</h4>
+
+<p>Nuke automates a process of determining which images in a <code>UICollectionView</code> (or <code>UITableView</code>) to preheat and when to start and stop preheating them. There are two corresponding classes (one for <code>UICollectionView</code>, one for <code>UITableView</code>). For more info about them see <a href="http://kean.github.io/blog/programming/2015/12/12/image-preheating.html">Image Preheating Guide</a>.</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">preheater</span> <span class="o">=</span> <span class="kt">ImagePreheatingControllerForCollectionView</span><span class="p">(</span><span class="nv">collectionView</span><span class="p">:</span> <span class="o">&lt;</span><span class="err">#</span><span class="n">collectionView</span><span class="err">#</span><span class="o">&gt;</span><span class="p">)</span>
-<span class="n">preheater</span><span class="o">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="k">self</span> <span class="c1">// Signals when preheat window changes</span>
+<span class="n">preheater</span><span class="o">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="k">self</span> <span class="c1">// Signals when preheat index paths change</span>
 </code></pre>
+<a href='#caching_images' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='caching_images'>Caching Images</h4>
+
+<p>Nuke provides both on-disk and in-memory caching.</p>
+
+<p>For on-disk caching it relies on <code>NSURLCache</code>. The <code>NSURLCache</code> is used to cache original image data downloaded from the server. This class a part of the URL Loading System&rsquo;s cache management, which relies on HTTP cache.</p>
+
+<p>For on-memory caching Nuke provides <code>ImageMemoryCaching</code> protocol and its implementation in <code>ImageMemoryCache</code> class built on top of <code>NSCache</code>. The <code>ImageMemoryCache</code> is used for fast access to processed images that are ready for display.</p>
+
+<p>The combination of two cache layers results in a high performance caching system. For more info see <a href="http://kean.github.io/blog/programming/2016/01/26/image-caching.html">Image Caching Guide</a> which provides a comprehensive look at HTTP cache, URL Loading System and NSCache.</p>
+<a href='#accessing_memory_cache' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='accessing_memory_cache'>Accessing Memory Cache</h4>
+
+<p>Nuke automatically leverages both its cache layers. It accesses in-memory cache each time you start an <code>ImageTask</code> and calls a completion closure synchronously if the appropriate image is found.</p>
+
+<p>If you need to access memory cache directly you might use the appropriate <code>ImageManager</code> methods:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">manager</span> <span class="o">=</span> <span class="kt">ImageManager</span><span class="o">.</span><span class="n">shared</span>
+<span class="k">let</span> <span class="nv">request</span> <span class="o">=</span> <span class="kt">ImageRequest</span><span class="p">(</span><span class="kt">URL</span><span class="p">:</span> <span class="kt">NSURL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">""</span><span class="p">)</span><span class="o">!</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">response</span> <span class="o">=</span> <span class="kt">ImageCachedResponse</span><span class="p">(</span><span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">(),</span> <span class="nv">userInfo</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+<span class="n">manager</span><span class="o">.</span><span class="nf">storeResponse</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="nv">forRequest</span><span class="p">:</span> <span class="n">request</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">cachedResponse</span> <span class="o">=</span> <span class="n">manager</span><span class="o">.</span><span class="nf">cachedResponseForRequest</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+</code></pre>
+
+<p><code>Nuke.taskWith(_:)</code> family of functions are just shortcuts for methods of the <code>ImageManager</code> class.</p>
 <a href='#customizing_image_manager' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='customizing_image_manager'>Customizing Image Manager</h4>
+
+<p>One of the great things about Nuke is that it is <a href="https://github.com/kean/Nuke#h_design">a pipeline</a> that loads images using injectable dependencies. There are there protocols that you can use to customize that pipeline:</p>
+
+<table><thead>
+<tr>
+<th>Protocol</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>ImageDataLoading</code></td>
+<td>Performs loading of image data (<code>NSData</code>)</td>
+</tr>
+<tr>
+<td><code>ImageDecoding</code></td>
+<td>Decodes <code>NSData</code> to <code>UIImage</code> objects</td>
+</tr>
+<tr>
+<td><code>ImageMemoryCaching</code></td>
+<td>Stores processed images into memory cache</td>
+</tr>
+</tbody></table>
+
+<p><br>
+You can either provide your own implementation of these protocols or customize existing classes that implement them. After you have all the dependencies in place you can create an <code>ImageManager</code>:</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">dataLoader</span><span class="p">:</span> <span class="kt">ImageDataLoading</span> <span class="o">=</span> <span class="o">&lt;</span><span class="err">#</span><span class="n">dataLoader</span><span class="err">#</span><span class="o">&gt;</span>
 <span class="k">let</span> <span class="nv">decoder</span><span class="p">:</span> <span class="kt">ImageDecoding</span> <span class="o">=</span> <span class="o">&lt;</span><span class="err">#</span><span class="n">decoder</span><span class="err">#</span><span class="o">&gt;</span>
 <span class="k">let</span> <span class="nv">cache</span><span class="p">:</span> <span class="kt">ImageMemoryCaching</span> <span class="o">=</span> <span class="o">&lt;</span><span class="err">#</span><span class="n">cache</span><span class="err">#</span><span class="o">&gt;</span>
 
 <span class="k">let</span> <span class="nv">configuration</span> <span class="o">=</span> <span class="kt">ImageManagerConfiguration</span><span class="p">(</span><span class="nv">dataLoader</span><span class="p">:</span> <span class="n">dataLoader</span><span class="p">,</span> <span class="nv">decoder</span><span class="p">:</span> <span class="n">decoder</span><span class="p">,</span> <span class="nv">cache</span><span class="p">:</span> <span class="n">cache</span><span class="p">)</span>
+<span class="kt">ImageManager</span><span class="o">.</span><span class="n">shared</span> <span class="o">=</span> <span class="kt">ImageManager</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="n">configuration</span><span class="p">)</span>
+</code></pre>
+
+<p>Even if those protocols are not enough, you can take a look at the <code>ImageLoading</code> protocol. It provides a high level API for loading images for concrete <code>ImageTasks</code>. This protocol is implemented by the <code>ImageLoader</code> class that defines a common flow of loading images (<code>load data</code> -&gt; <code>decode</code> -&gt; <code>process</code>) and uses the corresponding <code>ImageDataLoading</code>, <code>ImageDecoding</code> and <code>ImageProcessing</code> protocols.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">loader</span><span class="p">:</span> <span class="kt">ImageLoading</span> <span class="o">=</span> <span class="o">&lt;</span><span class="err">#</span><span class="n">loader</span><span class="err">#</span><span class="o">&gt;</span>
+<span class="k">let</span> <span class="nv">cache</span><span class="p">:</span> <span class="kt">ImageMemoryCaching</span> <span class="o">=</span> <span class="o">&lt;</span><span class="err">#</span><span class="n">cache</span><span class="err">#</span><span class="o">&gt;</span>
+
+<span class="c1">// The ImageManagerConfiguration(dataLoader:decoder:cache:) constructor is actually</span>
+<span class="c1">// just a convenience initializer that creates an instance of ImageLoader class</span>
+<span class="k">let</span> <span class="nv">configuration</span> <span class="o">=</span> <span class="kt">ImageManagerConfiguration</span><span class="p">(</span><span class="nv">loader</span><span class="p">:</span> <span class="n">loader</span><span class="p">,</span> <span class="nv">cache</span><span class="p">:</span> <span class="n">cache</span><span class="p">)</span>
 <span class="kt">ImageManager</span><span class="o">.</span><span class="n">shared</span> <span class="o">=</span> <span class="kt">ImageManager</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="n">configuration</span><span class="p">)</span>
 </code></pre>
 <a href='#a_name_h_design_a_design' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='a_name_h_design_a_design'><a name="h_design"></a>Design</h2>
@@ -434,7 +580,11 @@ github "kean/Nuke-AnimatedImage-Plugin" # optional
 
 <p>This project has taken hundreds hours of work. If you find it useful, you can chip in for coffee to keep me going.</p>
 
-<p><a href="http://kean.github.io/donate/"><img height="36" src="https://cloud.githubusercontent.com/assets/1567433/12532142/598bc7e6-c21d-11e5-976d-45200104c174.png"></a></p>
+<p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=B257REANNAAL6"><img height="30" src="https://cloud.githubusercontent.com/assets/1567433/12656493/a1b6075c-c60f-11e5-85a7-0f0c4dea27ed.gif"></a></p>
+
+<blockquote>
+<p><em>Alternatively, <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8VLXL699RFRY2">donate in ₽</em></a></p>
+</blockquote>
 <a href='#contacts' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='contacts'>Contacts</h2>
 
 <p><a href="https://github.com/kean">
@@ -453,7 +603,7 @@ github "kean/Nuke-AnimatedImage-Plugin" # optional
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://github.com/kean" target="_blank" rel="external">kean</a>. All rights reserved. (Last updated: 2016-01-27)</p>
+          <p>&copy; 2016 <a class="link" href="https://github.com/kean" target="_blank" rel="external">kean</a>. All rights reserved. (Last updated: 2016-02-06)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

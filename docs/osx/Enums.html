@@ -13,7 +13,7 @@
     <a title="Enums  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">Nuke Docs</a> (49% documented)</p>
+        <p><a href="index.html">Nuke Docs</a> (71% documented)</p>
         <p class="header-right"><a href="https://github.com/kean/Nuke"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -64,9 +64,6 @@
                 <a href="Classes/ImageRequestKey.html">ImageRequestKey</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/ImageResponseInfo.html">ImageResponseInfo</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Classes/ImageTask.html">ImageTask</a>
               </li>
               <li class="nav-group-task">
@@ -78,13 +75,7 @@
             <a href="Global Variables.html">Global Variables</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Global Variables.html#/s:v4Nuke26ImageManagerErrorCancelledSi">ImageManagerErrorCancelled</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Global Variables.html#/s:v4Nuke23ImageManagerErrorDomainSS">ImageManagerErrorDomain</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Global Variables.html#/s:v4Nuke24ImageManagerErrorUnknownSi">ImageManagerErrorUnknown</a>
               </li>
               <li class="nav-group-task">
                 <a href="Global Variables.html#/s:v4Nuke16ImageMaximumSizeVSC6CGSize">ImageMaximumSize</a>
@@ -99,6 +90,12 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Enums/ImageContentMode.html">ImageContentMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/ImageManagerErrorCode.html">ImageManagerErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/ImageRequestMemoryCachePolicy.html">ImageRequestMemoryCachePolicy</a>
               </li>
               <li class="nav-group-task">
                 <a href="Enums/ImageResponse.html">ImageResponse</a>
@@ -132,9 +129,6 @@
                 <a href="Functions.html#/s:ZF4Nukeoi2eeFTCS_9ImageTaskS0__Sb">==(_:_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:F4Nuke20equivalentProcessorsFTGSqPS_15ImageProcessing__3rhsGSqPS0____Sb">equivalentProcessors(_:rhs:)</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Functions.html#/s:F4Nuke21startPreheatingImagesFGSaVS_12ImageRequest_T_">startPreheatingImages(_:)</a>
               </li>
               <li class="nav-group-task">
@@ -144,10 +138,10 @@
                 <a href="Functions.html#/s:F4Nuke20stopPreheatingImagesFGSaVS_12ImageRequest_T_">stopPreheatingImages(_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:F4Nuke15taskWithRequestFTVS_12ImageRequest10completionGSqFOS_13ImageResponseT___CS_9ImageTask">taskWithRequest(_:completion:)</a>
+                <a href="Functions.html#/s:F4Nuke8taskWithFTVS_12ImageRequest10completionGSqFOS_13ImageResponseT___CS_9ImageTask">taskWith(_:completion:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:F4Nuke11taskWithURLFTCSo5NSURL10completionGSqFOS_13ImageResponseT___CS_9ImageTask">taskWithURL(_:completion:)</a>
+                <a href="Functions.html#/s:F4Nuke8taskWithFTCSo5NSURL10completionGSqFOS_13ImageResponseT___CS_9ImageTask">taskWith(_:completion:)</a>
               </li>
             </ul>
           </li>
@@ -199,6 +193,12 @@
                 <a href="Structs/ImageRequest.html">ImageRequest</a>
               </li>
               <li class="nav-group-task">
+                <a href="Structs/ImageResponseInfo.html">ImageResponseInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ImageTaskProgress.html">ImageTaskProgress</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Structs/ImageViewLoadingOptions.html">ImageViewLoadingOptions</a>
               </li>
             </ul>
@@ -241,7 +241,42 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/1.4.0/Nuke/Source/Core/ImageResponse.swift#L9-L12">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/2.0.0/Nuke/Source/Core/ImageResponse.swift#L9-L12">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:O4Nuke21ImageManagerErrorCode"></a>
+                    <a name="//apple_ref/swift/Enum/ImageManagerErrorCode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:O4Nuke21ImageManagerErrorCode">ImageManagerErrorCode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The image manager error codes.</p>
+
+                        <a href="Enums/ImageManagerErrorCode.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ImageManagerErrorCode</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/2.0.0/Nuke/Source/Core/ImageManager.swift#L15-L31">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -263,12 +298,24 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The state of the task. Allowed transitions include:
+ - Suspended -&gt; [Running, Cancelled, Completed]
+ - Running -&gt; [Suspended, Cancelled, Completed]
+ - Cancelled -&gt; []
+ - Completed -&gt; []</p>
 
                         <a href="Enums/ImageTaskState.html" class="slightly-smaller">See more</a>
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ImageTaskState</span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/1.4.0/Nuke/Source/Core/ImageTask.swift#L7-L9">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/2.0.0/Nuke/Source/Core/ImageTask.swift#L13-L15">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -303,7 +350,38 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/1.4.0/Nuke/Source/Core/ImageRequest.swift#L14-L22">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/2.0.0/Nuke/Source/Core/ImageRequest.swift#L14-L22">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:O4Nuke29ImageRequestMemoryCachePolicy"></a>
+                    <a name="//apple_ref/swift/Enum/ImageRequestMemoryCachePolicy" class="dashAnchor"></a>
+                    <a class="token" href="#/s:O4Nuke29ImageRequestMemoryCachePolicy">ImageRequestMemoryCachePolicy</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Defines constants that can be used to modify the way ImageManager interacts with the memory cache.</p>
+
+                        <a href="Enums/ImageRequestMemoryCachePolicy.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ImageRequestMemoryCachePolicy</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/2.0.0/Nuke/Source/Core/ImageRequest.swift#L26-L34">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -313,7 +391,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://github.com/kean" target="_blank" rel="external">kean</a>. All rights reserved. (Last updated: 2016-01-27)</p>
+          <p>&copy; 2016 <a class="link" href="https://github.com/kean" target="_blank" rel="external">kean</a>. All rights reserved. (Last updated: 2016-02-06)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

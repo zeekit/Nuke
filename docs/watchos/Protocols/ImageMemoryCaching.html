@@ -14,7 +14,7 @@
     <a title="ImageMemoryCaching Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Nuke Docs</a> (51% documented)</p>
+        <p><a href="../index.html">Nuke Docs</a> (75% documented)</p>
         <p class="header-right"><a href="https://github.com/kean/Nuke"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -65,9 +65,6 @@
                 <a href="../Classes/ImageRequestKey.html">ImageRequestKey</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/ImageResponseInfo.html">ImageResponseInfo</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Classes/ImageTask.html">ImageTask</a>
               </li>
             </ul>
@@ -76,13 +73,7 @@
             <a href="../Global Variables.html">Global Variables</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Global Variables.html#/s:v4Nuke26ImageManagerErrorCancelledSi">ImageManagerErrorCancelled</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Global Variables.html#/s:v4Nuke23ImageManagerErrorDomainSS">ImageManagerErrorDomain</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Global Variables.html#/s:v4Nuke24ImageManagerErrorUnknownSi">ImageManagerErrorUnknown</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Global Variables.html#/s:v4Nuke16ImageMaximumSizeVSC6CGSize">ImageMaximumSize</a>
@@ -96,6 +87,12 @@
                 <a href="../Enums/ImageContentMode.html">ImageContentMode</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Enums/ImageManagerErrorCode.html">ImageManagerErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ImageRequestMemoryCachePolicy.html">ImageRequestMemoryCachePolicy</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/ImageResponse.html">ImageResponse</a>
               </li>
               <li class="nav-group-task">
@@ -107,6 +104,9 @@
             <a href="../Functions.html">Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Functions.html#/==(_:_:)">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Functions.html#/s:ZF4Nukeoi2eeFTCS_17ImageDecompressorS0__Sb">==(_:_:)</a>
               </li>
               <li class="nav-group-task">
@@ -114,9 +114,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Functions.html#/s:ZF4Nukeoi2eeFTCS_9ImageTaskS0__Sb">==(_:_:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Functions.html#/s:F4Nuke20equivalentProcessorsFTGSqPS_15ImageProcessing__3rhsGSqPS0____Sb">equivalentProcessors(_:rhs:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Functions.html#/s:F4Nuke21startPreheatingImagesFGSaVS_12ImageRequest_T_">startPreheatingImages(_:)</a>
@@ -128,10 +125,10 @@
                 <a href="../Functions.html#/s:F4Nuke20stopPreheatingImagesFGSaVS_12ImageRequest_T_">stopPreheatingImages(_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:F4Nuke15taskWithRequestFTVS_12ImageRequest10completionGSqFOS_13ImageResponseT___CS_9ImageTask">taskWithRequest(_:completion:)</a>
+                <a href="../Functions.html#/s:F4Nuke8taskWithFTVS_12ImageRequest10completionGSqFOS_13ImageResponseT___CS_9ImageTask">taskWith(_:completion:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:F4Nuke11taskWithURLFTCSo5NSURL10completionGSqFOS_13ImageResponseT___CS_9ImageTask">taskWithURL(_:completion:)</a>
+                <a href="../Functions.html#/s:F4Nuke8taskWithFTCSo5NSURL10completionGSqFOS_13ImageResponseT___CS_9ImageTask">taskWith(_:completion:)</a>
               </li>
             </ul>
           </li>
@@ -168,6 +165,9 @@
             <a href="../Structs.html">Structs</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Structs/ImageFilterGaussianBlur.html">ImageFilterGaussianBlur</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Structs/ImageLoaderConfiguration.html">ImageLoaderConfiguration</a>
               </li>
               <li class="nav-group-task">
@@ -175,6 +175,12 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/ImageRequest.html">ImageRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageResponseInfo.html">ImageResponseInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ImageTaskProgress.html">ImageTaskProgress</a>
               </li>
             </ul>
           </li>
@@ -184,7 +190,13 @@
         <section>
           <section class="section">
             <h1>ImageMemoryCaching</h1>
-            <p>Undocumented</p>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ImageMemoryCaching</span></code></pre>
+
+                </div>
+              </div>
+            <p>Provides in-memory storage for image responses.</p>
 
           </section>
           <section class="section task-group-section">
@@ -193,9 +205,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FP4Nuke18ImageMemoryCaching20cachedResponseForKeyuRq_S0__Fq_FCS_15ImageRequestKeyGSqCS_19ImageCachedResponse_"></a>
-                    <a name="//apple_ref/swift/Method/cachedResponseForKey(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FP4Nuke18ImageMemoryCaching20cachedResponseForKeyuRq_S0__Fq_FCS_15ImageRequestKeyGSqCS_19ImageCachedResponse_">cachedResponseForKey(_:)</a>
+                    <a name="/s:FP4Nuke18ImageMemoryCaching14responseForKeyuRq_S0__Fq_FCS_15ImageRequestKeyGSqCS_19ImageCachedResponse_"></a>
+                    <a name="//apple_ref/swift/Method/responseForKey(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP4Nuke18ImageMemoryCaching14responseForKeyuRq_S0__Fq_FCS_15ImageRequestKeyGSqCS_19ImageCachedResponse_">responseForKey(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -203,11 +215,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Returns the cached response for the specified key.</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">responseForKey</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">ImageRequestKey</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ImageCachedResponse</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/1.4.0/Nuke/Source/Core/ImageMemoryCache.swift#L0">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/2.0.0/Nuke/Source/Core/ImageMemoryCache.swift#L17">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -215,9 +235,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FP4Nuke18ImageMemoryCaching13storeResponseuRq_S0__Fq_FTCS_19ImageCachedResponse6forKeyCS_15ImageRequestKey_T_"></a>
-                    <a name="//apple_ref/swift/Method/storeResponse(_:forKey:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FP4Nuke18ImageMemoryCaching13storeResponseuRq_S0__Fq_FTCS_19ImageCachedResponse6forKeyCS_15ImageRequestKey_T_">storeResponse(_:forKey:)</a>
+                    <a name="/s:FP4Nuke18ImageMemoryCaching11setResponseuRq_S0__Fq_FTCS_19ImageCachedResponse6forKeyCS_15ImageRequestKey_T_"></a>
+                    <a name="//apple_ref/swift/Method/setResponse(_:forKey:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP4Nuke18ImageMemoryCaching11setResponseuRq_S0__Fq_FTCS_19ImageCachedResponse6forKeyCS_15ImageRequestKey_T_">setResponse(_:forKey:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -225,11 +245,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Stores the cached response for the specified key.</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">setResponse</span><span class="p">(</span><span class="nv">response</span><span class="p">:</span> <span class="kt">ImageCachedResponse</span><span class="p">,</span> <span class="n">forKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">ImageRequestKey</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/1.4.0/Nuke/Source/Core/ImageMemoryCache.swift#L0">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/2.0.0/Nuke/Source/Core/ImageMemoryCache.swift#L21">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -237,9 +265,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FP4Nuke18ImageMemoryCaching21removeAllCachedImagesuRq_S0__Fq_FT_T_"></a>
-                    <a name="//apple_ref/swift/Method/removeAllCachedImages()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FP4Nuke18ImageMemoryCaching21removeAllCachedImagesuRq_S0__Fq_FT_T_">removeAllCachedImages()</a>
+                    <a name="/s:FP4Nuke18ImageMemoryCaching20removeResponseForKeyuRq_S0__Fq_FCS_15ImageRequestKeyT_"></a>
+                    <a name="//apple_ref/swift/Method/removeResponseForKey(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP4Nuke18ImageMemoryCaching20removeResponseForKeyuRq_S0__Fq_FCS_15ImageRequestKeyT_">removeResponseForKey(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -247,11 +275,49 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Removes the cached response for the specified key.</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">removeResponseForKey</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">ImageRequestKey</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/1.4.0/Nuke/Source/Core/ImageMemoryCache.swift#L0">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/2.0.0/Nuke/Source/Core/ImageMemoryCache.swift#L25">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP4Nuke18ImageMemoryCaching5clearuRq_S0__Fq_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/clear()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP4Nuke18ImageMemoryCaching5clearuRq_S0__Fq_FT_T_">clear()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Clears the receiver&rsquo;s storage.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">clear</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/2.0.0/Nuke/Source/Core/ImageMemoryCache.swift#L29">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -261,7 +327,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://github.com/kean" target="_blank" rel="external">kean</a>. All rights reserved. (Last updated: 2016-01-27)</p>
+          <p>&copy; 2016 <a class="link" href="https://github.com/kean" target="_blank" rel="external">kean</a>. All rights reserved. (Last updated: 2016-02-06)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
