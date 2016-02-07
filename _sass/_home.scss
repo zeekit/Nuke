@@ -2,7 +2,7 @@
     font-size: 100px;
     font-weight: 200;
     color: white;
-    margin: 15px 0 15px 0;
+    margin: $spacing-unit 0;
     padding: 0px 40px 0px 40px;
     background: linear-gradient(rgb(256, 43, 104), rgb(254, 153, 71));
     border-radius: 30px;
@@ -11,8 +11,7 @@
     @include media-query($on-palm) {
         font-size: 80px;
         line-height: 1.4;
-        padding: 0px 40px 0px 40px;
-        margin: 0px 0 5px 0;
+        margin: 0;
     }
 }
 
@@ -22,19 +21,24 @@
     font-weight: 200;
     color: $grey-color-dark;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: $spacing-unit;
 
     @include media-query($on-palm) {
-        font-size: 32px;
-        line-height: 34px;
-        margin-bottom: 20px;
+        font-size: 28px;
+        line-height: 1.2;
+        margin-bottom: 0.5 * $spacing-unit;
     }
 }
 
 .home-section-title {
     text-align: center;
-    font-size: 50px;
-    margin-top: 30px;
+    font-size: 48px;
+    margin-top: $spacing-unit;
+    margin-bottom: 0.5 * $spacing-unit;
+
+    @include media-query($on-palm) {
+        font-size: 38px;
+    }
 }
 
 /**
@@ -42,8 +46,12 @@
  */
 .home-share-container {
     margin: 25px 0 20px 0;
+    margin: $spacing-unit 0;
     display: flex;
     justify-content: center;
+    @include media-query($on-palm) {
+        margin: 0.5 * $spacing-unit 0;
+    }
 }
 
 .home-share-icon {
@@ -67,9 +75,14 @@
 
 .featurette-divider {
     margin: 20px 0;
+    margin: $spacing-unit 0;
     border-top: 1px solid #eeeeee;
     transform: scaleY(0.5);
     width: 100%;
+
+    @include media-query($on-palm) {
+        margin: 0.5 * $spacing-unit 0;
+    }
 }
 
 .featurette-block {
@@ -83,7 +96,7 @@
     }
 
     p {
-        margin-top: 10px;
+        margin-top: 0.25 * $spacing-unit;
     }
 
     @include media-query($on-palm) {
@@ -102,12 +115,13 @@
      flex-flow: row wrap;
 
      h2 {
-         margin: 12px 0 12px 0;
+         text-align: center;
+         margin: 0 0 0.25 * $spacing-unit 0;
      }
  }
 
  .feature-block {
-     margin: 0 8px 0 8px;
+     margin: 0 0.25 * $spacing-unit 0 0.25 * $spacing-unit;
      width: 47%;
      @include media-query($on-palm) {
          width: 100%;
