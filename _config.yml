@@ -10,7 +10,7 @@ title: Nuke
 email: grebenyuk.alexander@gmail.com
 baseurl: /Nuke
 description: > # this means to ignore newlines until "baseurl:"
-  Advanced Swift framework for loading, processing, caching and preheating images.
+  Swift framework for loading, processing, caching and preheating images.
 url: "https://kean.github.io/nuke" # the base hostname & protocol for your site
 twitter_username: a_grebenyuk
 github_username:  kean
