@@ -27,7 +27,7 @@ ImageManager.shared = ImageManager(configuration: configuration)
 [FLAnimatedImage](https://github.com/Flipboard/FLAnimatedImage) plugin for [Nuke](https://github.com/kean/Nuke) that allows you to load and display animated GIFs with a silky smooth scrolling performance and extremely low memory footprint.
 
 <div class="video-container">
-  <iframe width="640" height="360" src="https://www.youtube.com/embed/_8X7ip0Apx8?rel=0" frameborder="0" allowfullscreen></iframe>
+  <iframe width="640" height="360" src="https://www.youtube.com/embed/fEJqQMJrET4?rel=0" frameborder="0" allowfullscreen></iframe>
 </div>
 
 Footage from iPod Touch 5G (slightly slower than iPhone 5)
