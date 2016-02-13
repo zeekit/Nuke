@@ -24,16 +24,22 @@ ImageManager.shared = ImageManager(configuration: configuration)
 
 ## [Nuke AnimatedImage Plugin](https://github.com/kean/Nuke-AnimatedImage-Plugin)
 
-[FLAnimatedImage](https://github.com/Flipboard/FLAnimatedImage) plugin for [Nuke](https://github.com/kean/Nuke) that allows you to load and display animated GIFs.
+[FLAnimatedImage](https://github.com/Flipboard/FLAnimatedImage) plugin for [Nuke](https://github.com/kean/Nuke) that allows you to load and display animated GIFs with a silky smooth scrolling and extremely low memory footprint.
+
+<div class="video-container">
+  <iframe width="640" height="360" src="https://www.youtube.com/embed/_8X7ip0Apx8?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
 
 - `AnimatedImageDecoder` creates `AnimatedImages` from received data
 - `AnimatedImageLoaderDelegate` prevents `ImageLoader` from processing `AnimatedImages`
+- `AnimatedImageMemoryCache` calculates proper cost for animated images, can also be used to disable animated images storage all together
 
 {% highlight swift %}
 let decoder = ImageDecoderComposition(decoders: [AnimatedImageDecoder(), ImageDecoder()])
 let loader = ImageLoader(configuration: ImageLoaderConfiguration(dataLoader: <#dataLoader#>, decoder: decoder), delegate: AnimatedImageLoaderDelegate())
+let cache = AnimatedImageMemoryCache()
 
-ImageManager.shared = ImageManager(configuration: ImageManagerConfiguration(loader: loader))
+ImageManager.shared = ImageManager(configuration: ImageManagerConfiguration(loader: loader, cahce: cache))
 {% endhighlight %}
 
 Nuke adds full-featured image loading extension to FLAnimatedImageView
@@ -42,4 +48,3 @@ Nuke adds full-featured image loading extension to FLAnimatedImageView
 let imageView = FLAnimatedImageView()
 imageView.nk_setImageWith(<#imageRequest#>) // Loads animated image and starts playback
 {% endhighlight %}
-
