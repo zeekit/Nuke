@@ -30,6 +30,8 @@ ImageManager.shared = ImageManager(configuration: configuration)
   <iframe width="640" height="360" src="https://www.youtube.com/embed/_8X7ip0Apx8?rel=0" frameborder="0" allowfullscreen></iframe>
 </div>
 
+Footage from iPod Touch 5G (slightly slower than iPhone 5)
+
 - `AnimatedImageDecoder` creates `AnimatedImages` from received data
 - `AnimatedImageLoaderDelegate` prevents `ImageLoader` from processing `AnimatedImages`
 - `AnimatedImageMemoryCache` calculates proper cost for animated images, can also be used to disable animated images storage all together
