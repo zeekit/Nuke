@@ -48,6 +48,9 @@ ImageLoader.swift
 	public func isEqual(lhs: ImageRequestKey, to rhs: ImageRequestKey) -> Bool
 ImageDecoder.swift
 	func decode(data: NSData, response: NSURLResponse?) -> Image?
+ImageProcessor.swift
+	public func process(image: Image) -> Image?
+	public func ==(lhs: ImageProcessorWithClosure, rhs: ImageProcessorWithClosure) -> Bool
 ImageDataLoader.swift
 	public private(set) var session: NSURLSession!
 	public func taskWith(request: ImageRequest, progress: ImageDataLoadingProgress, completion: ImageDataLoadingCompletion) -> NSURLSessionTask

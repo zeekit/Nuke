@@ -2,13 +2,11 @@ ImageLoadingView.swift
 	public struct ImageViewLoadingOptions
 	public var handler: ((ImageLoadingView, ImageTask, ImageResponse, ImageViewLoadingOptions) -> Void)? = nil
 	public init() {}
-	public func nk_setImageWith(request: ImageRequest) -> ImageTask
 	public typealias View = NSView
 	var nk_image: Image? { get set }
 	public func nk_setImageWith(request: ImageRequest, options: ImageViewLoadingOptions = ImageViewLoadingOptions(), placeholder: Image?) -> ImageTask
 	public func nk_cancelLoading()
 	public func nk_setImageWith(request: ImageRequest, options: ImageViewLoadingOptions) -> ImageTask
-	public var nk_imageLoadingController: ImageViewLoadingController
 ImageResponse.swift
 	case Success(Image, ImageResponseInfo)
 	case Failure(ErrorType)
@@ -60,9 +58,7 @@ ImageLoader.swift
 	public func removeAllCachedImages()
 	public func isEqual(lhs: ImageRequestKey, to rhs: ImageRequestKey) -> Bool
 ImageViewLoadingController.swift
-	public var manager: ImageManager = ImageManager.shared
 	public init(handler: (ImageTask, ImageResponse, ImageViewLoadingOptions) -> Void)
-	public func cancelLoading()
 	public func setImageWith(request: ImageRequest, options: ImageViewLoadingOptions) -> ImageTask
 	public func setImageWith(task: ImageTask, options: ImageViewLoadingOptions) -> ImageTask
 ImageDataLoader.swift
@@ -70,6 +66,9 @@ ImageDataLoader.swift
 	public func taskWith(request: ImageRequest, progress: ImageDataLoadingProgress, completion: ImageDataLoadingCompletion) -> NSURLSessionTask
 	public func URLSession(session: NSURLSession, dataTask: NSURLSessionDataTask, didReceiveData data: NSData)
 	public func URLSession(session: NSURLSession, task: NSURLSessionTask, didCompleteWithError error: NSError?)
+ImageProcessor.swift
+	public func process(image: Image) -> Image?
+	public func ==(lhs: ImageProcessorWithClosure, rhs: ImageProcessorWithClosure) -> Bool
 ImageDecoder.swift
 	func decode(data: NSData, response: NSURLResponse?) -> Image?
 ImageRequestKey.swift

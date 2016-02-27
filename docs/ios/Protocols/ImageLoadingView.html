@@ -14,7 +14,7 @@
     <a title="ImageLoadingView Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Nuke Docs</a> (69% documented)</p>
+        <p><a href="../index.html">Nuke Docs</a> (70% documented)</p>
         <p class="header-right"><a href="https://github.com/kean/Nuke"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -69,6 +69,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/ImageProcessorComposition.html">ImageProcessorComposition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageProcessorWithClosure.html">ImageProcessorWithClosure</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/ImageRequestKey.html">ImageRequestKey</a>
@@ -140,6 +143,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Functions.html#/s:ZF4Nukeoi2eeFTCS_17ImageDecompressorS0__Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:ZF4Nukeoi2eeFTCS_25ImageProcessorWithClosureS0__Sb">==(_:_:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Functions.html#/s:ZF4Nukeoi2eeFTCS_25ImageProcessorCompositionS0__Sb">==(_:_:)</a>
@@ -242,8 +248,6 @@
               </div>
             <p>View that supports image loading.</p>
 
-<p>See <a href="https://github.com/kean/Nuke/issues/38">https://github.com/kean/Nuke/issues/38</a> for more info about overriding those methods.</p>
-
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -264,7 +268,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Cancels current task.</p>
+                        <p>Cancels the task currently associated with the view.</p>
 
                       </div>
                       <h4>Default Implementation</h4>
@@ -281,7 +285,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/2.0.0/Nuke/Source/UI/ImageLoadingView.swift#L44">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/2.1.0/Nuke/Source/UI/ImageLoadingView.swift#L43">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -302,7 +306,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Loads and displays an image for the given request. Cancels previously stared requests.</p>
+                        <p>Loads and displays an image for the given request. Cancels previously started requests.</p>
 
                       </div>
                       <h4>Default Implementation</h4>
@@ -319,7 +323,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/2.0.0/Nuke/Source/UI/ImageLoadingView.swift#L48">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/2.1.0/Nuke/Source/UI/ImageLoadingView.swift#L47">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -340,7 +344,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Gets called when the task currently associated with the view is completed.</p>
+                        <p>Gets called when the task that is currently associated with the view completes.</p>
 
 <p>See <a href="https://github.com/kean/Nuke/issues/38">https://github.com/kean/Nuke/issues/38</a> for more info about overriding this method.</p>
 
@@ -359,7 +363,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/2.0.0/Nuke/Source/UI/ImageLoadingView.swift#L54">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/2.1.0/Nuke/Source/UI/ImageLoadingView.swift#L53">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -384,7 +388,9 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Loads and displays an image for the given URL. Cancels previously stared requests. Uses ImageContentMode.AspectFill, and current view size multiplied by screen scaling factor as an image target size.</p>
+                        <p>Loads and displays an image for the given URL. Cancels previously started requests.</p>
+
+<p>Uses ImageContentMode.AspectFill, and current view size multiplied by screen scaling factor as an image target size.</p>
 
                       </div>
                       <div class="declaration">
@@ -396,7 +402,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/2.0.0/Nuke/Source/UI/ImageLoadingView.swift#L60-L62">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/2.1.0/Nuke/Source/UI/ImageLoadingView.swift#L61-L63">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -417,19 +423,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Loads and displays an image for the given request. Cancels previously started requests.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ImageLoadingView</span><span class="p">:</span> <span class="kd">class</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">nk_setImageWith</span><span class="p">(</span><span class="nv">request</span><span class="p">:</span> <span class="kt">ImageRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ImageTask</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/2.0.0/Nuke/Source/UI/ImageLoadingView.swift#L64-L66">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/2.1.0/Nuke/Source/UI/ImageLoadingView.swift#L67-L69">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -466,7 +472,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/2.0.0/Nuke/Source/UI/ImageLoadingView.swift#L98-L103">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/2.1.0/Nuke/Source/UI/ImageLoadingView.swift#L102-L107">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -498,7 +504,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns current image task.</p>
+                        <p>Returns current task.</p>
 
                       </div>
                       <div class="declaration">
@@ -510,7 +516,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/2.0.0/Nuke/Source/UI/ImageLoadingView.swift#L164-L166">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/2.1.0/Nuke/Source/UI/ImageLoadingView.swift#L166-L168">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -531,19 +537,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Returns image loading controller associated with the view.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ImageLoadingView</span><span class="p">:</span> <span class="kd">class</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">nk_imageLoadingController</span><span class="p">:</span> <span class="kt">ImageViewLoadingController</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/2.0.0/Nuke/Source/UI/ImageLoadingView.swift#L168-L182">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/2.1.0/Nuke/Source/UI/ImageLoadingView.swift#L172-L186">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -553,7 +559,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://github.com/kean" target="_blank" rel="external">kean</a>. All rights reserved. (Last updated: 2016-02-06)</p>
+          <p>&copy; 2016 <a class="link" href="https://github.com/kean" target="_blank" rel="external">kean</a>. All rights reserved. (Last updated: 2016-02-27)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

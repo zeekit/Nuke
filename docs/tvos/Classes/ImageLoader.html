@@ -14,7 +14,7 @@
     <a title="ImageLoader Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Nuke Docs</a> (69% documented)</p>
+        <p><a href="../index.html">Nuke Docs</a> (70% documented)</p>
         <p class="header-right"><a href="https://github.com/kean/Nuke"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -69,6 +69,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/ImageProcessorComposition.html">ImageProcessorComposition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageProcessorWithClosure.html">ImageProcessorWithClosure</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/ImageRequestKey.html">ImageRequestKey</a>
@@ -137,6 +140,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Functions.html#/s:ZF4Nukeoi2eeFTCS_25ImageProcessorCompositionS0__Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:ZF4Nukeoi2eeFTCS_25ImageProcessorWithClosureS0__Sb">==(_:_:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Functions.html#/s:ZF4Nukeoi2eeFTCS_17ImageDecompressorS0__Sb">==(_:_:)</a>
@@ -240,10 +246,12 @@
 
                 </div>
               </div>
-            <p>Performs loading of images for the image tasks using objects conforming to <code><a href="../Protocols/ImageDataLoading.html">ImageDataLoading</a></code>, <code><a href="../Protocols/ImageDecoding.html">ImageDecoding</a></code> and <code><a href="../Protocols/ImageProcessing.html">ImageProcessing</a></code> protocols. Works in conjunction with the <code><a href="../Classes/ImageManager.html">ImageManager</a></code>.</p>
+            <p>Performs loading of images for the image tasks.</p>
+
+<p>This class uses multiple dependencies provided in its configuration. Image data is loaded using an object conforming to <code><a href="../Protocols/ImageDataLoading.html">ImageDataLoading</a></code> protocol. Image data is decoded via <code><a href="../Protocols/ImageDecoding.html">ImageDecoding</a></code> protocol. Decoded images are processed by objects conforming to <code><a href="../Protocols/ImageProcessing.html">ImageProcessing</a></code> protocols.</p>
 
 <ul>
-<li>Provides a transparent loading, decoding and processing with a single completion signal</li>
+<li>Provides transparent loading, decoding and processing with a single completion signal</li>
 <li>Reuses data tasks for equivalent image tasks</li>
 </ul>
 
@@ -276,7 +284,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/2.0.0/Nuke/Source/Core/ImageLoader.swift#L0">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/2.1.0/Nuke/Source/Core/ImageLoader.swift#L0">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -306,7 +314,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/2.0.0/Nuke/Source/Core/ImageLoader.swift#L0">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/2.1.0/Nuke/Source/Core/ImageLoader.swift#L0">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -336,7 +344,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/2.0.0/Nuke/Source/Core/ImageLoader.swift#L187">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/2.1.0/Nuke/Source/Core/ImageLoader.swift#L193">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -386,7 +394,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/2.0.0/Nuke/Source/Core/ImageLoader.swift#L199-L204">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/2.1.0/Nuke/Source/Core/ImageLoader.swift#L205-L210">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -416,7 +424,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/2.0.0/Nuke/Source/Core/ImageLoader.swift#L206-L210">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/2.1.0/Nuke/Source/Core/ImageLoader.swift#L212-L217">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -446,7 +454,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/2.0.0/Nuke/Source/Core/ImageLoader.swift#L284-L288">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/2.1.0/Nuke/Source/Core/ImageLoader.swift#L296-L300">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -476,7 +484,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/2.0.0/Nuke/Source/Core/ImageLoader.swift#L300-L304">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/2.1.0/Nuke/Source/Core/ImageLoader.swift#L314-L318">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -506,7 +514,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/2.0.0/Nuke/Source/Core/ImageLoader.swift#L327-L329">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/2.1.0/Nuke/Source/Core/ImageLoader.swift#L342-L344">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -536,7 +544,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/2.0.0/Nuke/Source/Core/ImageLoader.swift#L331-L333">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/2.1.0/Nuke/Source/Core/ImageLoader.swift#L346-L348">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -566,7 +574,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/2.0.0/Nuke/Source/Core/ImageLoader.swift#L335-L337">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/2.1.0/Nuke/Source/Core/ImageLoader.swift#L350-L352">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -600,7 +608,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/2.0.0/Nuke/Source/Core/ImageLoader.swift#L343-L345">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/2.1.0/Nuke/Source/Core/ImageLoader.swift#L358-L360">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -610,7 +618,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://github.com/kean" target="_blank" rel="external">kean</a>. All rights reserved. (Last updated: 2016-02-06)</p>
+          <p>&copy; 2016 <a class="link" href="https://github.com/kean" target="_blank" rel="external">kean</a>. All rights reserved. (Last updated: 2016-02-27)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -28,9 +28,7 @@ ImagePreheatingControllerForCollectionView.swift
 	public override var enabled: Bool
 	public override func scrollViewDidScroll()
 ImageViewLoadingController.swift
-	public var manager: ImageManager = ImageManager.shared
 	public init(handler: (ImageTask, ImageResponse, ImageViewLoadingOptions) -> Void)
-	public func cancelLoading()
 	public func setImageWith(request: ImageRequest, options: ImageViewLoadingOptions) -> ImageTask
 	public func setImageWith(task: ImageTask, options: ImageViewLoadingOptions) -> ImageTask
 ImagePreheatingControllerForTableView.swift
@@ -45,6 +43,8 @@ ImageManagerExtensions.swift
 	func taskWith(URL: NSURL, completion: ImageTaskCompletion? = nil) -> ImageTask
 	func taskWith(request: ImageRequest, completion: ImageTaskCompletion?) -> ImageTask
 ImageProcessor.swift
+	public func process(image: Image) -> Image?
+	public func ==(lhs: ImageProcessorWithClosure, rhs: ImageProcessorWithClosure) -> Bool
 	public let radius: Int
 	public func process(image: UIImage) -> UIImage?
 	public func ==(lhs: ImageFilterGaussianBlur, rhs: ImageFilterGaussianBlur) -> Bool
@@ -83,13 +83,11 @@ ImageLoadingView.swift
 	public struct ImageViewLoadingOptions
 	public var handler: ((ImageLoadingView, ImageTask, ImageResponse, ImageViewLoadingOptions) -> Void)? = nil
 	public init() {}
-	public func nk_setImageWith(request: ImageRequest) -> ImageTask
 	public typealias View = UIView
 	var nk_image: Image? { get set }
 	public func nk_setImageWith(request: ImageRequest, options: ImageViewLoadingOptions = ImageViewLoadingOptions(), placeholder: Image?) -> ImageTask
 	public func nk_cancelLoading()
 	public func nk_setImageWith(request: ImageRequest, options: ImageViewLoadingOptions) -> ImageTask
-	public var nk_imageLoadingController: ImageViewLoadingController
 ImageManager.swift
 	public struct ImageManagerConfiguration
 	public var loader: ImageLoading

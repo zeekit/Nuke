@@ -13,7 +13,7 @@
     <a title="Nuke  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">Nuke Docs</a> (69% documented)</p>
+        <p><a href="index.html">Nuke Docs</a> (70% documented)</p>
         <p class="header-right"><a href="https://github.com/kean/Nuke"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -68,6 +68,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Classes/ImageProcessorComposition.html">ImageProcessorComposition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ImageProcessorWithClosure.html">ImageProcessorWithClosure</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/ImageRequestKey.html">ImageRequestKey</a>
@@ -136,6 +139,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Functions.html#/s:ZF4Nukeoi2eeFTCS_25ImageProcessorCompositionS0__Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:ZF4Nukeoi2eeFTCS_25ImageProcessorWithClosureS0__Sb">==(_:_:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="Functions.html#/s:ZF4Nukeoi2eeFTCS_17ImageDecompressorS0__Sb">==(_:_:)</a>
@@ -233,7 +239,7 @@
         <section>
           <section class="section">
             
-            <p align="left"><img src="https://cloud.githubusercontent.com/assets/1567433/10440878/a7c6e468-714b-11e5-9b12-baef482c37c1.png" height="100"/>
+            <p align="left"><img src="https://cloud.githubusercontent.com/assets/1567433/13362579/7001aa94-dcd6-11e5-8c0d-5a4920008d04.png" height="150"/>
 
 <p align="left">
 <a href="https://cocoapods.org"><img src="https://img.shields.io/cocoapods/v/Nuke.svg"></a>
@@ -241,7 +247,7 @@
 <a href="http://cocoadocs.org/docsets/Nuke"><img src="https://img.shields.io/cocoapods/p/Nuke.svg?style=flat)"></a>
 </p>
 
-<p>Advanced Swift framework for loading, processing, caching and <a href="http://outscope.net/blog/image-preheating">preheating</a> images.</p>
+<p>Loading, processing, caching and <a href="http://outscope.net/blog/image-preheating"><strong>preheating</strong></a> images.</p>
 
 <p>To get started check out <a href="http://kean.github.io/Nuke/">http://kean.github.io/Nuke/</a> !</p>
 <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">request</span> <span class="o">=</span> <span class="kt">ImageRequest</span><span class="p">(</span><span class="kt">URL</span><span class="p">:</span> <span class="kt">NSURL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"http://..."</span><span class="p">))</span>
@@ -267,7 +273,7 @@
 <li>Uses <a href="https://developer.apple.com/library/ios/documentation/Foundation/Reference/NSURLSession_class/">NSURLSession</a> with <a href="https://en.wikipedia.org/wiki/HTTP/2">HTTP/2</a> support</li>
 <li>A single data task is used for multiple equivalent requests</li>
 <li><a href="http://outscope.net/blog/image-preheating">Automated preheating</a> of images close to the viewport</li>
-<li>Congestion control that prevents trashing the system with requests during fast scrolling</li>
+<li>Prevents trashing the system with requests during fast scrolling</li>
 <li>Full featured extensions for UI components</li>
 </ul>
 <a href='#caching' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h5 id='caching'>Caching</h5>
@@ -275,7 +281,7 @@
 <ul>
 <li><a href="http://outscope.net/blog/image-caching">Doesn&rsquo;t reinvent caching</a>, relies on HTTP cache in URL Loading System</li>
 <li>Two cache layers including auto purging memory cache</li>
-<li>Intellegent control over memory cache</li>
+<li>Intelligent control over memory cache</li>
 </ul>
 <a href='#processing' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h5 id='processing'>Processing</h5>
 
@@ -306,6 +312,7 @@
 <li>API reference: <a href="http://kean.github.io/Nuke/docs/ios/">iOS</a> / <a href="http://kean.github.io/Nuke/docs/osx/">OSX</a> / <a href="http://kean.github.io/Nuke/docs/tvos/">tvOS</a> / <a href="http://kean.github.io/Nuke/docs/watchos/">watchOS</a></li>
 <li><a href="http://kean.github.io/Nuke/usage/">Usage</a></li>
 <li><a href="http://kean.github.io/Nuke/plugins/">Plugins</a></li>
+<li><a href="http://kean.github.io/Nuke/docs/">Docs</a></li>
 </ul>
 <a href='#a_name_h_usage_a_usage' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='a_name_h_usage_a_usage'><a name="h_usage"></a>Usage</h2>
 <a href='#creating_image_task' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='creating_image_task'>Creating Image Task</h4>
@@ -499,7 +506,7 @@
 
 <p>For on-memory caching Nuke provides <code>ImageMemoryCaching</code> protocol and its implementation in <code>ImageMemoryCache</code> class built on top of <code>NSCache</code>. The <code>ImageMemoryCache</code> is used for fast access to processed images that are ready for display.</p>
 
-<p>The combination of two cache layers results in a high performance caching system. For more info see <a href="http://kean.github.io/blog/programming/2016/01/26/image-caching.html">Image Caching Guide</a> which provides a comprehensive look at HTTP cache, URL Loading System and NSCache.</p>
+<p>The combination of two cache layers results in a high performance caching system. For more info see <a href="http://outscope.net/blog/image-caching">Image Caching Guide</a> which provides a comprehensive look at HTTP cache, URL Loading System and NSCache.</p>
 <a href='#accessing_memory_cache' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='accessing_memory_cache'>Accessing Memory Cache</h4>
 
 <p>Nuke automatically leverages both its cache layers. It accesses in-memory cache each time you start an <code>ImageTask</code> and calls a completion closure synchronously if the appropriate image is found.</p>
@@ -647,7 +654,7 @@ github "kean/Nuke-AnimatedImage-Plugin" # optional
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://github.com/kean" target="_blank" rel="external">kean</a>. All rights reserved. (Last updated: 2016-02-06)</p>
+          <p>&copy; 2016 <a class="link" href="https://github.com/kean" target="_blank" rel="external">kean</a>. All rights reserved. (Last updated: 2016-02-27)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

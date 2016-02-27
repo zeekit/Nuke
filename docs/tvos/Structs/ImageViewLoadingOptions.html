@@ -14,7 +14,7 @@
     <a title="ImageViewLoadingOptions Struct Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Nuke Docs</a> (69% documented)</p>
+        <p><a href="../index.html">Nuke Docs</a> (70% documented)</p>
         <p class="header-right"><a href="https://github.com/kean/Nuke"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -69,6 +69,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/ImageProcessorComposition.html">ImageProcessorComposition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageProcessorWithClosure.html">ImageProcessorWithClosure</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/ImageRequestKey.html">ImageRequestKey</a>
@@ -137,6 +140,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Functions.html#/s:ZF4Nukeoi2eeFTCS_25ImageProcessorCompositionS0__Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:ZF4Nukeoi2eeFTCS_25ImageProcessorWithClosureS0__Sb">==(_:_:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Functions.html#/s:ZF4Nukeoi2eeFTCS_17ImageDecompressorS0__Sb">==(_:_:)</a>
@@ -253,9 +259,9 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Custom animations to run after the image is displayed. Defaul value is nil.</p>
+                        <p>Custom animations to run when the image is displayed. Default value is nil.</p>
 
-<p>Animations are not run for fast response (response from memory cache). If you&rsquo;d like to change that behaviour, set <code><a href="../Structs/ImageViewLoadingOptions.html#/s:vV4Nuke23ImageViewLoadingOptions7handlerGSqFTPS_16ImageLoadingView_CS_9ImageTaskOS_13ImageResponseS0__T__">handler</a></code> property instead.</p>
+<p>This closure is not called if the response is from memory cache (<code>isFastResponse</code>) or if the <code><a href="../Structs/ImageViewLoadingOptions.html#/s:vV4Nuke23ImageViewLoadingOptions8animatedSb">animated</a></code> property of the reciever is set to <code>false</code>. Use <code><a href="../Structs/ImageViewLoadingOptions.html#/s:vV4Nuke23ImageViewLoadingOptions7handlerGSqFTPS_16ImageLoadingView_CS_9ImageTaskOS_13ImageResponseS0__T__">handler</a></code> property if you need more control.</p>
 
                       </div>
                       <div class="declaration">
@@ -267,7 +273,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/2.0.0/Nuke/Source/UI/ImageLoadingView.swift#L20">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/2.1.0/Nuke/Source/UI/ImageLoadingView.swift#L21">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -285,7 +291,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Default value is true. Allows to disable animations.</p>
+                        <p>If true the loaded image is displayed with an animation. Default value is true.</p>
 
                       </div>
                       <div class="declaration">
@@ -297,7 +303,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/2.0.0/Nuke/Source/UI/ImageLoadingView.swift#L24">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/2.1.0/Nuke/Source/UI/ImageLoadingView.swift#L25">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -319,7 +325,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/2.0.0/Nuke/Source/UI/ImageLoadingView.swift#L0">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/2.1.0/Nuke/Source/UI/ImageLoadingView.swift#L0">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -337,7 +343,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Defaul value is nil.</p>
+                        <p>Default value is nil.</p>
 
                       </div>
                       <div class="declaration">
@@ -349,7 +355,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/2.0.0/Nuke/Source/UI/ImageLoadingView.swift#L32">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/2.1.0/Nuke/Source/UI/ImageLoadingView.swift#L33">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -371,7 +377,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/2.0.0/Nuke/Source/UI/ImageLoadingView.swift#L0">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/2.1.0/Nuke/Source/UI/ImageLoadingView.swift#L0">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -381,7 +387,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://github.com/kean" target="_blank" rel="external">kean</a>. All rights reserved. (Last updated: 2016-02-06)</p>
+          <p>&copy; 2016 <a class="link" href="https://github.com/kean" target="_blank" rel="external">kean</a>. All rights reserved. (Last updated: 2016-02-27)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
