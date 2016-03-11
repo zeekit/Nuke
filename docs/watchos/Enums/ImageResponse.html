@@ -14,7 +14,7 @@
     <a title="ImageResponse Enum Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Nuke Docs</a> (75% documented)</p>
+        <p><a href="../index.html">Nuke Docs</a> (96% documented)</p>
         <p class="header-right"><a href="https://github.com/kean/Nuke"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -190,6 +190,23 @@
               </li>
             </ul>
           </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Typealiases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:4Nuke5Image">Image</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:4Nuke26ImageDataLoadingCompletion">ImageDataLoadingCompletion</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:4Nuke24ImageDataLoadingProgress">ImageDataLoadingProgress</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:4Nuke19ImageTaskCompletion">ImageTaskCompletion</a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
       <article class="main-content">
@@ -221,19 +238,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Task completed successfully.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ImageResponse</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">Success</span><span class="p">(</span><span class="kt">Image</span><span class="p">,</span> <span class="kt">ImageResponseInfo</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/2.1.0/Nuke/Source/Core/ImageResponse.swift#L0">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/File Doesn't Exist, Will Create: Nuke/Supporting Files/Info.plist/Source/Core/ImageResponse.swift#L10">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -255,19 +272,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Task either failed or was cancelled. See ImageManagerErrorDomain for more info.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ImageResponse</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">Failure</span><span class="p">(</span><span class="kt">ErrorType</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/2.1.0/Nuke/Source/Core/ImageResponse.swift#L0">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/File Doesn't Exist, Will Create: Nuke/Supporting Files/Info.plist/Source/Core/ImageResponse.swift#L13">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -289,19 +306,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Returns image if the response was successful.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ImageResponse</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">Image</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/2.1.0/Nuke/Source/Core/ImageResponse.swift#L17-L22">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/File Doesn't Exist, Will Create: Nuke/Supporting Files/Info.plist/Source/Core/ImageResponse.swift#L19-L24">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -319,19 +336,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Returns response metadata if the response was successful.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ImageResponse</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">info</span><span class="p">:</span> <span class="kt">ImageResponseInfo</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/2.1.0/Nuke/Source/Core/ImageResponse.swift#L24-L29">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/File Doesn't Exist, Will Create: Nuke/Supporting Files/Info.plist/Source/Core/ImageResponse.swift#L27-L32">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -349,19 +366,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Returns error if the response failed.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ImageResponse</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">ErrorType</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/2.1.0/Nuke/Source/Core/ImageResponse.swift#L31-L36">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/File Doesn't Exist, Will Create: Nuke/Supporting Files/Info.plist/Source/Core/ImageResponse.swift#L35-L40">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -379,19 +396,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Returns true if the response was successful.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ImageResponse</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isSuccess</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/2.1.0/Nuke/Source/Core/ImageResponse.swift#L38-L43">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/File Doesn't Exist, Will Create: Nuke/Supporting Files/Info.plist/Source/Core/ImageResponse.swift#L43-L48">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -401,7 +418,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://github.com/kean" target="_blank" rel="external">kean</a>. All rights reserved. (Last updated: 2016-02-27)</p>
+          <p>&copy; 2016 <a class="link" href="https://github.com/kean" target="_blank" rel="external">kean</a>. All rights reserved. (Last updated: 2016-03-11)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

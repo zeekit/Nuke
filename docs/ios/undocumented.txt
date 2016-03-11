@@ -1,6 +1,5 @@
 ImageDataLoader.swift
 	public private(set) var session: NSURLSession!
-	public func taskWith(request: ImageRequest, progress: ImageDataLoadingProgress, completion: ImageDataLoadingCompletion) -> NSURLSessionTask
 	public func URLSession(session: NSURLSession, dataTask: NSURLSessionDataTask, didReceiveData data: NSData)
 	public func URLSession(session: NSURLSession, task: NSURLSessionTask, didCompleteWithError error: NSError?)
 ImageTask.swift
@@ -8,92 +7,16 @@ ImageTask.swift
 	case Suspended, Running, Cancelled, Completed
 	case Suspended, Running, Cancelled, Completed
 	case Suspended, Running, Cancelled, Completed
-	public internal(set) var response: ImageResponse?
-	public var hashValue: Int { return self.identifier }
-	public init(request: ImageRequest, identifier: Int)
-	public func ==(lhs: ImageTask, rhs: ImageTask) -> Bool
-ImageResponse.swift
-	case Success(Image, ImageResponseInfo)
-	case Failure(ErrorType)
-	public var image: Image?
-	public var info: ImageResponseInfo?
-	public var error: ErrorType?
-	public var isSuccess: Bool
-	public init(fastResponse: Bool, userInfo: Any? = nil)
 ImagePreheatingControllerForCollectionView.swift
-	public class ImagePreheatingControllerForCollectionView: ImagePreheatingController
-	public var collectionView: UICollectionView
-	public var collectionViewLayout: UICollectionViewFlowLayout
-	public init(collectionView: UICollectionView)
-	public override var enabled: Bool
 	public override func scrollViewDidScroll()
 ImageViewLoadingController.swift
-	public init(handler: (ImageTask, ImageResponse, ImageViewLoadingOptions) -> Void)
 	public func setImageWith(request: ImageRequest, options: ImageViewLoadingOptions) -> ImageTask
 	public func setImageWith(task: ImageTask, options: ImageViewLoadingOptions) -> ImageTask
 ImagePreheatingControllerForTableView.swift
-	public class ImagePreheatingControllerForTableView: ImagePreheatingController
-	public var tableView: UITableView
-	public init(tableView: UITableView)
-	public override var enabled: Bool
 	public override func scrollViewDidScroll()
 ImageLoadingViewExtensions.swift
 	public var nk_image: UIImage?
-ImageManagerExtensions.swift
-	func taskWith(URL: NSURL, completion: ImageTaskCompletion? = nil) -> ImageTask
-	func taskWith(request: ImageRequest, completion: ImageTaskCompletion?) -> ImageTask
-ImageProcessor.swift
-	public func process(image: Image) -> Image?
-	public func ==(lhs: ImageProcessorWithClosure, rhs: ImageProcessorWithClosure) -> Bool
-	public let radius: Int
-	public func process(image: UIImage) -> UIImage?
-	public func ==(lhs: ImageFilterGaussianBlur, rhs: ImageFilterGaussianBlur) -> Bool
-ImageLoader.swift
-	public struct ImageLoaderConfiguration
-	public var dataLoader: ImageDataLoading
-	public var decoder: ImageDecoding
-	public func decompressorFor(request: ImageRequest) -> ImageProcessing?
-	public init() {}
-	public weak var manager: ImageLoadingManager?
-	public let configuration: ImageLoaderConfiguration
-	public func resumeLoadingFor(task: ImageTask)
-	public func suspendLoadingFor(task: ImageTask)
-	public func cancelLoadingFor(task: ImageTask)
-	public func isCacheEquivalent(lhs: ImageRequest, to rhs: ImageRequest) -> Bool
-	public func invalidate()
-	public func removeAllCachedImages()
-	public func isEqual(lhs: ImageRequestKey, to rhs: ImageRequestKey) -> Bool
-ImageRequestKey.swift
-	public init(_ request: ImageRequest, owner: ImageRequestKeyOwner)
-	public override var hash: Int
-	public override func isEqual(other: AnyObject?) -> Bool
-ImageMemoryCache.swift
-	public func responseForKey(key: ImageRequestKey) -> ImageCachedResponse?
-	public func setResponse(response: ImageCachedResponse, forKey key: ImageRequestKey)
-	public func removeResponseForKey(key: ImageRequestKey)
-ImagePreheatingController.swift
-	func preheatingController(controller: ImagePreheatingController, didUpdateWithAddedIndexPaths addedIndexPaths: [NSIndexPath], removedIndexPaths: [NSIndexPath])
-	public weak var delegate: ImagePreheatingControllerDelegate?
-	public let scrollView: UIScrollView
-	public init(scrollView: UIScrollView)
-	public override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>)
-ImageDecoder.swift
-	func decode(data: NSData, response: NSURLResponse?) -> Image?
 ImageLoadingView.swift
-	public struct ImageViewLoadingOptions
-	public var handler: ((ImageLoadingView, ImageTask, ImageResponse, ImageViewLoadingOptions) -> Void)? = nil
-	public init() {}
 	public typealias View = UIView
 	var nk_image: Image? { get set }
 	public func nk_setImageWith(request: ImageRequest, options: ImageViewLoadingOptions = ImageViewLoadingOptions(), placeholder: Image?) -> ImageTask
-	public func nk_cancelLoading()
-	public func nk_setImageWith(request: ImageRequest, options: ImageViewLoadingOptions) -> ImageTask
-ImageManager.swift
-	public struct ImageManagerConfiguration
-	public var loader: ImageLoading
-	public var cache: ImageMemoryCaching?
-	public let configuration: ImageManagerConfiguration
-	public init(configuration: ImageManagerConfiguration)
-	public func loader(loader: ImageLoading, task: ImageTask, didUpdateProgress progress: ImageTaskProgress)
-	public func loader(loader: ImageLoading, task: ImageTask, didCompleteWithImage image: Image?, error: ErrorType?, userInfo: Any?)
-	public func isEqual(lhs: ImageRequestKey, to rhs: ImageRequestKey) -> Bool

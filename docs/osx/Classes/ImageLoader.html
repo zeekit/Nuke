@@ -14,7 +14,7 @@
     <a title="ImageLoader Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Nuke Docs</a> (73% documented)</p>
+        <p><a href="../index.html">Nuke Docs</a> (94% documented)</p>
         <p class="header-right"><a href="https://github.com/kean/Nuke"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -210,6 +210,23 @@
               </li>
             </ul>
           </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Typealiases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:4Nuke5Image">Image</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:4Nuke26ImageDataLoadingCompletion">ImageDataLoadingCompletion</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:4Nuke24ImageDataLoadingProgress">ImageDataLoadingProgress</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:4Nuke19ImageTaskCompletion">ImageTaskCompletion</a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
       <article class="main-content">
@@ -218,7 +235,7 @@
             <h1>ImageLoader</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ImageLoader</span><span class="p">:</span> <span class="kt">ImageLoading</span><span class="p">,</span> <span class="kt">CongestionControllerDelegate</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ImageLoader</span><span class="p">:</span> <span class="kt">ImageLoading</span></code></pre>
 
                 </div>
               </div>
@@ -228,7 +245,7 @@
 
 <ul>
 <li>Provides transparent loading, decoding and processing with a single completion signal</li>
-<li>Reuses data tasks for equivalent image tasks</li>
+<li>Reuses session tasks for equivalent request</li>
 </ul>
 
           </section>
@@ -248,19 +265,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Manages image loading.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ImageLoader</span><span class="p">:</span> <span class="kt">ImageLoading</span><span class="p">,</span> <span class="kt">CongestionControllerDelegate</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt">ImageLoadingManager</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/2.1.0/Nuke/Source/Core/ImageLoader.swift#L0">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/File Doesn't Exist, Will Create: Nuke/Supporting Files/Info.plist/Source/Core/ImageLoader.swift#L172">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -278,19 +295,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The configuration that the receiver was initialized with.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ImageLoader</span><span class="p">:</span> <span class="kt">ImageLoading</span><span class="p">,</span> <span class="kt">CongestionControllerDelegate</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">configuration</span><span class="p">:</span> <span class="kt">ImageLoaderConfiguration</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/2.1.0/Nuke/Source/Core/ImageLoader.swift#L0">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/File Doesn't Exist, Will Create: Nuke/Supporting Files/Info.plist/Source/Core/ImageLoader.swift#L175">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -320,7 +337,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/2.1.0/Nuke/Source/Core/ImageLoader.swift#L193">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/File Doesn't Exist, Will Create: Nuke/Supporting Files/Info.plist/Source/Core/ImageLoader.swift#L178">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -370,7 +387,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/2.1.0/Nuke/Source/Core/ImageLoader.swift#L205-L210">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/File Doesn't Exist, Will Create: Nuke/Supporting Files/Info.plist/Source/Core/ImageLoader.swift#L190-L196">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -388,49 +405,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Resumes loading for the image task.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ImageLoader</span><span class="p">:</span> <span class="kt">ImageLoading</span><span class="p">,</span> <span class="kt">CongestionControllerDelegate</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">resumeLoadingFor</span><span class="p">(</span><span class="nv">task</span><span class="p">:</span> <span class="kt">ImageTask</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/2.1.0/Nuke/Source/Core/ImageLoader.swift#L212-L217">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:FC4Nuke11ImageLoader17suspendLoadingForFS0_FCS_9ImageTaskT_"></a>
-                    <a name="//apple_ref/swift/Method/suspendLoadingFor(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC4Nuke11ImageLoader17suspendLoadingForFS0_FCS_9ImageTaskT_">suspendLoadingFor(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ImageLoader</span><span class="p">:</span> <span class="kt">ImageLoading</span><span class="p">,</span> <span class="kt">CongestionControllerDelegate</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/2.1.0/Nuke/Source/Core/ImageLoader.swift#L296-L300">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/File Doesn't Exist, Will Create: Nuke/Supporting Files/Info.plist/Source/Core/ImageLoader.swift#L199-L220">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -448,19 +435,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Cancels loading for the task if there are no other outstanding executing tasks registered with the underlying data task.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ImageLoader</span><span class="p">:</span> <span class="kt">ImageLoading</span><span class="p">,</span> <span class="kt">CongestionControllerDelegate</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">cancelLoadingFor</span><span class="p">(</span><span class="nv">task</span><span class="p">:</span> <span class="kt">ImageTask</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/2.1.0/Nuke/Source/Core/ImageLoader.swift#L314-L318">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/File Doesn't Exist, Will Create: Nuke/Supporting Files/Info.plist/Source/Core/ImageLoader.swift#L288-L303">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -478,19 +465,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Comapres two requests using ImageLoaderDelegate.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ImageLoader</span><span class="p">:</span> <span class="kt">ImageLoading</span><span class="p">,</span> <span class="kt">CongestionControllerDelegate</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">isCacheEquivalent</span><span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">ImageRequest</span><span class="p">,</span> <span class="n">to</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">ImageRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/2.1.0/Nuke/Source/Core/ImageLoader.swift#L342-L344">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/File Doesn't Exist, Will Create: Nuke/Supporting Files/Info.plist/Source/Core/ImageLoader.swift#L313-L315">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -508,19 +495,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Signals the data loader to invalidate.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ImageLoader</span><span class="p">:</span> <span class="kt">ImageLoading</span><span class="p">,</span> <span class="kt">CongestionControllerDelegate</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">invalidate</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/2.1.0/Nuke/Source/Core/ImageLoader.swift#L346-L348">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/File Doesn't Exist, Will Create: Nuke/Supporting Files/Info.plist/Source/Core/ImageLoader.swift#L318-L320">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -538,19 +525,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Signals data loader to remove all cached images.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ImageLoader</span><span class="p">:</span> <span class="kt">ImageLoading</span><span class="p">,</span> <span class="kt">CongestionControllerDelegate</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">removeAllCachedImages</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/2.1.0/Nuke/Source/Core/ImageLoader.swift#L350-L352">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/File Doesn't Exist, Will Create: Nuke/Supporting Files/Info.plist/Source/Core/ImageLoader.swift#L323-L325">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -572,19 +559,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Compares two requests for equivalence using ImageLoaderDelegate.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ImageLoader</span><span class="p">:</span> <span class="kt">ImageLoading</span><span class="p">,</span> <span class="kt">CongestionControllerDelegate</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">isEqual</span><span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">ImageRequestKey</span><span class="p">,</span> <span class="n">to</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">ImageRequestKey</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/2.1.0/Nuke/Source/Core/ImageLoader.swift#L358-L360">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/File Doesn't Exist, Will Create: Nuke/Supporting Files/Info.plist/Source/Core/ImageLoader.swift#L330-L332">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -594,7 +581,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://github.com/kean" target="_blank" rel="external">kean</a>. All rights reserved. (Last updated: 2016-02-27)</p>
+          <p>&copy; 2016 <a class="link" href="https://github.com/kean" target="_blank" rel="external">kean</a>. All rights reserved. (Last updated: 2016-03-11)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
