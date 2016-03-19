@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>ImageViewLoadingOptions Struct Reference</title>
+    <title>ImageDiskCaching Protocol Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Struct/ImageViewLoadingOptions" class="dashAnchor"></a>
-    <a title="ImageViewLoadingOptions Struct Reference"></a>
+    <a name="//apple_ref/swift/Protocol/ImageDiskCaching" class="dashAnchor"></a>
+    <a title="ImageDiskCaching Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">Nuke Docs</a> (94% documented)</p>
@@ -22,7 +22,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">Nuke Reference</a>
         <img id="carat" src="../img/carat.png" />
-        ImageViewLoadingOptions Struct Reference
+        ImageDiskCaching Protocol Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -57,6 +57,15 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/ImageMemoryCache.html">ImageMemoryCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImagePreheatingController.html">ImagePreheatingController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImagePreheatingControllerForCollectionView.html">ImagePreheatingControllerForCollectionView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImagePreheatingControllerForTableView.html">ImagePreheatingControllerForTableView</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/ImageProcessorComposition.html">ImageProcessorComposition</a>
@@ -116,6 +125,12 @@
                 <a href="../Extensions/NSImageView.html">NSImageView</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Extensions/UIImage.html">UIImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIImageView.html">UIImageView</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Extensions/View.html">View</a>
               </li>
             </ul>
@@ -124,7 +139,10 @@
             <a href="../Functions.html">Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Functions.html#/==(_:_:)">==(_:_:)</a>
+                <a href="../Functions.html#/s:ZF4Nukeoi2eeFTVS_23ImageFilterGaussianBlurS0__Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:ZF4Nukeoi2eeFTCS_17ImageDecompressorS0__Sb">==(_:_:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Functions.html#/s:ZF4Nukeoi2eeFTCS_25ImageProcessorWithClosureS0__Sb">==(_:_:)</a>
@@ -183,6 +201,9 @@
                 <a href="../Protocols/ImageMemoryCaching.html">ImageMemoryCaching</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Protocols/ImagePreheatingControllerDelegate.html">ImagePreheatingControllerDelegate</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Protocols/ImageProcessing.html">ImageProcessing</a>
               </li>
               <li class="nav-group-task">
@@ -193,6 +214,9 @@
           <li class="nav-group-name">
             <a href="../Structs.html">Structs</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/ImageFilterGaussianBlur.html">ImageFilterGaussianBlur</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Structs/ImageLoaderConfiguration.html">ImageLoaderConfiguration</a>
               </li>
@@ -235,14 +259,16 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>ImageViewLoadingOptions</h1>
+            <h1>ImageDiskCaching</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ImageViewLoadingOptions</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ImageDiskCaching</span></code></pre>
 
                 </div>
               </div>
-            <p>Options for image loading.</p>
+            <p>On-disk storage for image data.</p>
+
+<p>Nuke doesn&rsquo;t provide a built-in implementation of this protocol. However, it&rsquo;s very easy to implement it in an extension of some existing library, for example, DFCache (see Example project for more info).</p>
 
           </section>
           <section class="section task-group-section">
@@ -251,9 +277,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vV4Nuke23ImageViewLoadingOptions10animationsGSqFPS_16ImageLoadingView_T__"></a>
-                    <a name="//apple_ref/swift/Property/animations" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vV4Nuke23ImageViewLoadingOptions10animationsGSqFPS_16ImageLoadingView_T__">animations</a>
+                    <a name="/s:FP4Nuke16ImageDiskCaching7setDatauRq_S0__Fq_FTCSo6NSData8responseCSo13NSURLResponse7forTaskCS_9ImageTask_T_"></a>
+                    <a name="//apple_ref/swift/Method/setData(_:response:forTask:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP4Nuke16ImageDiskCaching7setDatauRq_S0__Fq_FTCSo6NSData8responseCSo13NSURLResponse7forTaskCS_9ImageTask_T_">setData(_:response:forTask:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -261,21 +287,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Custom animations to run when the image is displayed. Default value is nil.</p>
-
-<p>This closure is not called if the response is from memory cache (<code>isFastResponse</code>) or if the <code><a href="../Structs/ImageViewLoadingOptions.html#/s:vV4Nuke23ImageViewLoadingOptions8animatedSb">animated</a></code> property of the reciever is set to <code>false</code>. Use <code><a href="../Structs/ImageViewLoadingOptions.html#/s:vV4Nuke23ImageViewLoadingOptions7handlerGSqFTPS_16ImageLoadingView_CS_9ImageTaskOS_13ImageResponseS0__T__">handler</a></code> property if you need more control.</p>
+                        <p>Stores data for the given task.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">animations</span><span class="p">:</span> <span class="p">((</span><span class="kt">ImageLoadingView</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">setData</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="kt">NSData</span><span class="p">,</span> <span class="nv">response</span><span class="p">:</span> <span class="kt">NSURLResponse</span><span class="p">,</span> <span class="n">forTask</span> <span class="nv">task</span><span class="p">:</span> <span class="kt">ImageTask</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/File Doesn't Exist, Will Create: Nuke/Supporting Files/Info.plist/Source/UI/ImageLoadingView.swift#L22">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/File Doesn't Exist, Will Create: Nuke/Supporting Files/Info.plist/Source/Core/ImageDiskCache.swift#L14">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -283,9 +307,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vV4Nuke23ImageViewLoadingOptions8animatedSb"></a>
-                    <a name="//apple_ref/swift/Property/animated" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vV4Nuke23ImageViewLoadingOptions8animatedSb">animated</a>
+                    <a name="/s:FP4Nuke16ImageDiskCaching7dataForuRq_S0__Fq_FCS_9ImageTaskGSqCSo6NSData_"></a>
+                    <a name="//apple_ref/swift/Method/dataFor(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP4Nuke16ImageDiskCaching7dataForuRq_S0__Fq_FCS_9ImageTaskGSqCSo6NSData_">dataFor(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -293,19 +317,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>If true the loaded image is displayed with an animation. Default value is true.</p>
+                        <p>Returns data for the given task.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">animated</span> <span class="o">=</span> <span class="kc">true</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">dataFor</span><span class="p">(</span><span class="nv">task</span><span class="p">:</span> <span class="kt">ImageTask</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSData</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/File Doesn't Exist, Will Create: Nuke/Supporting Files/Info.plist/Source/UI/ImageLoadingView.swift#L25">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/File Doesn't Exist, Will Create: Nuke/Supporting Files/Info.plist/Source/Core/ImageDiskCache.swift#L17">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -313,9 +337,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vV4Nuke23ImageViewLoadingOptions7handlerGSqFTPS_16ImageLoadingView_CS_9ImageTaskOS_13ImageResponseS0__T__"></a>
-                    <a name="//apple_ref/swift/Property/handler" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vV4Nuke23ImageViewLoadingOptions7handlerGSqFTPS_16ImageLoadingView_CS_9ImageTaskOS_13ImageResponseS0__T__">handler</a>
+                    <a name="/s:FP4Nuke16ImageDiskCaching21removeAllCachedImagesuRq_S0__Fq_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/removeAllCachedImages()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP4Nuke16ImageDiskCaching21removeAllCachedImagesuRq_S0__Fq_FT_T_">removeAllCachedImages()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -323,79 +347,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Custom handler to run when the image task completes. Overrides the default completion handling. Default value is nil.</p>
+                        <p>Clears the receiver&rsquo;s storage.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">handler</span><span class="p">:</span> <span class="p">((</span><span class="kt">ImageLoadingView</span><span class="p">,</span> <span class="kt">ImageTask</span><span class="p">,</span> <span class="kt">ImageResponse</span><span class="p">,</span> <span class="kt">ImageViewLoadingOptions</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">removeAllCachedImages</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/File Doesn't Exist, Will Create: Nuke/Supporting Files/Info.plist/Source/UI/ImageLoadingView.swift#L28">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:vV4Nuke23ImageViewLoadingOptions8userInfoGSqP__"></a>
-                    <a name="//apple_ref/swift/Property/userInfo" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vV4Nuke23ImageViewLoadingOptions8userInfoGSqP__">userInfo</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Default value is nil.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">userInfo</span><span class="p">:</span> <span class="kt">Any</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/File Doesn't Exist, Will Create: Nuke/Supporting Files/Info.plist/Source/UI/ImageLoadingView.swift#L31">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:FV4Nuke23ImageViewLoadingOptionscFMS0_FT_S0_"></a>
-                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FV4Nuke23ImageViewLoadingOptionscFMS0_FT_S0_">init()</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Initializes the receiver.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{}</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/File Doesn't Exist, Will Create: Nuke/Supporting Files/Info.plist/Source/UI/ImageLoadingView.swift#L34">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/File Doesn't Exist, Will Create: Nuke/Supporting Files/Info.plist/Source/Core/ImageDiskCache.swift#L20">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
