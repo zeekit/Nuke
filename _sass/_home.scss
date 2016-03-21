@@ -1,17 +1,10 @@
-.home-title {
-    font-size: 100px;
-    font-weight: 200;
-    color: white;
-    margin: $spacing-unit 0 0.33 * $spacing-unit 0;
-    padding: 0px 40px 0px 40px;
-    background: linear-gradient(rgb(256, 43, 104), rgb(254, 153, 71));
-    border-radius: 30px;
-    display: inline-block;
+.home-logo {
+    height: 200px;
+    margin: $spacing-unit 0 0.5 * $spacing-unit 0;
 
     @include media-query($on-palm) {
-        font-size: 80px;
-        line-height: 1.4;
-        margin: 0;
+        margin: 0.33 * $spacing-unit 0 0.33 * $spacing-unit 0;
+        height: 160px;
     }
 }
 
