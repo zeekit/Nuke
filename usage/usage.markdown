@@ -191,7 +191,7 @@ Nuke.taskWith(request) {
 
 ## Creating Filters
 
-`ImageProcessing` protocol consists of two methods: one to process the image and one to compare two (heterogeneous) filters. Here's an example of custom image filter implemented on top of [Core Image](https://github.com/kean/Nuke/wiki/Core-Image-Integration-Guide). It uses some of the helper functions provided by Nuke that simplify work with `Core Image`.
+`ImageProcessing` protocol consists of two methods: one to process the image and one to compare two (heterogeneous) filters. Here's an example of custom image filter that uses [Core Image](https://developer.apple.com/library/mac/documentation/GraphicsImaging/Conceptual/CoreImaging/ci_intro/ci_intro.html). For more info see [Core Image Integration Guide](https://github.com/kean/Nuke/wiki/Core-Image-Integration-Guide).
 
 {% highlight swift %}
 public class ImageFilterGaussianBlur: ImageProcessing {
@@ -201,12 +201,12 @@ public class ImageFilterGaussianBlur: ImageProcessing {
     }
 
     public func process(image: UIImage) -> UIImage? {
-        return image.nk_filter(CIFilter(name: "CIGaussianBlur", withInputParameters: ["inputRadius" : self.radius]))
+        // The `applyFilter` function is not shipped with Nuke.
+        return image.applyFilter(CIFilter(name: "CIGaussianBlur", withInputParameters: ["inputRadius" : self.radius]))
     }
 }
 
-// We need to be able to compare filters for equivalence to cache processed images
-// Default implementation returns `true` if both filters are of the same class
+// We need to compare filters to identify cached images
 public func ==(lhs: ImageFilterGaussianBlur, rhs: ImageFilterGaussianBlur) -> Bool {
     return lhs.radius == rhs.radius
 }
@@ -236,6 +236,8 @@ preheater.delegate = self // Signals when preheat index paths change
 Nuke provides both on-disk and in-memory caching.
 
 For on-disk caching it relies on `NSURLCache`. The `NSURLCache` is used to cache original image data downloaded from the server. This class a part of the URL Loading System's cache management, which relies on HTTP cache.
+
+As an alternative to `NSURLCache` Nuke provides an `ImageDiskCaching` protocol that allows you to easily integrate any third-party caching library.
 
 For on-memory caching Nuke provides `ImageMemoryCaching` protocol and its implementation in `ImageMemoryCache` class built on top of `NSCache`. The `ImageMemoryCache` is used for fast access to processed images that are ready for display.
 
