@@ -1,22 +1,9 @@
-ImagePreheatingControllerForCollectionView.swift
-	public override func scrollViewDidScroll()
-ImagePreheatingControllerForTableView.swift
-	public override func scrollViewDidScroll()
 ImageDataLoader.swift
 	public private(set) var session: NSURLSession!
 	public func URLSession(session: NSURLSession, dataTask: NSURLSessionDataTask, didReceiveData data: NSData)
 	public func URLSession(session: NSURLSession, task: NSURLSessionTask, didCompleteWithError error: NSError?)
-ImageLoadingView.swift
-	public typealias View = UIView
-	var nk_image: Image? { get set }
-	public func nk_setImageWith(request: ImageRequest, options: ImageViewLoadingOptions = ImageViewLoadingOptions(), placeholder: Image?) -> ImageTask
 ImageTask.swift
 	case Suspended, Running, Cancelled, Completed
 	case Suspended, Running, Cancelled, Completed
 	case Suspended, Running, Cancelled, Completed
 	case Suspended, Running, Cancelled, Completed
-ImageViewLoadingController.swift
-	public func setImageWith(request: ImageRequest, options: ImageViewLoadingOptions) -> ImageTask
-	public func setImageWith(task: ImageTask, options: ImageViewLoadingOptions) -> ImageTask
-ImageLoadingViewExtensions.swift
-	public var nk_image: UIImage?

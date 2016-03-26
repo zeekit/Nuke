@@ -7,16 +7,3 @@ ImageTask.swift
 	case Suspended, Running, Cancelled, Completed
 	case Suspended, Running, Cancelled, Completed
 	case Suspended, Running, Cancelled, Completed
-ImagePreheatingControllerForCollectionView.swift
-	public override func scrollViewDidScroll()
-ImageViewLoadingController.swift
-	public func setImageWith(request: ImageRequest, options: ImageViewLoadingOptions) -> ImageTask
-	public func setImageWith(task: ImageTask, options: ImageViewLoadingOptions) -> ImageTask
-ImagePreheatingControllerForTableView.swift
-	public override func scrollViewDidScroll()
-ImageLoadingViewExtensions.swift
-	public var nk_image: UIImage?
-ImageLoadingView.swift
-	public typealias View = UIView
-	var nk_image: Image? { get set }
-	public func nk_setImageWith(request: ImageRequest, options: ImageViewLoadingOptions = ImageViewLoadingOptions(), placeholder: Image?) -> ImageTask

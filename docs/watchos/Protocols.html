@@ -106,16 +106,13 @@
             <a href="Functions.html">Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Functions.html#/==(_:_:)">==(_:_:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Functions.html#/s:ZF4Nukeoi2eeFTCS_17ImageDecompressorS0__Sb">==(_:_:)</a>
+                <a href="Functions.html#/s:ZF4Nukeoi2eeFTCS_25ImageProcessorCompositionS0__Sb">==(_:_:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="Functions.html#/s:ZF4Nukeoi2eeFTCS_25ImageProcessorWithClosureS0__Sb">==(_:_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:ZF4Nukeoi2eeFTCS_25ImageProcessorCompositionS0__Sb">==(_:_:)</a>
+                <a href="Functions.html#/s:ZF4Nukeoi2eeFTCS_17ImageDecompressorS0__Sb">==(_:_:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="Functions.html#/s:ZF4Nukeoi2eeFTCS_9ImageTaskS0__Sb">==(_:_:)</a>
@@ -130,10 +127,10 @@
                 <a href="Functions.html#/s:F4Nuke20stopPreheatingImagesFGSaVS_12ImageRequest_T_">stopPreheatingImages(_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:F4Nuke8taskWithFTVS_12ImageRequest10completionGSqFOS_13ImageResponseT___CS_9ImageTask">taskWith(_:completion:)</a>
+                <a href="Functions.html#/s:F4Nuke8taskWithFTCSo5NSURL10completionGSqFOS_13ImageResponseT___CS_9ImageTask">taskWith(_:completion:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:F4Nuke8taskWithFTCSo5NSURL10completionGSqFOS_13ImageResponseT___CS_9ImageTask">taskWith(_:completion:)</a>
+                <a href="Functions.html#/s:F4Nuke8taskWithFTVS_12ImageRequest10completionGSqFOS_13ImageResponseT___CS_9ImageTask">taskWith(_:completion:)</a>
               </li>
             </ul>
           </li>
@@ -172,9 +169,6 @@
           <li class="nav-group-name">
             <a href="Structs.html">Structs</a>
             <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="Structs/ImageFilterGaussianBlur.html">ImageFilterGaussianBlur</a>
-              </li>
               <li class="nav-group-task">
                 <a href="Structs/ImageLoaderConfiguration.html">ImageLoaderConfiguration</a>
               </li>
@@ -220,13 +214,20 @@
           </section>
           <section class="section task-group-section">
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/ImageProcessing"></a>
+                <a name="//apple_ref/swift/Section/ImageProcessing" class="dashAnchor"></a>
+                <a href="#/ImageProcessing">
+                  <h3 class="section-name">ImageProcessing</h3>
+                </a>
+              </div>
               <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:P4Nuke20ImageRequestKeyOwner"></a>
-                    <a name="//apple_ref/swift/Protocol/ImageRequestKeyOwner" class="dashAnchor"></a>
-                    <a class="token" href="#/s:P4Nuke20ImageRequestKeyOwner">ImageRequestKeyOwner</a>
+                    <a name="/s:P4Nuke15ImageProcessing"></a>
+                    <a name="//apple_ref/swift/Protocol/ImageProcessing" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P4Nuke15ImageProcessing">ImageProcessing</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -234,20 +235,129 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Compares keys for equivalence.</p>
+                        <p>Performs image processing.</p>
 
-                        <a href="Protocols/ImageRequestKeyOwner.html" class="slightly-smaller">See more</a>
+<p>Types that implement <code>ImageProcessing</code> protocol should either use one of the default implementations of <code>isEquivalent(_:)</code> method or provide their own implementation, which is required to cache processed images.</p>
+
+                        <a href="Protocols/ImageProcessing.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ImageRequestKeyOwner</span><span class="p">:</span> <span class="kd">class</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ImageProcessing</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/File Doesn't Exist, Will Create: Nuke/Supporting Files/Info.plist/Source/Core/ImageRequestKey.swift#L8-L11">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/File Doesn't Exist, Will Create: Nuke/Supporting Files/Info.plist/Sources/ImageProcessor.swift#L19-L25">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:P4Nuke18ImageMemoryCaching"></a>
+                    <a name="//apple_ref/swift/Protocol/ImageMemoryCaching" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P4Nuke18ImageMemoryCaching">ImageMemoryCaching</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Provides in-memory storage for image responses.</p>
+
+                        <a href="Protocols/ImageMemoryCaching.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ImageMemoryCaching</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/File Doesn't Exist, Will Create: Nuke/Supporting Files/Info.plist/Sources/ImageMemoryCache.swift#L13-L25">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:P4Nuke13ImageDecoding"></a>
+                    <a name="//apple_ref/swift/Protocol/ImageDecoding" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P4Nuke13ImageDecoding">ImageDecoding</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Decodes data into images.</p>
+
+                        <a href="Protocols/ImageDecoding.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ImageDecoding</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/File Doesn't Exist, Will Create: Nuke/Supporting Files/Info.plist/Sources/ImageDecoder.swift#L16-L19">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:P4Nuke16ImageDiskCaching"></a>
+                    <a name="//apple_ref/swift/Protocol/ImageDiskCaching" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P4Nuke16ImageDiskCaching">ImageDiskCaching</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>On-disk storage for image data.</p>
+
+<p>Nuke doesn&rsquo;t provide a built-in implementation of this protocol. However, it&rsquo;s very easy to implement it in an extension of some existing library, for example, DFCache (see Example project for more info).</p>
+
+                        <a href="Protocols/ImageDiskCaching.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ImageDiskCaching</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/kean/Nuke/tree/File Doesn't Exist, Will Create: Nuke/Supporting Files/Info.plist/Sources/ImageDiskCache.swift#L12-L21">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -289,7 +399,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/File Doesn't Exist, Will Create: Nuke/Supporting Files/Info.plist/Source/Core/ImageLoader.swift#L10-L28">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/File Doesn't Exist, Will Create: Nuke/Supporting Files/Info.plist/Sources/ImageLoader.swift#L10-L28">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -331,7 +441,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/File Doesn't Exist, Will Create: Nuke/Supporting Files/Info.plist/Source/Core/ImageLoader.swift#L33-L39">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/File Doesn't Exist, Will Create: Nuke/Supporting Files/Info.plist/Sources/ImageLoader.swift#L33-L39">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -373,123 +483,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/File Doesn't Exist, Will Create: Nuke/Supporting Files/Info.plist/Source/Core/ImageLoader.swift#L88-L97">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:P4Nuke13ImageDecoding"></a>
-                    <a name="//apple_ref/swift/Protocol/ImageDecoding" class="dashAnchor"></a>
-                    <a class="token" href="#/s:P4Nuke13ImageDecoding">ImageDecoding</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Decodes data into images.</p>
-
-                        <a href="Protocols/ImageDecoding.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ImageDecoding</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/File Doesn't Exist, Will Create: Nuke/Supporting Files/Info.plist/Source/Core/ImageDecoder.swift#L16-L19">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:P4Nuke16ImageDiskCaching"></a>
-                    <a name="//apple_ref/swift/Protocol/ImageDiskCaching" class="dashAnchor"></a>
-                    <a class="token" href="#/s:P4Nuke16ImageDiskCaching">ImageDiskCaching</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>On-disk storage for image data.</p>
-
-<p>Nuke doesn&rsquo;t provide a built-in implementation of this protocol. However, it&rsquo;s very easy to implement it in an extension of some existing library, for example, DFCache (see Example project for more info).</p>
-
-                        <a href="Protocols/ImageDiskCaching.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ImageDiskCaching</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/File Doesn't Exist, Will Create: Nuke/Supporting Files/Info.plist/Source/Core/ImageDiskCache.swift#L12-L21">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/ImageProcessing"></a>
-                <a name="//apple_ref/swift/Section/ImageProcessing" class="dashAnchor"></a>
-                <a href="#/ImageProcessing">
-                  <h3 class="section-name">ImageProcessing</h3>
-                </a>
-              </div>
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:P4Nuke15ImageProcessing"></a>
-                    <a name="//apple_ref/swift/Protocol/ImageProcessing" class="dashAnchor"></a>
-                    <a class="token" href="#/s:P4Nuke15ImageProcessing">ImageProcessing</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Performs image processing.</p>
-
-<p>Types that implement <code>ImageProcessing</code> protocol should either use one of the default implementations of <code>isEquivalent(_:)</code> method or provide their own implementation, which is required to cache processed images.</p>
-
-                        <a href="Protocols/ImageProcessing.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ImageProcessing</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/File Doesn't Exist, Will Create: Nuke/Supporting Files/Info.plist/Source/Core/ImageProcessor.swift#L19-L25">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/File Doesn't Exist, Will Create: Nuke/Supporting Files/Info.plist/Sources/ImageLoader.swift#L85-L94">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -531,7 +525,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/File Doesn't Exist, Will Create: Nuke/Supporting Files/Info.plist/Source/Core/ImageDataLoader.swift#L16-L25">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/File Doesn't Exist, Will Create: Nuke/Supporting Files/Info.plist/Sources/ImageDataLoader.swift#L16-L25">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -543,9 +537,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:P4Nuke18ImageMemoryCaching"></a>
-                    <a name="//apple_ref/swift/Protocol/ImageMemoryCaching" class="dashAnchor"></a>
-                    <a class="token" href="#/s:P4Nuke18ImageMemoryCaching">ImageMemoryCaching</a>
+                    <a name="/s:P4Nuke20ImageRequestKeyOwner"></a>
+                    <a name="//apple_ref/swift/Protocol/ImageRequestKeyOwner" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P4Nuke20ImageRequestKeyOwner">ImageRequestKeyOwner</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -553,20 +547,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Provides in-memory storage for image responses.</p>
+                        <p>Compares keys for equivalence.</p>
 
-                        <a href="Protocols/ImageMemoryCaching.html" class="slightly-smaller">See more</a>
+                        <a href="Protocols/ImageRequestKeyOwner.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ImageMemoryCaching</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ImageRequestKeyOwner</span><span class="p">:</span> <span class="kd">class</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/kean/Nuke/tree/File Doesn't Exist, Will Create: Nuke/Supporting Files/Info.plist/Source/Core/ImageMemoryCache.swift#L13-L25">Show on GitHub</a>
+                        <a href="https://github.com/kean/Nuke/tree/File Doesn't Exist, Will Create: Nuke/Supporting Files/Info.plist/Sources/ImageRequestKey.swift#L8-L11">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -576,7 +570,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://github.com/kean" target="_blank" rel="external">kean</a>. All rights reserved. (Last updated: 2016-03-19)</p>
+          <p>&copy; 2016 <a class="link" href="https://github.com/kean" target="_blank" rel="external">kean</a>. All rights reserved. (Last updated: 2016-03-27)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
