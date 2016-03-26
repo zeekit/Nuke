@@ -42,7 +42,7 @@ Nuke.taskWith(request) { response in
     </div>
     <div class="featurette-block">
         <strong>Extensible</strong>
-        <p> Nuke is a <a href="https://github.com/kean/Nuke#h_design">pipeline</a> with injectable dependencies. It features <a href="https://github.com/Alamofire/Alamofire">Alamofire</a> and <a href="https://github.com/Flipboard/FLAnimatedImage">FLAnimatedImage</a> plugins.</p>
+        <p> Nuke is a <a href="https://github.com/kean/Nuke#h_design">pipeline</a> with injectable dependencies. Features <a href="https://github.com/Alamofire/Alamofire">Alamofire</a> and <a href="https://github.com/Flipboard/FLAnimatedImage">FLAnimatedImage</a> plugins.</p>
     </div>
 </div>
 
@@ -57,19 +57,17 @@ Nuke.taskWith(request) { response in
     <div class="feature-block">
     <h2>Loading</h2>
     <ul>
-        <li>Uses <a href="https://developer.apple.com/library/ios/documentation/Foundation/Reference/NSURLSession_class/">NSURLSession</a> with <a href="https://en.wikipedia.org/wiki/HTTP/2">HTTP/2</a> support</li>
         <li>Install <a href="https://github.com/kean/Nuke-Alamofire-Plugin">Alamofire plugin</a> or integrate your own networking code in minutes</li>
-        <li>A single data task is used for multiple equivalent requests</li>
-        <li>Full featured extensions for UI components</li>
+        <li>Uses single data task for equivalent requests</li>
+        <li>Extensions for UI components</li>
     </ul>
     </div>
 
     <div class="feature-block">
     <h2>Caching</h2>
     <ul>
-        <li>Two cache layers including auto-purging memory cache for processed images</li>
-        <li><a href="http://outscope.net/blog/image-caching">Doesn't reinvent caching</a>, relies on HTTP cache in URL Loading System</li>
-        <li>Provides a protocol for integrating any third-party caching library</li>
+        <li>Two <a href="http://outscope.net/blog/image-caching">cache layers</a> including auto-purging memory cache for processed images</li>
+        <li>Protocol for integrating any third-party caching library</li>
     </ul>
     </div>
 
@@ -77,18 +75,17 @@ Nuke.taskWith(request) { response in
     <h2>Processing</h2>
     <ul>
         <li>Create, compose and apply image filters</li>
-        <li>Simple <a href="https://developer.apple.com/library/mac/documentation/GraphicsImaging/Conceptual/CoreImaging/ci_intro/ci_intro.html">Core Image</a> integration</li>
-        <li>Background image decompression and scaling in a single step</li>
-        <li>Resize loaded images to <a href="https://developer.apple.com/library/ios/qa/qa1708/_index.html">fit displayed size</a></li>
+        <li>Simple <a href="https://github.com/kean/Nuke/wiki/Core-Image-Integration-Guide">Core Image</a> integration</li>
+        <li>Background image decompression</li>
     </ul>
     </div>
 
     <div class="feature-block">
     <h2>Advanced</h2>
     <ul>
-        <li>Nuke is a <a href="https://github.com/kean/Nuke#h_design">pipeline</a> with injectable dependencies, everything is customizable</li>
-        <li>Image <a href="http://kean.github.io/blog/programming/2015/12/12/image-preheating.html">preheating</a> (precaching)</li>
-        <li>Add UI extensions to your custom classes using traits</li>
+        <li>Image <a href="http://outscope.net/blog/image-preheating">preheating</a> (precaching)</li>
+        <li>Implement custom data loaders, caches, processors, decoders, etc</li>
+        <li>Add UI extensions to your classes using traits</li>
     </ul>
     </div>
 
