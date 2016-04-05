@@ -9,6 +9,7 @@ weight: 3
 - [Usage](http://kean.github.io/Nuke/usage/)
 - [Plugins](http://kean.github.io/Nuke/plugins/)
 - [FAQ](https://github.com/kean/Nuke/wiki/FAQ)
+- [Supported Platforms](https://github.com/kean/Nuke/wiki/Supported-Platforms)
 
 ### Articles
 
