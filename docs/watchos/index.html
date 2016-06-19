@@ -217,7 +217,7 @@
 <a href="http://cocoadocs.org/docsets/Nuke"><img src="https://img.shields.io/cocoapods/p/Nuke.svg?style=flat)"></a>
 </p>
 
-<p>Loading, processing, caching and <a href="http://outscope.net/blog/image-preheating"><strong>preheating</strong></a> images. To get started check out <a href="http://kean.github.io/Nuke">http://kean.github.io/Nuke</a></p>
+<p>Loading, processing, caching and <a href="https://kean.github.io/blog/image-preheating"><strong>preheating</strong></a> images. To get started check out <a href="http://kean.github.io/Nuke">http://kean.github.io/Nuke</a></p>
 <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">request</span> <span class="o">=</span> <span class="kt">ImageRequest</span><span class="p">(</span><span class="kt">URL</span><span class="p">:</span> <span class="kt">NSURL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"http://..."</span><span class="p">))</span>
 <span class="n">request</span><span class="o">.</span><span class="n">targetSize</span> <span class="o">=</span> <span class="kt">CGSize</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">200</span><span class="p">)</span> <span class="c1">// Resize image</span>
 <span class="n">request</span><span class="o">.</span><span class="n">processor</span> <span class="o">=</span> <span class="kt">ImageFilterGaussianBlur</span><span class="p">()</span> <span class="c1">// Apply image filter</span>
@@ -234,9 +234,9 @@
 <li>Nuke is a <a href="#h_design">pipeline</a> with injectable dependencies</li>
 <li><a href="https://github.com/kean/Nuke-Alamofire-Plugin">Alamofire</a> and <a href="https://github.com/kean/Nuke-AnimatedImage-Plugin">FLAnimatedImage</a> plugins</li>
 <li>Extensions for UI components</li>
-<li>Two <a href="http://outscope.net/blog/image-caching">cache layers</a> including auto purging memory cache</li>
+<li>Two <a href="https://kean.github.io/blog/image-caching">cache layers</a> including auto purging memory cache</li>
 <li>Protocol for integrating any third-party caching library</li>
-<li>Automates image <a href="http://outscope.net/blog/image-preheating">preheating (precaching)</a></li>
+<li>Automates image <a href="https://kean.github.io/blog/image-preheating">preheating (precaching)</a></li>
 <li>Create, compose and apply image filters</li>
 <li>Background image decompression</li>
 <li>Simple <a href="https://github.com/kean/Nuke/wiki/Core-Image-Integration-Guide">Core Image</a> integration</li>
@@ -427,14 +427,14 @@
 </code></pre>
 <a href='#preheating_images' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='preheating_images'>Preheating Images</h4>
 
-<p><a href="http://outscope.net/blog/image-preheating">Preheating</a> is an effective way to improve user experience in applications that display collections of images. Preheating means loading and caching images that might soon appear on the display. Nuke provides a set of self-explanatory methods for image preheating which are inspired by <a href="https://developer.apple.com/library/prerelease/ios/documentation/Photos/Reference/PHImageManager_Class/index.html">PHImageManager</a>:</p>
+<p><a href="https://kean.github.io/blog/image-preheating">Preheating</a> is an effective way to improve user experience in applications that display collections of images. Preheating means loading and caching images that might soon appear on the display. Nuke provides a set of self-explanatory methods for image preheating which are inspired by <a href="https://developer.apple.com/library/prerelease/ios/documentation/Photos/Reference/PHImageManager_Class/index.html">PHImageManager</a>:</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">requests</span> <span class="o">=</span> <span class="p">[</span><span class="kt">ImageRequest</span><span class="p">(</span><span class="kt">URL</span><span class="p">:</span> <span class="n">imageURL1</span><span class="p">),</span> <span class="kt">ImageRequest</span><span class="p">(</span><span class="kt">URL</span><span class="p">:</span> <span class="n">imageURL2</span><span class="p">)]</span>
 <span class="kt">Nuke</span><span class="o">.</span><span class="nf">startPreheatingImages</span><span class="p">(</span><span class="nv">requests</span><span class="p">:</span> <span class="n">requests</span><span class="p">)</span>
 <span class="kt">Nuke</span><span class="o">.</span><span class="nf">stopPreheatingImages</span><span class="p">(</span><span class="nv">requests</span><span class="p">:</span> <span class="n">requests</span><span class="p">)</span>
 </code></pre>
 <a href='#automating_preheating' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='automating_preheating'>Automating Preheating</h4>
 
-<p>Nuke can be used in conjuction with <a href="https://github.com/kean/Preheat">Preheat</a> package which automates precaching of content in <code>UICollectionView</code> and <code>UITableView</code>. For more info see <a href="http://outscope.net/blog/image-preheating">Image Preheating Guide</a>, Nuke&rsquo;s demo project, and <a href="https://github.com/kean/Preheat">Preheat</a> documentation.</p>
+<p>Nuke can be used in conjuction with <a href="https://github.com/kean/Preheat">Preheat</a> package which automates precaching of content in <code>UICollectionView</code> and <code>UITableView</code>. For more info see <a href="https://kean.github.io/blog/image-preheating">Image Preheating Guide</a>, Nuke&rsquo;s demo project, and <a href="https://github.com/kean/Preheat">Preheat</a> documentation.</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">preheater</span> <span class="o">=</span> <span class="kt">PreheatControllerForCollectionView</span><span class="p">(</span><span class="nv">collectionView</span><span class="p">:</span> <span class="o">&lt;</span><span class="err">#</span><span class="n">collectionView</span><span class="err">#</span><span class="o">&gt;</span><span class="p">)</span>
 <span class="n">preheater</span><span class="o">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="k">self</span> <span class="c1">// Signals when preheat index paths change</span>
 </code></pre>
@@ -448,7 +448,7 @@
 
 <p>For on-memory caching Nuke provides <code>ImageMemoryCaching</code> protocol and its implementation in <code>ImageMemoryCache</code> class built on top of <code>NSCache</code>. The <code>ImageMemoryCache</code> is used for fast access to processed images that are ready for display.</p>
 
-<p>The combination of two cache layers results in a high performance caching system. For more info see <a href="http://outscope.net/blog/image-caching">Image Caching Guide</a> which provides a comprehensive look at HTTP cache, URL Loading System and NSCache.</p>
+<p>The combination of two cache layers results in a high performance caching system. For more info see <a href="https://kean.github.io/blog/image-caching">Image Caching Guide</a> which provides a comprehensive look at HTTP cache, URL Loading System and NSCache.</p>
 <a href='#accessing_memory_cache' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='accessing_memory_cache'>Accessing Memory Cache</h4>
 
 <p>Nuke automatically leverages both its cache layers. It accesses in-memory cache each time you start an <code>ImageTask</code> and calls a completion closure synchronously if the image is found.</p>

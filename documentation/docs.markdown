@@ -13,6 +13,6 @@ weight: 3
 
 ### Articles
 
-- [Image Caching Guide](http://outscope.net/blog/image-caching)
-- [Image Preheating Guide](http://outscope.net/blog/image-preheating)
+- [Image Caching Guide](https://kean.github.io/blog/image-caching)
+- [Image Preheating Guide](https://kean.github.io/blog/image-preheating)
 - [Core Image Integration Guide](https://github.com/kean/Nuke/wiki/Core-Image-Integration-Guide)
