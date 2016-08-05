@@ -28,7 +28,7 @@ layout: default
     </div>
     <div class="featurette-block">
         <strong>Fast</strong>
-        <p>Performant, asynchronous and thread-safe. Even creation of data tasks is performed on the background thread.</p>
+        <p>Performant, asynchronous and thread-safe. The entire framework operates in the background.</p>
     </div>
     <div class="featurette-block">
         <strong>Extensible</strong>
@@ -44,41 +44,14 @@ layout: default
 <h1 class="home-section-title">Features</h1>
 
 <div class="feature-container">
-    <div class="feature-block">
-    <h2>Loading</h2>
     <ul>
-        <li>Install <a href="https://github.com/kean/Nuke-Alamofire-Plugin">Alamofire plugin</a> or integrate your own networking code in minutes</li>
-        <li>Extensions for UI components</li>
-        <li>Deduplicate equivalent requests</li>
+        <li>Hassle-free image loading into image views (and other targets)</li>
+        <li>Two <a href="https://kean.github.io/blog/image-caching">cache layers</a> including auto-purging memory cache</li>
+        <li>Image transformations</li>
+        <li>Automated <a href="https://kean.github.io/blog/image-preheating">preheating (prefetching)</a></li>
+        <li><a href="https://github.com/kean/Nuke#h_design">Pipeline</a> with injectable dependencies</li>
+        <li><a href="https://github.com/kean/Nuke-Alamofire-Plugin"Alamofire</a> and <a href="https://github.com/kean/Nuke-AnimatedImage-Plugin">FLAnimatedImage</a> plugins</li>
     </ul>
-    </div>
-
-    <div class="feature-block">
-    <h2>Caching</h2>
-    <ul>
-        <li>Two <a href="https://kean.github.io/blog/image-caching">cache layers</a> including auto-purging memory cache for processed images</li>
-        <li>Protocol for integrating any third-party caching library</li>
-    </ul>
-    </div>
-
-    <div class="feature-block">
-    <h2>Processing</h2>
-    <ul>
-        <li>Create, compose and apply image filters</li>
-        <li>Simple <a href="https://github.com/kean/Nuke/wiki/Core-Image-Integration-Guide">Core Image</a> integration</li>
-        <li>Background image decompression</li>
-    </ul>
-    </div>
-
-    <div class="feature-block">
-    <h2>Advanced</h2>
-    <ul>
-        <li>Image <a href="https://kean.github.io/blog/image-preheating">preheating</a> (precaching)</li>
-        <li>Implement custom data loaders, caches, processors, decoders, etc</li>
-        <li>Add UI extensions to your classes using traits</li>
-    </ul>
-    </div>
-
 </div>
 
 
@@ -88,13 +61,13 @@ layout: default
 
 <div>
 
-    <p>Nuke features <a href="https://github.com/Flipboard/FLAnimatedImage"> FLAnimatedImage</a> plugin that allows you to load and display animated GIFs with a silky smooth scrolling performance and extremely low memory footprint.</p>
+    <p>Nuke features <a href="https://github.com/Flipboard/FLAnimatedImage"> FLAnimatedImage</a> plugin that allows you to load and display animated GIFs with smooth scrolling performance and low memory footprint.</p>
 
     <div class="video-container">
       <iframe width="640" height="360" src="https://www.youtube.com/embed/fEJqQMJrET4?rel=0" frameborder="0" allowfullscreen></iframe>
     </div>
 
-    <p>Footage from iPod Touch 5G (slightly slower than iPhone 5)</p>
+    <p>Capture from iPod Touch 5G</p>
 </div>
 
 <hr class="featurette-divider"/>
