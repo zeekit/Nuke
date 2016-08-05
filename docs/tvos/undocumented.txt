@@ -1,9 +1,0 @@
-ImageDataLoader.swift
-	public private(set) var session: NSURLSession!
-	public func URLSession(session: NSURLSession, dataTask: NSURLSessionDataTask, didReceiveData data: NSData)
-	public func URLSession(session: NSURLSession, task: NSURLSessionTask, didCompleteWithError error: NSError?)
-ImageTask.swift
-	case Suspended, Running, Cancelled, Completed
-	case Suspended, Running, Cancelled, Completed
-	case Suspended, Running, Cancelled, Completed
-	case Suspended, Running, Cancelled, Completed

@@ -5,7 +5,7 @@ permalink: /docs/
 weight: 3
 ---
 
-- API reference: [iOS](http://kean.github.io/Nuke/docs/ios/) / [macOS](http://kean.github.io/Nuke/docs/osx/) / [tvOS](http://kean.github.io/Nuke/docs/tvos/) / [watchOS](http://kean.github.io/Nuke/docs/watchos/)
+- [API Reference](http://cocoadocs.org/docsets/Nuke/)
 - [Usage](http://kean.github.io/Nuke/usage/)
 - [FAQ](https://github.com/kean/Nuke/wiki/FAQ)
 - [Supported Platforms](https://github.com/kean/Nuke/wiki/Supported-Platforms)
