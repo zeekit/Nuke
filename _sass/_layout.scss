@@ -11,9 +11,8 @@
 
 .site-title {
     font-size: 26px;
-    font-weight: 300;
+    font-weight: 500;
     line-height: 56px;
-    letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
     transition: color .2s ease-out;
@@ -40,10 +39,11 @@
 
     .page-link {
         color: $text-color;
-        line-height: $base-line-height;
         transition: color .2s ease-out;
-        padding-top: 16px;
-        padding-bottom: 16px;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 56px;
+        margin-bottom: 0;
 
         &:hover {
             color: $brand-color;
@@ -53,55 +53,6 @@
         // Gaps between nav items, but not on the last one
         &:not(:last-child) {
             margin-right: 20px;
-        }
-    }
-
-    @include media-query($on-palm) {
-        position: absolute;
-        top: 9px;
-        right: $spacing-unit / 2;
-        background-color: $background-color;
-        border: 1px solid $grey-color-light;
-        border-radius: 5px;
-        text-align: right;
-
-        .menu-icon {
-            display: block;
-            float: right;
-            width: 36px;
-            height: 26px;
-            line-height: 0;
-            padding-top: 10px;
-            text-align: center;
-
-            > svg {
-                width: 18px;
-                height: 15px;
-
-                path {
-                    fill: $grey-color-dark;
-                }
-            }
-        }
-
-        .trigger {
-            clear: both;
-            display: none;
-        }
-
-        &:hover .trigger {
-            display: block;
-            padding-bottom: 5px;
-        }
-
-        .page-link {
-            display: block;
-            padding: 5px 10px;
-
-            &:not(:last-child) {
-                margin-right: 0;
-            }
-            margin-left: 20px;
         }
     }
 }

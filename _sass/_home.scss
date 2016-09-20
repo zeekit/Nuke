@@ -9,29 +9,27 @@
 }
 
 .home-description {
-    font-size: 42px;
-    line-height: 46px;
-    font-weight: 200;
+    font-size: 34px;
+    line-height: 1.2;
     color: $grey-color-dark;
     text-align: center;
+    margin-top: 0.5 * $spacing-unit;
     margin-bottom: $spacing-unit;
-    max-width: 700px;
 
     @include media-query($on-palm) {
-        font-size: 28px;
-        line-height: 1.2;
-        margin-bottom: 0.5 * $spacing-unit;
+        font-size: 32px;
     }
 }
 
 .home-section-title {
     text-align: center;
-    font-size: 48px;
+    font-size: 38px;
+    font-weight: 500;
     margin-top: $spacing-unit;
     margin-bottom: 0.5 * $spacing-unit;
 
     @include media-query($on-palm) {
-        font-size: 38px;
+        font-size: 32px;
     }
 }
 
@@ -85,8 +83,7 @@
     margin: 0 4px;
 
     strong {
-        font-weight: 400;
-        font-size: 22px;
+        font-size: 26px;
     }
 
     p {
@@ -96,6 +93,10 @@
     @include media-query($on-palm) {
         width: 100%;
         margin: 0;
+
+        strong {
+            font-size: 24px;
+        }
     }
 }
 
