@@ -196,10 +196,10 @@
 
 <ul>
 <li>Load images into image views and other targets</li>
-<li>Two <a href="https://kean.github.io/blog/image-caching">cache layers</a>, fast LRU memory cache</li>
+<li>Two <a href="https://kean.github.io/post/image-caching">cache layers</a>, fast LRU memory cache</li>
 <li><a href="https://github.com/kean/Nuke-Alamofire-Plugin">Alamofire</a>, <a href="https://github.com/kean/Nuke-Gifu-Plugin">Gifu</a>, <a href="https://github.com/kean/Nuke-Toucan-Plugin">Toucan</a> plugins</li>
 <li><a href="#h_design">Freedom to use</a> networking, caching libraries of your choice</li>
-<li>Automated <a href="https://kean.github.io/blog/image-preheating">prefetching</a> with <a href="https://github.com/kean/Preheat">Preheat</a> library</li>
+<li>Automated <a href="https://kean.github.io/post/image-preheating">prefetching</a> with <a href="https://github.com/kean/Preheat">Preheat</a> library</li>
 <li>Simple, small (~1k sloc), <a href="https://github.com/kean/Image-Frameworks-Benchmark">fast</a> and reliable</li>
 </ul>
 <a href='#a-name-h_getting_started-a-quick-start' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='a-name-h_getting_started-a-quick-start'><a name="h_getting_started"></a>Quick Start</h1>
@@ -319,7 +319,7 @@
 </code></pre>
 <a href='#preheating-images' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='preheating-images'>Preheating Images</h4>
 
-<p><a href="https://kean.github.io/blog/image-preheating">Preheating</a> (prefetching) means loading images ahead of time in anticipation of its use. Nuke provides a <code>Preheater</code> class that does just that:</p>
+<p><a href="https://kean.github.io/post/image-preheating">Preheating</a> (prefetching) means loading images ahead of time in anticipation of its use. Nuke provides a <code>Preheater</code> class that does just that:</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">preheater</span> <span class="o">=</span> <span class="kt">Preheater</span><span class="p">(</span><span class="nv">manager</span><span class="p">:</span> <span class="kt">Manager</span><span class="o">.</span><span class="n">shared</span><span class="p">)</span>
 
 <span class="c1">// User enters the screen:</span>
@@ -384,7 +384,7 @@
 <p>Nuke has a basic built-in <code>DataLoader</code> class that implements <code>DataLoading</code> protocol. It uses <a href="https://developer.apple.com/reference/foundation/nsurlsession"><code>Foundation.URLSession</code></a> which is a part of the Foundation&rsquo;s <a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/URLLoadingSystem/URLLoadingSystem.html">URL Loading System</a>. Another part of it is <a href="https://developer.apple.com/reference/foundation/urlcache"><code>Foundation.URLCache</code></a> which provides a composite in-memory and on-disk cache for data. By default it is initialized with a memory capacity of 0 MB (Nuke only stores decompressed images in memory) and a disk capacity of 150 MB.</p>
 
 <blockquote>
-<p>See <a href="https://kean.github.io/blog/image-caching">Image Caching Guide</a> to learn more about URLCache, HTTP caching, and more</p>
+<p>See <a href="https://kean.github.io/post/image-caching">Image Caching Guide</a> to learn more about URLCache, HTTP caching, and more</p>
 
 <p>If you&rsquo;d like to use a third-party caching library check out <a href="https://github.com/kean/Nuke/blob/master/Documentation/Guides/Third%20Party%20Libraries.md#using-other-caching-libraries">Third Party Libraries: Using Other Caching Libraries</a></p>
 </blockquote>
