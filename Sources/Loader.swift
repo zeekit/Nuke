@@ -33,7 +33,7 @@ public extension Loading {
 /// 3. Transform the image using processor (`Processing`) provided in the request.
 ///
 /// `Loader` is thread-safe.
-public final class Loader: Loading {
+open class Loader: Loading {
     private let loader: DataLoading
     private let decoder: DataDecoding
     private let schedulers: Schedulers
@@ -82,10 +82,15 @@ public final class Loader: Loading {
                 if let image = self?.decoder.decode(data: response.0, response: response.1) {
                     self?.process(image: image, context: ctx)
                 } else {
-                    ctx.completion(.failure(Error.decodingFailed))
+                    let error = self?.getResponseError(response: response.1) ?? Error.decodingFailed
+                    ctx.completion(.failure(error))
                 }
             }
         }
+    }
+
+    open func getResponseError(response: URLResponse) -> Swift.Error {
+        return Error.decodingFailed
     }
 
     private func process(image: Image, context ctx: Context) {
