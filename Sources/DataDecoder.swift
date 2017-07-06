@@ -56,7 +56,12 @@ public struct DataDecoder: DataDecoding {
     }
 
     private static func validate(response: URLResponse) -> Bool {
-        guard let response = response as? HTTPURLResponse else { return true }
+        guard let response = response as? HTTPURLResponse else {
+            return true
+        }
+        if response.statusCode == 304 {
+            return true
+        }
         return (200..<300).contains(response.statusCode)
     }
 }
