@@ -243,10 +243,16 @@ open class Loader: Loading {
         let decode = { [decoder = self.decoder] in decoder.decode(data: response.0, response: response.1) }
         decodingQueue.async { [weak self] in
             guard let image = autoreleasepool(invoking: decode) else {
-                completion(.failure(Error.decodingFailed)); return
+                let error = self?.getResponseError(response: response.1) ?? Error.decodingFailed
+                completion(.failure(error))
+                return
             }
             self?._process(image: image, request: request, token: token, completion: completion)
         }
+    }
+    
+    open func getResponseError(response: URLResponse) -> Swift.Error {
+        return Error.decodingFailed
     }
 
     private func _process(image: Image, request: Request, token: CancellationToken, completion: @escaping Completion) {
