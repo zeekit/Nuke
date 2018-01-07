@@ -36,7 +36,9 @@ public final class DataLoader: DataLoading {
     /// it's not returns `DataLoader.Error.statusCodeUnacceptable`.
     public static func validate(data: Data, response: URLResponse) -> Swift.Error? {
         guard let response = response as? HTTPURLResponse else { return nil }
-        return (200..<300).contains(response.statusCode) ? nil : Error.statusCodeUnacceptable(response.statusCode)
+        var validStatusCodes = Set((200..<300))
+        validStatusCodes.update(with: 304)
+        return validStatusCodes.contains(response.statusCode) ? nil : Error.statusCodeUnacceptable(response.statusCode)
     }
 
     /// Shared url cached used by a default `DataLoader`. The cache is
