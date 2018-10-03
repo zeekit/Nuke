@@ -1,6 +1,6 @@
 // The MIT License (MIT)
 //
-// Copyright (c) 2015-2018 Alexander Grebenyuk (github.com/kean).
+// Copyright (c) 2017 Alexander Grebenyuk (github.com/kean).
 
 import Foundation
 import Nuke
@@ -22,32 +22,33 @@ private struct AssociatedKeys {
 
 // MARK: - MockImageProcessor
 
-class MockImageProcessor: ImageProcessing {
+class MockImageProcessor: Processing {
     let id: String
     init(id: String) {
         self.id = id
     }
-    func process(image: Image, context: ImageProcessingContext) -> Image? {
+    func process(_ image: Image) -> Image? {
         var processorIDs: [String] = image.nk_test_processorIDs
         processorIDs.append(id)
         let processedImage = Image()
         processedImage.nk_test_processorIDs = processorIDs
         return processedImage
     }
+}
 
-    static func == (lhs: MockImageProcessor, rhs: MockImageProcessor) -> Bool {
-        return lhs.id == rhs.id
-    }
+func ==(lhs: MockImageProcessor, rhs: MockImageProcessor) -> Bool {
+    return lhs.id == rhs.id
 }
 
 // MARK: - MockFailingProcessor
 
-class MockFailingProcessor: Nuke.ImageProcessing {
-    func process(image: Image, context: ImageProcessingContext) -> Image? {
+class MockFailingProcessor: Nuke.Processing {
+    func process(_ image: Image) -> Image? {
         return nil
     }
-
-    static func ==(lhs: MockFailingProcessor, rhs: MockFailingProcessor) -> Bool {
-        return true
-    }
 }
+
+func ==(lhs: MockFailingProcessor, rhs: MockFailingProcessor) -> Bool {
+    return true
+}
+

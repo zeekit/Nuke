@@ -1,32 +1,23 @@
 // The MIT License (MIT)
 //
-// Copyright (c) 2015-2018 Alexander Grebenyuk (github.com/kean).
+// Copyright (c) 2017 Alexander Grebenyuk (github.com/kean).
 
 import XCTest
 @testable import Nuke
 
 class CancellationTokenTests: XCTestCase {
-    func testInitialState() {
-        // Given
-        let cts = _CancellationTokenSource()
-        let token = cts.token
-
-        // Then
-        XCTAssertFalse(cts.isCancelling)
-        XCTAssertFalse(token.isCancelling)
-        XCTAssertFalse(cts.token.isCancelling)
-    }
-
     func testCancellation() {
-        // Given
-        let cts = _CancellationTokenSource()
+        let cts = CancellationTokenSource()
         let token1 = cts.token
         let token2 = cts.token
-
-        // When
+        
+        XCTAssertFalse(cts.isCancelling)
+        XCTAssertFalse(token1.isCancelling)
+        XCTAssertFalse(token2.isCancelling)
+        XCTAssertFalse(cts.token.isCancelling)
+        
         cts.cancel()
-
-        // Then
+        
         XCTAssertTrue(cts.isCancelling)
         XCTAssertTrue(token1.isCancelling)
         XCTAssertTrue(token2.isCancelling)
@@ -34,50 +25,49 @@ class CancellationTokenTests: XCTestCase {
     }
     
     func testThatTheRegisteredClosureIsCalled() {
-        // Given
-        let cts = _CancellationTokenSource()
-
-        // When/ Then
-        let expectation = self.expectation(description: "Token Cancelled")
-        cts.token.register {
-            expectation.fulfill()
+        let cts = CancellationTokenSource()
+        
+        expect { fulfill in
+            cts.token.register {
+                fulfill()
+            }
         }
+        
         cts.cancel()
-
+        
         wait()
     }
-
+    
     func testThatTheRegisteredClosureIsCalledWhenRegisteringAfterCancellation() {
-        // Given
-        let cts = _CancellationTokenSource()
+        let cts = CancellationTokenSource()
+        
         cts.cancel()
-
-        // When/Then
+        
         var isClosureCalled = false
         cts.token.register {
             isClosureCalled = true
         }
-
+        
         XCTAssertTrue(isClosureCalled)
     }
 
     func testMultipleClosuresRegistered() {
-        // Given
-        let cts = _CancellationTokenSource()
+        let cts = CancellationTokenSource()
         let token = cts.token
 
-        // When/Then
         var isClosureCalled = false
-        let expectation1 = self.expectation(description: "Token Cancelled")
-        token.register {
-            expectation1.fulfill()
-            isClosureCalled = true
-        }
 
-        let expectation2 = self.expectation(description: "Token Cancelled")
-        token.register {
-            expectation2.fulfill()
-            isClosureCalled = true
+        expect { fulfil in
+            token.register {
+                fulfil()
+                isClosureCalled = true
+            }
+        }
+        expect { fulfil in
+            token.register {
+                fulfil()
+                isClosureCalled = true
+            }
         }
 
         XCTAssertFalse(isClosureCalled)
@@ -88,8 +78,7 @@ class CancellationTokenTests: XCTestCase {
     }
 
     func testCancellingMultipleTimes() {
-        // Given
-        let cts = _CancellationTokenSource()
+        let cts = CancellationTokenSource()
         let token = cts.token
 
         var callsCount = 0
@@ -97,26 +86,46 @@ class CancellationTokenTests: XCTestCase {
             callsCount += 1
         }
 
-        // When
         cts.cancel()
         cts.cancel()
 
-        // Then
         XCTAssertEqual(callsCount, 1)
+    }
+    
+    func testThreadSafety() {
+        for _ in 0..<100 {
+            let cts = CancellationTokenSource()
+            
+            for _ in 0...100 {
+                expect { fulfill in
+                    DispatchQueue.global().async {
+                        if rnd(4) == 0 {
+                            cts.cancel()
+                            fulfill()
+                        } else {
+                            cts.token.register {
+                                fulfill()
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        wait(10)
     }
 
     func testCancellingOneFromAnother() {
-        // Given
-        let cts1 = _CancellationTokenSource()
-        let cts2 = _CancellationTokenSource()
+        let cts1 = CancellationTokenSource()
+        let cts2 = CancellationTokenSource()
 
-        // When/Then
-        let expectation = self.expectation(description: "Token Cancelled")
-        cts1.token.register {
-            cts2.cancel()
-        }
-        cts2.token.register {
-            expectation.fulfill()
+        expect { fulfil in
+            cts1.token.register {
+                cts2.cancel()
+            }
+            cts2.token.register {
+                fulfil()
+            }
         }
 
         cts1.cancel()
@@ -125,19 +134,10 @@ class CancellationTokenTests: XCTestCase {
 
     // MARK: No-op token
 
-    func testNoOpTokenInitialState() {
-        // Given
-        let token = _CancellationToken.noOp
-
-        // Then
-        XCTAssertFalse(token.isCancelling)
-    }
-
     func testNoOpToken() {
-        // Given
-        let token = _CancellationToken.noOp
+        let token = CancellationToken.noOp
 
-        // When/Then
+        XCTAssertFalse(token.isCancelling)
         token.register { XCTFail() }
         XCTAssertFalse(token.isCancelling)
     }
