@@ -204,7 +204,7 @@ class CacheTests: XCTestCase {
         cache[request] = Image()
         XCTAssertNotNil(cache[request])
 
-        NotificationCenter.default.post(name: NSNotification.Name.UIApplicationDidReceiveMemoryWarning, object: nil)
+        NotificationCenter.default.post(name: UIApplication.didReceiveMemoryWarningNotification, object: nil)
 
         XCTAssertNil(cache[request])
     }
@@ -219,7 +219,7 @@ class CacheTests: XCTestCase {
 
         XCTAssertEqual(cache.totalCount, 10)
 
-        NotificationCenter.default.post(name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
+        NotificationCenter.default.post(name: UIApplication.didEnterBackgroundNotification, object: nil)
 
         XCTAssertEqual(cache.totalCount, 1)
     }
@@ -236,7 +236,7 @@ class CacheTests: XCTestCase {
 
         XCTAssertEqual(cache.totalCount, 10)
 
-        NotificationCenter.default.post(name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
+        NotificationCenter.default.post(name: UIApplication.didEnterBackgroundNotification, object: nil)
 
         XCTAssertEqual(cache.totalCount, 1)
     }
@@ -270,10 +270,10 @@ class CacheTests: XCTestCase {
 
         #if os(iOS) || os(tvOS)
             ops.append {
-                NotificationCenter.default.post(name: NSNotification.Name.UIApplicationDidReceiveMemoryWarning, object: nil)
+                NotificationCenter.default.post(name: UIApplication.didReceiveMemoryWarningNotification, object: nil)
             }
             ops.append {
-                NotificationCenter.default.post(name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
+                NotificationCenter.default.post(name: UIApplication.didEnterBackgroundNotification, object: nil)
             }
         #endif
 
